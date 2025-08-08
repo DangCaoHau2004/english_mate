@@ -1,0 +1,5035 @@
+[
+  {
+    "id": 1,
+    "word": "justly",
+    "pos": "trạng từ",
+    "meaning_vi": "một cách công bằng, một cách ngay thẳng",
+    "full_definition_vi": [],
+    "audio_pronunciation": "4000B4_justly.mp3",
+    "image": "4000B4_2153.jpg",
+    "phonetic": "['ʤʌstlɪ]",
+    "definition_en": "If something is done justly, then it is fair.",
+    "example_en": " We justly decided to give the prize to him.",
+    "audio_meaning": "4000B4_justly_meaning.mp3",
+    "audio_example": "4000B4_justly_example.mp3",
+    "unit": 1
+  },
+  {
+    "id": 2,
+    "word": "revise",
+    "pos": "ngoại động từ",
+    "meaning_vi": "đọc lại, xem lại, duyệt lại, xét lại",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "đọc lại, xem lại, duyệt lại, xét lại",
+            "examples": []
+          },
+          {
+            "meaning": "sửa (bản in thử), sửa đổi (đạo luật...)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_revise.mp3",
+    "image": "4000B6_3557.jpg",
+    "phonetic": "[rɪˈvaɪz]",
+    "definition_en": "To revise something means to change or update it to make it better.",
+    "example_en": "When the editor discovered certain facts were wrong, he revised the book.",
+    "audio_meaning": "4000B6_revise_meaning.mp3",
+    "audio_example": "4000B6_revise_example.mp3",
+    "unit": 1
+  },
+  {
+    "id": 3,
+    "word": "intimidate",
+    "pos": "ngoại động từ",
+    "meaning_vi": "hăm doạ, đe doạ, doạ dẫm",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "hăm doạ, đe doạ, doạ dẫm",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_intimidate.mp3",
+    "image": "4000B6_3507.jpg",
+    "phonetic": "[ɪnˈtɪmɪdeɪt]",
+    "definition_en": "To intimidate means to frighten others.",
+    "example_en": "My dad intimidates my friends whenever they visit.",
+    "audio_meaning": "4000B6_intimidate_meaning.mp3",
+    "audio_example": "4000B6_intimidate_example.mp3",
+    "unit": 1
+  },
+  {
+    "id": 4,
+    "word": "relax",
+    "pos": "ngoại động từ",
+    "meaning_vi": "nới lỏng, lơi ra",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "nới lỏng, lơi ra",
+            "examples": [
+              "to relax one's hold: buông lỏng ra, nới lỏng ra",
+              "relax discipline: nới lỏng kỷ luật"
+            ]
+          },
+          {
+            "meaning": "làm dịu đi, làm chùng, làm bớt căng thẳng",
+            "examples": ["to relax tension: làm tình hình bớt căng thẳng"]
+          },
+          {
+            "meaning": "làm giãn ra, làm cho dễ chịu, giải (trí)",
+            "examples": [
+              "to relax one's mind: giải trí",
+              "to relax one's muscles: làm giảm bắp cơ"
+            ]
+          },
+          {
+            "meaning": "giảm nhẹ (hình phạt)",
+            "examples": []
+          },
+          {
+            "meaning": "làm yếu đi, làm suy nhược",
+            "examples": []
+          },
+          {
+            "meaning": "(y học) làm nhuận (tràng)",
+            "examples": ["to relax the bowels: làm nhuận tràng"]
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "lỏng ra, chùng ra, giân ra (gân cốt bắp cơ)",
+            "examples": []
+          },
+          {
+            "meaning": "giảm bớt, nguôi đi, bớt căng thẳng, dịu đi",
+            "examples": [
+              "anger relaxes: cơn giận nguôi đi",
+              "his features relaxed: nét mặt anh dịu đi",
+              "world tension relaxes: tình hình thế giới bớt căng thẳng"
+            ]
+          },
+          {
+            "meaning": "giải trí, nghỉ ngơi",
+            "examples": [
+              "to relax for an hour: giải trí trong một tiếng đồng h"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_relax.mp3",
+    "image": "4000B1_093.jpg",
+    "phonetic": "[rɪ'læks]",
+    "definition_en": "To relax is to rest.",
+    "example_en": "The frog relaxed in the warm sun.",
+    "audio_meaning": "4000B1_relax_meaning.mp3",
+    "audio_example": "4000B1_relax_example.mp3",
+    "unit": 1
+  },
+  {
+    "id": 5,
+    "word": "however",
+    "pos": "phó từ",
+    "meaning_vi": "dù đến đâu, dù cách nào, dù cách gì",
+    "full_definition_vi": [
+      {
+        "pos": "phó từ",
+        "meanings": [
+          {
+            "meaning": "dù đến đâu, dù cách nào, dù cách gì",
+            "examples": ["however things are: dù sự việc có thế nào"]
+          }
+        ]
+      },
+      {
+        "pos": "liên từ",
+        "meanings": [
+          {
+            "meaning": "tuy nhiên, tuy thế, tuy vậy",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_however.mp3",
+    "image": "4000B1_370.jpg",
+    "phonetic": "[hau'evə]",
+    "definition_en": "however means despite or not being influenced by something.",
+    "example_en": "She is a great cook. however, she never had professional lessons.",
+    "audio_meaning": "4000B1_however_meaning.mp3",
+    "audio_example": "4000B1_however_example.mp3",
+    "unit": 1
+  },
+  {
+    "id": 6,
+    "word": "fend",
+    "pos": "ngoại động từ, (viết tắt) của defend ((thường) + off, away, from)",
+    "meaning_vi": "đánh lui, đẩy lui, đẩy xa",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ, (viết tắt) của defend ((thường) + off, away, from)",
+        "meanings": [
+          {
+            "meaning": "đánh lui, đẩy lui, đẩy xa",
+            "examples": []
+          },
+          {
+            "meaning": "chống đỡ được, né, tránh, gạt được",
+            "examples": [
+              "to fend off a blow: né tránh được một đòn, gạt được một đòn"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "cung cấp mọi thứ cần thiết, lo liệu",
+            "examples": ["to fend for oneself: tự lo liệu lấy, tự xoay xở lấy"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_fend.mp3",
+    "image": "4000B6_3108.jpg",
+    "phonetic": "[fɛnd]",
+    "definition_en": "To fend off something means to push it away and avoid it.",
+    "example_en": "Dave spent all night fending off bugs instead of sleeping.",
+    "audio_meaning": "4000B6_fend_meaning.mp3",
+    "audio_example": "4000B6_fend_example.mp3",
+    "unit": 1
+  },
+  {
+    "id": 7,
+    "word": "silence",
+    "pos": "danh từ",
+    "meaning_vi": "sự lặng thinh, sự nín lặng",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự lặng thinh, sự nín lặng",
+            "examples": [
+              "silence gives consent: làm thinh là tình đã thuận",
+              "to suffer in silence: chịu đau khổ âm thầm",
+              "to put somebody to silence: bắt ai nín thinh, bác bỏ lý lẻ của ai,",
+              "silence!: đề nghị yên lặng!"
+            ]
+          },
+          {
+            "meaning": "tính trầm lặng",
+            "examples": []
+          },
+          {
+            "meaning": "sự im hơi lặng tiếng",
+            "examples": [
+              "after five years' silence: sau năm năm im hơi lặng tiếng"
+            ]
+          },
+          {
+            "meaning": "sự lãng quên",
+            "examples": ["to pass into silence: bị lãng quên, bị bỏ qua"]
+          },
+          {
+            "meaning": "sự yên lặng, sự yên tĩnh, sự tĩnh mịch",
+            "examples": ["the silence of the night: sự tĩnh mịch của đêm khuya"]
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "bắt phải im, bắt phải câm họng",
+            "examples": [
+              "to silence the enemy's batteries: bắt pháo địch phải câm họng",
+              "to silence the best debaters: làm cho những vị tranh luận cừ khôi nhất cũng phải cứng họng"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_silence.mp3",
+    "image": "4000B2_978.jpg",
+    "phonetic": "['saɪlən(t)s]",
+    "definition_en": "silence is complete quiet.",
+    "example_en": " The man asked for silence while he worked on the problem.",
+    "audio_meaning": "4000B2_silence_meaning.mp3",
+    "audio_example": "4000B2_silence_example.mp3",
+    "unit": 1
+  },
+  {
+    "id": 8,
+    "word": "punishment",
+    "pos": "danh từ",
+    "meaning_vi": "sự phạt, sự trừng phạt, sự trừng trị",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự phạt, sự trừng phạt, sự trừng trị",
+            "examples": []
+          },
+          {
+            "meaning": "(từ Mỹ,nghĩa Mỹ), (thông tục) sự hành hạ, sự ngược đãi",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_punishment.mp3",
+    "image": "4000B3_1514.jpg",
+    "phonetic": "['pʌnɪʃmənt]",
+    "definition_en": "A punishment is something that one must endure for any wrongdoing.",
+    "example_en": "He was given a punishment for being rude to the teacher.",
+    "audio_meaning": "4000B3_punishment_meaning.mp3",
+    "audio_example": "4000B3_punishment_example.mp3",
+    "unit": 1
+  },
+  {
+    "id": 9,
+    "word": "harness",
+    "pos": "động từ",
+    "meaning_vi": "khai thác, tận dụng, điều khiển",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "bộ yên cương (ngựa)",
+            "examples": []
+          },
+          {
+            "meaning": "(nghĩa bóng) trang bị lao động, dụng cụ lao động",
+            "examples": []
+          },
+          {
+            "meaning": "(sử học) áo giáp (của người và ngựa)",
+            "examples": []
+          },
+          {
+            "meaning": "dệt khung go",
+            "examples": []
+          },
+          {
+            "meaning": "to go (get) back into harness: lại lao đầu vào công việc",
+            "examples": []
+          },
+          {
+            "meaning": "in harness: (từ lóng) đang làm công việc thường xuyên",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "đóng yên cương (ngựa)",
+            "examples": []
+          },
+          {
+            "meaning": "khai thác để sản xuất điện (một con sông, một thác nước...)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_harness.mp3",
+    "image": "4000B5_2452.jpg",
+    "phonetic": "['hɑːnɪs]",
+    "definition_en": "To harness something means to control and use it, usually to make energy.",
+    "example_en": "The sails harness the wind in order to move.",
+    "audio_meaning": "4000B5_harness_meaning.mp3",
+    "audio_example": "4000B5_harness_example.mp3",
+    "unit": 1
+  },
+  {
+    "id": 10,
+    "word": "throw",
+    "pos": "danh từ",
+    "meaning_vi": "sự ném, sự vứt, sự quăng, sự liệng",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự ném, sự vứt, sự quăng, sự liệng",
+            "examples": []
+          },
+          {
+            "meaning": "khoảng ném xa",
+            "examples": []
+          },
+          {
+            "meaning": "(thể dục,thể thao) sự vật ngã, sự quăng xuống đất",
+            "examples": []
+          },
+          {
+            "meaning": "(địa lý,địa chất) xê dịch của phay",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ threw, thrown",
+        "meanings": [
+          {
+            "meaning": "ném, vứt, quăng, quẳng, liệng, lao",
+            "examples": ["to throw oneself forwards: lao tới, xông tới trước"]
+          },
+          {
+            "meaning": "(thể dục,thể thao) vật ngã",
+            "examples": ["to throw an opponent: vật ngã một địch thủ"]
+          },
+          {
+            "meaning": "(nghĩa bóng) ném vào, mang vào, đưa vào",
+            "examples": [
+              "to throw someone into an prison: bỏ ai vào tù",
+              "to throw all one's energies into an undertaking: đem hết sức mình vào một việc gì",
+              "to throw a look at: đưa mắt nhìn, lườm",
+              "to throw light on a matter: soi sáng (nêu rõ) một vấn đề"
+            ]
+          },
+          {
+            "meaning": "(nghĩa bóng) làm cho rơi vào, bỗng đẩy vào (một tình trạng)",
+            "examples": [
+              "to throw the crowd into disorder: làm cho đám đông rối loạn",
+              "to be thrown upon: thuộc về, rôi vào đầu (ai) trách nhiệm, công việc)"
+            ]
+          },
+          {
+            "meaning": "lột (da), thay (lông)",
+            "examples": [
+              "the snake throws its skin: rắn lột da",
+              "the bird throws its feather: chim thay lông"
+            ]
+          },
+          {
+            "meaning": "đẻ (thỏ, chim bồ câu...)",
+            "examples": []
+          },
+          {
+            "meaning": "xe (tơ)",
+            "examples": []
+          },
+          {
+            "meaning": "nắn hình, trau (đồ gốm trên bàn quay)",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "ném, quăng",
+            "examples": []
+          },
+          {
+            "meaning": "chơi súc sắc",
+            "examples": []
+          },
+          {
+            "meaning": "to throw about: quẳng chỗ này chỗ nọ, vứt bừa bãi, vung phí",
+            "examples": []
+          },
+          {
+            "meaning": "to throw aside: quẳng ra một bên, ném ra một bên",
+            "examples": []
+          },
+          {
+            "meaning": "to throw away: ném đi, vứt đi, liệng đi, bỏ rơi vãi",
+            "examples": []
+          },
+          {
+            "meaning": "to throw back: ném lại, quăng trở lại, đẩy lùi, phản chiếu, phản xạ",
+            "examples": []
+          },
+          {
+            "meaning": "(sinh vật học) lại giống",
+            "examples": []
+          },
+          {
+            "meaning": "to throw by: để lại, bỏ lại, gạt ra",
+            "examples": []
+          },
+          {
+            "meaning": "to throw in: ném vào, vứt vào, xen vào, thêm",
+            "examples": []
+          },
+          {
+            "meaning": "to throw off: ném đi, quăng đi, phun ra, bỏ, bỏ đi",
+            "examples": []
+          },
+          {
+            "meaning": "thả (chó săn)",
+            "examples": []
+          },
+          {
+            "meaning": "(nghĩa bóng) bắt đầu, khởi sự",
+            "examples": []
+          },
+          {
+            "meaning": "làm cho trật bánh (xe lửa)",
+            "examples": []
+          },
+          {
+            "meaning": "cởi (quần áo)",
+            "examples": []
+          },
+          {
+            "meaning": "to throw out: ném ra, quăng ra, đuổi ra, đẩy ra, phóng ra, phát ra",
+            "examples": []
+          },
+          {
+            "meaning": "đem toàn sức, bắt tay ào",
+            "examples": []
+          },
+          {
+            "meaning": "vượt, át, phá ngang",
+            "examples": []
+          },
+          {
+            "meaning": "văng (lời thoá mạ)",
+            "examples": []
+          },
+          {
+            "meaning": "phủ nhận, bác (một đạo luật)",
+            "examples": []
+          },
+          {
+            "meaning": "đâm (rễ)",
+            "examples": []
+          },
+          {
+            "meaning": "to throw over: rời bỏ",
+            "examples": []
+          },
+          {
+            "meaning": "to throw together: hợp lại, tập trung lại, tụ họp lại",
+            "examples": []
+          },
+          {
+            "meaning": "to throw up: (y học) thổ ra, nôn ra",
+            "examples": []
+          },
+          {
+            "meaning": "kéo lên (mành mành...)",
+            "examples": []
+          },
+          {
+            "meaning": "bỏ, thôi (việc)",
+            "examples": ["to throw up one's eyes: trợn mắt lên (sợ hãi)"]
+          },
+          {
+            "meaning": "to throw in one's lot with someone: cùng chia sẻ số phận với ai",
+            "examples": []
+          },
+          {
+            "meaning": "to throw oneself down: nằm vật xuống",
+            "examples": []
+          },
+          {
+            "meaning": "to throw oneself on (upon): phó mặc cho",
+            "examples": []
+          },
+          {
+            "meaning": "to throw open: mở to, mở tung, mở mạnh, (nghĩa bóng) mở cửa, để mặc",
+            "examples": []
+          },
+          {
+            "meaning": "to throw up the sponge: chịu thua (đánh quyền Anh...)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_throw.mp3",
+    "image": "4000B1_179.jpg",
+    "phonetic": "[θrəu]",
+    "definition_en": "To throw something is to use your hand to make it go through the air.",
+    "example_en": "The pitcher can throw the baseball very fast.",
+    "audio_meaning": "4000B1_throw_meaning.mp3",
+    "audio_example": "4000B1_throw_example.mp3",
+    "unit": 1
+  },
+  {
+    "id": 11,
+    "word": "blacksmith",
+    "pos": "danh từ",
+    "meaning_vi": "thợ rèn",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "thợ rèn",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_blacksmith.mp3",
+    "image": "4000B3_1203.jpg",
+    "phonetic": "['blæksmɪθ]",
+    "definition_en": "A blacksmith is a person who makes things out of metal.",
+    "example_en": "The blacksmith pounded the piece of metal until it was flat.",
+    "audio_meaning": "4000B3_blacksmith_meaning.mp3",
+    "audio_example": "4000B3_blacksmith_example.mp3",
+    "unit": 2
+  },
+  {
+    "id": 12,
+    "word": "indifferent",
+    "pos": "tính từ",
+    "meaning_vi": "lânh đạm, thờ ơ, hờ hững, dửng dưng, không thiết, không quan tâm, không để ý, bàng quang",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "lânh đạm, thờ ơ, hờ hững, dửng dưng, không thiết, không quan tâm, không để ý, bàng quang",
+            "examples": [
+              "to be indifferent to something: thờ ơ đối với cái gì, không quan tâm tới cái gì"
+            ]
+          },
+          {
+            "meaning": "trung lập, không thiên vị",
+            "examples": [
+              "to be indifferent in a dispute: đứng trung lập trong một cuộc tranh chấp"
+            ]
+          },
+          {
+            "meaning": "không quan trọng, cũng vậy thôi",
+            "examples": [
+              "it's indifferent to me that...: đối với tôi cũng không có gì quan trọng là..., đối với tôi thì... cũng như vậy thôi"
+            ]
+          },
+          {
+            "meaning": "bình thường, xoàng xoàng, vô thưởng, vô phạt",
+            "examples": [
+              "his English is indifferent: tiếng Anh của cậu ta cũng xoàng xoàng"
+            ]
+          },
+          {
+            "meaning": "(hoá học) trung hoà, trung tính",
+            "examples": []
+          },
+          {
+            "meaning": "(vật lý) phiếm định (cân bằng)",
+            "examples": []
+          },
+          {
+            "meaning": "(sinh vật học) không phân hoá, không chuyển hoá (mô)",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "người lânh đạm, người thờ ơ",
+            "examples": []
+          },
+          {
+            "meaning": "hành động vô thưởng, hành động vô phạt (về mặt đạo lý)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_indifferent.mp3",
+    "image": "4000B5_2589.jpg",
+    "phonetic": "[ɪn'dɪf(ə)r(ə)nt]",
+    "definition_en": "When someone is indifferent toward something, they have a lack of interest in it.",
+    "example_en": "Lisa is indifferent toward school. She doesn’t care what her final grades are.",
+    "audio_meaning": "4000B5_indifferent_meaning.mp3",
+    "audio_example": "4000B5_indifferent_example.mp3",
+    "unit": 2
+  },
+  {
+    "id": 13,
+    "word": "resemble",
+    "pos": "ngoại động từ",
+    "meaning_vi": "giống với (người nào, vật gì)",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "giống với (người nào, vật gì)",
+            "examples": ["to resemble one another: giống nhau"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_resemble.mp3",
+    "image": "4000B2_1136.jpg",
+    "phonetic": "[rɪ'zembl]",
+    "definition_en": "To resemble someone is to look like them.",
+    "example_en": " The baby resembles his father a great deal.",
+    "audio_meaning": "4000B2_resemble_meaning.mp3",
+    "audio_example": "4000B2_resemble_example.mp3",
+    "unit": 2
+  },
+  {
+    "id": 14,
+    "word": "pound",
+    "pos": "danh từ",
+    "meaning_vi": "Pao (khoảng 450 gam)",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "Pao (khoảng 450 gam)",
+            "examples": []
+          },
+          {
+            "meaning": "đồng bảng Anh",
+            "examples": [
+              "to pay four shillings by the pound: cứ mỗi bảng Anh trả bốn silinh, trả 20 rịu 4 ĩu đĩu"
+            ]
+          },
+          {
+            "meaning": "(xem) penny_wise",
+            "examples": []
+          },
+          {
+            "meaning": "pound of flesh: (nghĩa bóng) một đòi hỏi hợp pháp nhưng quá đáng",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "kiểm tra trọng lượng tiền đồng theo trọng lượng đồng bảng Anh",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "bãi rào nhốt súc vật lạc",
+            "examples": []
+          },
+          {
+            "meaning": "nơi giữ súc vật tịch biên, nơi giữ hàng hoá tịch biên",
+            "examples": []
+          },
+          {
+            "meaning": "bãi rào nuôi súc vật",
+            "examples": []
+          },
+          {
+            "meaning": "(nghĩa bóng) nơi giam cầm, trại giam",
+            "examples": []
+          },
+          {
+            "meaning": "(săn bắn) thế cùng, đường cùng",
+            "examples": [
+              "to bring a wild boar into a pound: dồn con lợn lòi vào thế cùng"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "nhốt (súc vật...) vào bãi rào",
+            "examples": []
+          },
+          {
+            "meaning": "nhốt vào trại giam",
+            "examples": []
+          },
+          {
+            "meaning": "to pound the field: (săn bắn) là một chướng ngại không thể vượt qua được (hàng rào chắn)",
+            "examples": []
+          },
+          {
+            "meaning": "vượt qua được những hàng rào chắn mà người khác không thể vượt được (người cưỡi ngựa đi săn)",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "giã, nghiền",
+            "examples": []
+          },
+          {
+            "meaning": "nện, thụi, thoi (bằng quả đấm), đánh đập",
+            "examples": [
+              "to pound something to pieces: đập cái gì vỡ tan từng mảnh",
+              "to pound someone into a jelly: đánh cho ai nhừ tử"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "(+ at, on, away at) giâ, nện, thoi, đập thình lình, (quân sự) nện vào, giã vào, nã oàng oàng vào",
+            "examples": [
+              "to pound at the door: đập cửa thình thình",
+              "guns pound away at the enemy's position: đại bác nã oàng oàng vào vị trí địch"
+            ]
+          },
+          {
+            "meaning": "(+ along, on...) chạy uỳnh uỵch, đi uỳnh uỵch",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_pound.mp3",
+    "image": "4000B1_316.jpg",
+    "phonetic": "[paund]",
+    "definition_en": "To pound something is to hit it many times with a lot of force.",
+    "example_en": "He pounded the nail with the hammer.",
+    "audio_meaning": "4000B1_pound_meaning.mp3",
+    "audio_example": "4000B1_pound_example.mp3",
+    "unit": 2
+  },
+  {
+    "id": 15,
+    "word": "insist",
+    "pos": "động từ (+ on)",
+    "meaning_vi": "cứ nhất định, khăng khăng đòi, cố nài",
+    "full_definition_vi": [
+      {
+        "pos": "động từ (+ on)",
+        "meanings": [
+          {
+            "meaning": "cứ nhất định, khăng khăng đòi, cố nài",
+            "examples": []
+          },
+          {
+            "meaning": "nhấn đi nhấn lại, nhấn mạnh (một điểm trong lập luận...), khẳng định tính chất chính nghĩa của sự nghiệp mình",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_insist.mp3",
+    "image": "4000B2_833.jpg",
+    "phonetic": "[ɪn'sɪst]",
+    "definition_en": "To insist means to be firm in telling people what to do.",
+    "example_en": " I insist that you try some of these cookies.",
+    "audio_meaning": "4000B2_insist_meaning.mp3",
+    "audio_example": "4000B2_insist_example.mp3",
+    "unit": 2
+  },
+  {
+    "id": 16,
+    "word": "relativity",
+    "pos": "danh từ",
+    "meaning_vi": "tính tương đối",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "tính tương đối",
+            "examples": ["the theory of relativity: thuyết tương đối"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_relativity.mp3",
+    "image": "4000B5_2458.jpg",
+    "phonetic": "[ˌrelə'tɪvətɪ]",
+    "definition_en": "relativity is a set of ideas about time and space developed by Albert Einstein.",
+    "example_en": "relativity teaches that light travels at the same speed in the universe.",
+    "audio_meaning": "4000B5_relativity_meaning.mp3",
+    "audio_example": "4000B5_relativity_example.mp3",
+    "unit": 2
+  },
+  {
+    "id": 17,
+    "word": "affair",
+    "pos": "danh từ",
+    "meaning_vi": "việc",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "việc",
+            "examples": [
+              "it's my affair: đây là việc (riêng) của tôi",
+              "mind your own affair: hãy lo lấy việc của anh"
+            ]
+          },
+          {
+            "meaning": "(số nhiều) công việc, việc làm, sự vụ",
+            "examples": [
+              "internal affair of a country: công việc nội bộ của một nước",
+              "Department of Home affair: bộ nội vụ",
+              "Department of Foreign affairs: bộ ngoại giao"
+            ]
+          },
+          {
+            "meaning": "chuyện tình, chuyện yêu đương",
+            "examples": []
+          },
+          {
+            "meaning": "chuyện vấn đề",
+            "examples": ["affair of honour: vấn đề danh dự, cuộc đọ kiếm"]
+          },
+          {
+            "meaning": "việc buôn bán, việc giao thiệp",
+            "examples": [
+              "a profitable affair: việc buôn bán có lời",
+              "to have an affair with somebody: có việc giao thiệp với ai"
+            ]
+          },
+          {
+            "meaning": "(thông tục) cái, thứ, vật, đồ, món, chuyện",
+            "examples": [
+              "this motor-cycle is a very complicated affair: cái mô tô này thật là một món phức tạp quá"
+            ]
+          },
+          {
+            "meaning": "(quân sự) trận đánh nhỏ",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_affair.mp3",
+    "image": "4000B3_1481.jpg",
+    "phonetic": "[ə'feə]",
+    "definition_en": "An affair is an event or a thing that happened.",
+    "example_en": " My wife and I attended a formal affair over the weekend.",
+    "audio_meaning": "4000B3_affair_meaning.mp3",
+    "audio_example": "4000B3_affair_example.mp3",
+    "unit": 2
+  },
+  {
+    "id": 18,
+    "word": "obstruct",
+    "pos": "ngoại động từ",
+    "meaning_vi": "làm tắc, làm bế tắc, làm nghẽn",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "làm tắc, làm bế tắc, làm nghẽn",
+            "examples": ["to obstruct truffic: làm nghẽn giao thông"]
+          },
+          {
+            "meaning": "ngăn, che, lấp, che khuất",
+            "examples": []
+          },
+          {
+            "meaning": "cản trở, gây trở ngại",
+            "examples": [
+              "to obstruct someone's proggress: cản trở sự tiến bộ của ai",
+              "to obstruct someone's activity: gây trở ngại cho sự hoạt động của ai"
+            ]
+          },
+          {
+            "meaning": "(y học) làm tắc",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "phá rối (ở nghị trường bằng cách nói cho hết giờ)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_obstruct.mp3",
+    "image": "4000B6_3112.jpg",
+    "phonetic": "[əbˈstrʌkt]",
+    "definition_en": "To obstruct something means to get in its way.",
+    "example_en": "The car broke down on the road and obstructed traffic for hours.",
+    "audio_meaning": "4000B6_obstruct_meaning.mp3",
+    "audio_example": "4000B6_obstruct_example.mp3",
+    "unit": 2
+  },
+  {
+    "id": 19,
+    "word": "bind",
+    "pos": "(bất qui tắc) ngoại động từ bound",
+    "meaning_vi": "trói, buộc, bỏ lại",
+    "full_definition_vi": [
+      {
+        "pos": "(bất qui tắc) ngoại động từ bound",
+        "meanings": [
+          {
+            "meaning": "trói, buộc, bỏ lại",
+            "examples": [
+              "to bind hand and foot: trói tay, trói chân",
+              "to be bound to do something: bắt buộc phải làm gì, nhất định phải làm gì"
+            ]
+          },
+          {
+            "meaning": "ký hợp đồng học nghề",
+            "examples": ["to be bound [as an] apprentice: ký hợp đồng học nghề"]
+          },
+          {
+            "meaning": "ràng buộc",
+            "examples": [
+              "to bind oneself: tự mình ràng buộc với, giao ước, hứa hẹn, cam đoan",
+              "to be bound by an oath: bị ràng buộc bởi lời thề"
+            ]
+          },
+          {
+            "meaning": "chấp nhận, thừa nhận (một giao kèo, giá cả mua bán...)",
+            "examples": ["to bind a bargain: chấp nhận giá cả mua bán"]
+          },
+          {
+            "meaning": "làm táo bón (đồ ăn)",
+            "examples": []
+          },
+          {
+            "meaning": "băng bó (vết thương), đánh đai nẹp (thùng...), đóng (sách), tết quanh",
+            "examples": ["head bound with laurels: đầu tết vòng hoa nguyệt quế"]
+          }
+        ]
+      },
+      {
+        "pos": "(bất qui tắc) nội động từ bound",
+        "meanings": [
+          {
+            "meaning": "kết lại với nhau, kết thành khối rắn",
+            "examples": ["clay binds to heat: đất sét rắn lại khi đem nung"]
+          },
+          {
+            "meaning": "(kỹ thuật) kẹt (cán bộ phân trong máy)",
+            "examples": []
+          },
+          {
+            "meaning": "táo bón",
+            "examples": []
+          },
+          {
+            "meaning": "to bind over: bắt buộc",
+            "examples": []
+          },
+          {
+            "meaning": "to bind up: băng bó (vết thương)",
+            "examples": []
+          },
+          {
+            "meaning": "đóng (nhiều quyển sách) thành một tập",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "(ngành mỏ) vỉa đất sét (giữa hai vỉa than)",
+            "examples": []
+          },
+          {
+            "meaning": "(như) bire",
+            "examples": []
+          },
+          {
+            "meaning": "(âm nhạc) dấu nối",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B4_bind.mp3",
+    "image": "4000B4_2102.jpg",
+    "phonetic": "[baɪnd]",
+    "definition_en": "To bind is to bring people together.",
+    "example_en": "The victims of the flood were bound by their need to help each other.",
+    "audio_meaning": "4000B4_bind_meaning.mp3",
+    "audio_example": "4000B4_bind_example.mp3",
+    "unit": 2
+  },
+  {
+    "id": 20,
+    "word": "independent",
+    "pos": "tính từ",
+    "meaning_vi": "độc lập",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "độc lập",
+            "examples": [
+              "an independent state: một quốc gia độc lập",
+              "independent research: sự nghiên cứu độc lập",
+              "independent clause: (ngôn ngữ học) mệnh đề đọc lập"
+            ]
+          },
+          {
+            "meaning": "không lệ thuộc, không phụ thuộc, không tuỳ thuộc",
+            "examples": [
+              "to be independent of something: không phụ thuộc vào cái gì"
+            ]
+          },
+          {
+            "meaning": "đủ sung túc, không cần phải làm ăn gì để kiếm sống",
+            "examples": ["an independent income: tiền thu nhập đủ sung túc"]
+          },
+          {
+            "meaning": "tự nó đã có giá trị, tự nó đã hiệu nghiệm",
+            "examples": [
+              "independent proofs: những bằng chứng tự chúng đã có giá trị"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "người không phụ thuộc, vật không phụ thuộc",
+            "examples": []
+          },
+          {
+            "meaning": "(chính trị) người không đảng phái, người độc lập",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_independent.mp3",
+    "image": "4000B1_593.jpg",
+    "phonetic": "[ˌɪndɪ'pendənt]",
+    "definition_en": "If something is independent, it is not controlled by something else.",
+    "example_en": "She chose to live an independent life in the country.",
+    "audio_meaning": "4000B1_independent_meaning.mp3",
+    "audio_example": "4000B1_independent_example.mp3",
+    "unit": 2
+  },
+  {
+    "id": 21,
+    "word": "liberty",
+    "pos": "danh từ",
+    "meaning_vi": "tự do, quyền tự do",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "tự do, quyền tự do",
+            "examples": [
+              "liberty of conscience: tự do tín ngưỡng",
+              "liberty of sspeech: tự do ngôn luận",
+              "liberty of the press: tự do báo chí",
+              "to set someone at liberty: thả ai, trả lại sự tự do cho ai",
+              "to be at liberty to do something: được tự do làm gì",
+              "at liberty: tự do, rảnh rang"
+            ]
+          },
+          {
+            "meaning": "sự tự tiện, sự mạn phép",
+            "examples": ["to take the liberty of: mạn phép, tự tiện"]
+          },
+          {
+            "meaning": "((thường) số nhiều) thái độ sỗ sàng, thái độ coi thường, thái độ nhờn, thái độ tuỳ tiện",
+            "examples": [
+              "to take libertiles with a woman: sỗ sàng với một người phụ nữ",
+              "to take liberties with rules: tuỳ tiện với nội quy, coi thường quy tắc"
+            ]
+          },
+          {
+            "meaning": "(số nhiều) đặc quyền",
+            "examples": [
+              "the liberties of a city: những đặc quyền của một đô thị"
+            ]
+          },
+          {
+            "meaning": "nữ thần tự do",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_liberty.mp3",
+    "image": "4000B3_1508.jpg",
+    "phonetic": "['lɪbətɪ]",
+    "definition_en": "liberty is freedom to do what you want.",
+    "example_en": " To many people, the Statue of liberty is a symbol of freedom.",
+    "audio_meaning": "4000B3_liberty_meaning.mp3",
+    "audio_example": "4000B3_liberty_example.mp3",
+    "unit": 3
+  },
+  {
+    "id": 22,
+    "word": "horror",
+    "pos": "danh từ",
+    "meaning_vi": "sự khiếp, sự ghê rợn",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự khiếp, sự ghê rợn",
+            "examples": []
+          },
+          {
+            "meaning": "điều kinh khủng, cảnh khủng khiếp",
+            "examples": []
+          },
+          {
+            "meaning": "sự ghét độc địa, sự ghê tởm",
+            "examples": []
+          },
+          {
+            "meaning": "(y học) sự rùng mình",
+            "examples": []
+          },
+          {
+            "meaning": "(the horrors) cơn rùng mình, sự sợ hãi, trạng thái ủ rũ buồn nản (trong cơn mê sảng của những người nghiện rượu nặng)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_horror.mp3",
+    "image": "4000B3_1565.jpg",
+    "phonetic": "['hɔrə]",
+    "definition_en": "horror is a feeling of being very afraid or shocked.",
+    "example_en": "The audience screamed in horror when the ghost appeared in the movie.",
+    "audio_meaning": "4000B3_horror_meaning.mp3",
+    "audio_example": "4000B3_horror_example.mp3",
+    "unit": 3
+  },
+  {
+    "id": 23,
+    "word": "prosper",
+    "pos": "nội động từ",
+    "meaning_vi": "thịnh vượng, phồn vinh, thành công",
+    "full_definition_vi": [
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "thịnh vượng, phồn vinh, thành công",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "làm thịnh vượng, làm phát đạt, làm phồn vinh, làm thành công",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_prosper.mp3",
+    "image": "4000B3_1217.jpg",
+    "phonetic": "['prɔspə]",
+    "definition_en": "To prosper is to be successful or make a lot of money.",
+    "example_en": "Frank's new business finally prosper after many years of hard work.",
+    "audio_meaning": "4000B3_prosper_meaning.mp3",
+    "audio_example": "4000B3_prosper_example.mp3",
+    "unit": 3
+  },
+  {
+    "id": 24,
+    "word": "trick",
+    "pos": "danh từ",
+    "meaning_vi": "mưu mẹo, thủ đoạn đánh lừa, trò gian trá, trò bịp bợm",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "mưu mẹo, thủ đoạn đánh lừa, trò gian trá, trò bịp bợm",
+            "examples": [
+              "the trick took him in completely: nó hoàn toàn bị mắc mưu",
+              "there must be some trick about it: có cái gì gian trá bịp bợm trong đó"
+            ]
+          },
+          {
+            "meaning": "trò chơi khăm, trò choi xỏ, trò ranh ma, trò tinh nghịch",
+            "examples": [
+              "to be up to one's old tricks again: lại dở những trò xỏ lá",
+              "to play a trick on someone: xỏ chơi ai một vố"
+            ]
+          },
+          {
+            "meaning": "ngón, đòn, phép, mánh khoé, mánh lới nhà nghề",
+            "examples": []
+          },
+          {
+            "meaning": "trò, trò khéo",
+            "examples": [
+              "conjuring trick: trò nhanh tay, trò ảo thuật",
+              "to teach a dog tricks: dạy cho làm trò"
+            ]
+          },
+          {
+            "meaning": "thói, tật",
+            "examples": [
+              "the has the trick of using slangs: nó có cái tật hay dùng tiếng lóng"
+            ]
+          },
+          {
+            "meaning": "nước bài",
+            "examples": ["to take (win) a trick: được ăn một nước bài"]
+          },
+          {
+            "meaning": "(hàng hải) phiên làm việc ở buồng lái",
+            "examples": []
+          },
+          {
+            "meaning": "to be up to a trick or two: khôn ngoan, láu, đủ ngón, có tài xoay xở",
+            "examples": []
+          },
+          {
+            "meaning": "I don't know the trick of it: tôi không biết mẹo",
+            "examples": []
+          },
+          {
+            "meaning": "to know a trick worth two of that: biết một ngón hay hơn",
+            "examples": []
+          },
+          {
+            "meaning": "that will do the trick: (thông tục) cứ thế là ăn tiền đấy",
+            "examples": []
+          },
+          {
+            "meaning": "tricks of fortune: những trò trở trêu của số mệnh",
+            "examples": []
+          },
+          {
+            "meaning": "whole bag of tricks: (xem) bag",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "lừa, đánh lừa, lừa gạt",
+            "examples": [
+              "to trick someone into doing something: lừa ai làm gì",
+              "to trick someone out of something: lừa gạt ai lấy cái gì"
+            ]
+          },
+          {
+            "meaning": "to trick out (up): trang điểm, trang sức",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_trick.mp3",
+    "image": "4000B1_019.jpg",
+    "phonetic": "[trɪk]",
+    "definition_en": "A trick is something you do to fool another person.",
+    "example_en": "His card trick really surprised us.",
+    "audio_meaning": "4000B1_trick_meaning.mp3",
+    "audio_example": "4000B1_trick_example.mp3",
+    "unit": 3
+  },
+  {
+    "id": 25,
+    "word": "uniform",
+    "pos": "tính từ",
+    "meaning_vi": "đồng dạng, cùng một kiểu, giống nhau",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "đồng dạng, cùng một kiểu, giống nhau",
+            "examples": ["of uniform length: cùng một chiều dài như nhau"]
+          },
+          {
+            "meaning": "không thay đổi, không biến hoá, đều",
+            "examples": [
+              "to keep at a uniform temperature: giữ ở một nhiệt độ không đổi",
+              "uniform movement: chuyển động đều"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "đồng phục, (quân) quân phục",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "(quân sự) mặc quân phục",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_uniform.mp3",
+    "image": "4000B2_879.jpg",
+    "phonetic": "['juːnɪfɔːm]",
+    "definition_en": "A uniform is a piece of clothing worn by people of the same group.",
+    "example_en": "All the members of our marching band wear matching uniforms.",
+    "audio_meaning": "4000B2_uniform_meaning.mp3",
+    "audio_example": "4000B2_uniform_example.mp3",
+    "unit": 3
+  },
+  {
+    "id": 26,
+    "word": "purchase",
+    "pos": "danh từ",
+    "meaning_vi": "sự mua, sự tậu được, vật mua được, vật tậu được",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự mua, sự tậu được, vật mua được, vật tậu được",
+            "examples": []
+          },
+          {
+            "meaning": "thu hoạch hằng năm, hoa lợi hằng năm, lợi tức hằng năm (của đất đai...)",
+            "examples": [
+              "the land is sold at 20 year's purchase: miếng đất được bán đi với giá bằng hai mươi năm hoa lợi",
+              "his life is not worth a day's purchase: (nghĩa bóng) anh ta chẳng chắc đã sống thêm được một ngày"
+            ]
+          },
+          {
+            "meaning": "(pháp lý) sự tậu được (chứ không phải do hưởng thừa kế)",
+            "examples": []
+          },
+          {
+            "meaning": "điểm tựa, chỗ dựa vào, chỗ bám vào",
+            "examples": []
+          },
+          {
+            "meaning": "lực bẩy, lực đòn bẩy",
+            "examples": []
+          },
+          {
+            "meaning": "(hàng hải) dụng cụ để kéo lên, dụng cụ bẩy lên, đòn bẩy, dây chão, ròng rọc, palăng",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "mua, tậu",
+            "examples": []
+          },
+          {
+            "meaning": "giành được (bằng sự hy sinh, bằng lao động gian khổ...)",
+            "examples": [
+              "to purchase freedom with one's blood: giành được tự do bằng xương máu"
+            ]
+          },
+          {
+            "meaning": "(pháp lý) tậu được (chứ không phải được hưởng thừa kế)",
+            "examples": []
+          },
+          {
+            "meaning": "(hàng hải) kéo (neo) lên bằng ròng rọc, bẩy lên bằng đòn bẩy",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_purchase.mp3",
+    "image": "4000B1_356.jpg",
+    "phonetic": "['pɜːʧəs]",
+    "definition_en": "To purchase something is to buy it.",
+    "example_en": "I recently purchased a new car.",
+    "audio_meaning": "4000B1_purchase_meaning.mp3",
+    "audio_example": "4000B1_purchase_example.mp3",
+    "unit": 3
+  },
+  {
+    "id": 27,
+    "word": "resort",
+    "pos": "danh từ",
+    "meaning_vi": "cái dùng đến, phương kế, phương sách",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "cái dùng đến, phương kế, phương sách",
+            "examples": [
+              "this is to be done without resort to force: việc này phải làm mà không dùng đến vũ lực",
+              "in the last resort: như là phương sách cuối cùng"
+            ]
+          },
+          {
+            "meaning": "nơi có đông người lui tới",
+            "examples": ["seaside resort: nơi nghỉ mát ở bờ biển"]
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "dùng đến, cầu đến, nhờ vào",
+            "examples": [
+              "to resort to revolutionary violence: dùng đến bạo lực cách mạng"
+            ]
+          },
+          {
+            "meaning": "thường xuyên lui tới (nơi nào)",
+            "examples": ["to resort to the mountain: thường đi chơi núi"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_resort.mp3",
+    "image": "4000B2_756.jpg",
+    "phonetic": "[rɪ'zɔːt]",
+    "definition_en": "To resort to something is to depend on it in order to solve a problem.",
+    "example_en": " I hope they don't resort to violence to end the argument.",
+    "audio_meaning": "4000B2_resort_meaning.mp3",
+    "audio_example": "4000B2_resort_example.mp3",
+    "unit": 3
+  },
+  {
+    "id": 28,
+    "word": "valve",
+    "pos": "danh từ",
+    "meaning_vi": "(kỹ thuật), (giải phẫu) van",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "(kỹ thuật), (giải phẫu) van",
+            "examples": [
+              "the valve of a bicycle tyre: van săm xe đạp",
+              "the valves of the heart: các van tim"
+            ]
+          },
+          {
+            "meaning": "rađiô đèn điện tử",
+            "examples": []
+          },
+          {
+            "meaning": "(thực vật học), (động vật học) mảnh vỏ (quả đậu, vỏ sò...)",
+            "examples": []
+          },
+          {
+            "meaning": "(âm nhạc) cần bấm",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "động từ",
+        "meanings": [
+          {
+            "meaning": "(kỹ thuật) lắp van",
+            "examples": []
+          },
+          {
+            "meaning": "kiểm tra bằng van",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_valve.mp3",
+    "image": "4000B6_3240.jpg",
+    "phonetic": "[vælv]",
+    "definition_en": "A valve is a device attached to a pipe that controls the flow of liquid or air.",
+    "example_en": "The mechanic removed the dirt to clear the engine valve.",
+    "audio_meaning": "4000B6_valve_meaning.mp3",
+    "audio_example": "4000B6_valve_example.mp3",
+    "unit": 3
+  },
+  {
+    "id": 29,
+    "word": "member",
+    "pos": "danh từ",
+    "meaning_vi": "(sinh vật học) chân, tay, chi",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "(sinh vật học) chân, tay, chi",
+            "examples": []
+          },
+          {
+            "meaning": "bộ phạn (của một toàn thể)",
+            "examples": []
+          },
+          {
+            "meaning": "thành viên, hội viên",
+            "examples": [
+              "a member of the Vietnam Workers' Party: đảng viên đảng Lao động Việt-nam"
+            ]
+          },
+          {
+            "meaning": "vế (của một câu, một phương trình)",
+            "examples": []
+          },
+          {
+            "meaning": "unruly member: cái lưỡi",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_member.mp3",
+    "image": "4000B1_449.jpg",
+    "phonetic": "['membə]",
+    "definition_en": "member is a person who is part of a group.",
+    "example_en": "Julie is the newest member of our team.",
+    "audio_meaning": "4000B1_member_meaning.mp3",
+    "audio_example": "4000B1_member_example.mp3",
+    "unit": 3
+  },
+  {
+    "id": 30,
+    "word": "inherit",
+    "pos": "ngoại động từ",
+    "meaning_vi": "hưởng, thừa hưởng, thừa kế",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "hưởng, thừa hưởng, thừa kế",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "là người thừa kế",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_inherit.mp3",
+    "image": "4000B2_1051.jpg",
+    "phonetic": "[ɪn'herɪt]",
+    "definition_en": "To inherit it to get something from someone who has died.",
+    "example_en": " She inherited her mother's gold earrings.",
+    "audio_meaning": "4000B2_inherit_meaning.mp3",
+    "audio_example": "4000B2_inherit_example.mp3",
+    "unit": 3
+  },
+  {
+    "id": 31,
+    "word": "charitable",
+    "pos": "tính từ",
+    "meaning_vi": "nhân đức, từ thiện, có lòng thảo",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "nhân đức, từ thiện, có lòng thảo",
+            "examples": []
+          },
+          {
+            "meaning": "khoan dung, độ lượng",
+            "examples": []
+          },
+          {
+            "meaning": "charitable instution: nhà tế bần",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_charitable.mp3",
+    "image": "4000B3_1204.jpg",
+    "phonetic": "['ʧærɪtəbl]",
+    "definition_en": "When someone is charitable, they help people who are in need.",
+    "example_en": " My sister was charitable enough to help me buy my first house.",
+    "audio_meaning": "4000B3_charitable_meaning.mp3",
+    "audio_example": "4000B3_charitable_example.mp3",
+    "unit": 4
+  },
+  {
+    "id": 32,
+    "word": "transmit",
+    "pos": "ngoại động từ",
+    "meaning_vi": "chuyển giao, truyền",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "chuyển giao, truyền",
+            "examples": [
+              "to transmit a letter: chuyển một bức thư",
+              "to transmit order: truyền lệnh",
+              "to transmit disease: truyền bệnh",
+              "to transmit news: truyền tin",
+              "to transmit electricity: truyền điện",
+              "to transmit one's virtues to one's posterity: truyền những đức tính của mình cho con cái về sau"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_transmit.mp3",
+    "image": "4000B6_3259.jpg",
+    "phonetic": "[trænzˈmɪt], [træns-], [trɑːn-]",
+    "definition_en": "To transmit something means to pass it from one person or place to another.",
+    "example_en": "The radio tower transmits a signal to all the radios in a 20-kilometer radius.",
+    "audio_meaning": "4000B6_transmit_meaning.mp3",
+    "audio_example": "4000B6_transmit_example.mp3",
+    "unit": 4
+  },
+  {
+    "id": 33,
+    "word": "destiny",
+    "pos": "danh từ",
+    "meaning_vi": "vận số, vận mệnh, số phận",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "vận số, vận mệnh, số phận",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B4_destiny.mp3",
+    "image": "4000B4_2046.jpg",
+    "phonetic": "['destɪnɪ]",
+    "definition_en": "A destiny is all the things that happen or will happen to a person in their life.",
+    "example_en": " It was his destiny to become a great singer.",
+    "audio_meaning": "4000B4_destiny_meaning.mp3",
+    "audio_example": "4000B4_destiny_example.mp3",
+    "unit": 4
+  },
+  {
+    "id": 34,
+    "word": "torch",
+    "pos": "danh từ",
+    "meaning_vi": "đuốc ((nghĩa đen) & (nghĩa bóng))",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "đuốc ((nghĩa đen) & (nghĩa bóng))",
+            "examples": ["the torch of liberty: ngọn đuốc tự do"]
+          },
+          {
+            "meaning": "đèn",
+            "examples": ["electric torch: đèn pin"]
+          },
+          {
+            "meaning": "to carry a (the) torch for: (từ Mỹ,nghĩa Mỹ), (nghĩa bóng) mê (ai), yêu (ai)",
+            "examples": []
+          },
+          {
+            "meaning": "to hand on the torch: truyền lại kiến thức",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_torch.mp3",
+    "image": "4000B6_3277.jpg",
+    "phonetic": "[tɔːtʃ]",
+    "definition_en": "A torch is a stick with one end on fire that can be carried in order to give light.",
+    "example_en": "He grabbed a piece of wood and stuck it in the fire in order to make a torch.",
+    "audio_meaning": "4000B6_torch_meaning.mp3",
+    "audio_example": "4000B6_torch_example.mp3",
+    "unit": 4
+  },
+  {
+    "id": 35,
+    "word": "offer",
+    "pos": "danh từ",
+    "meaning_vi": "sự đưa tay ra, sự tỏ ra sẵn sàng cho, sự tỏ ra sẵn sàng làm",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự đưa tay ra, sự tỏ ra sẵn sàng cho, sự tỏ ra sẵn sàng làm",
+            "examples": []
+          },
+          {
+            "meaning": "sự chào hàng",
+            "examples": []
+          },
+          {
+            "meaning": "sự trả giá",
+            "examples": []
+          },
+          {
+            "meaning": "lời dạm hỏi, lời đề nghị, lời ướm, lời mời chào",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "biếu, tặng, dâng, hiến, cúng, tiến",
+            "examples": ["to offer someone something: biếu ai cái gì"]
+          },
+          {
+            "meaning": "xung phong (nghĩa bóng), tỏ ý muốn, để lộ ý muốn",
+            "examples": ["to offer to help somebody: xung phong, giúp đỡ ai"]
+          },
+          {
+            "meaning": "đưa ra bán, bày ra bán (hàng)",
+            "examples": []
+          },
+          {
+            "meaning": "giơ ra, chìa ra, đưa ra mời",
+            "examples": [
+              "to offer one's hand: giơ tay ra (để bắt)",
+              "to offer a few remarks: đưa ra một vài câu nhận xét"
+            ]
+          },
+          {
+            "meaning": "đưa ra đề nghị",
+            "examples": [
+              "to offer a plan: đưa ra một kế hoạch, đề nghị một kế hoạch"
+            ]
+          },
+          {
+            "meaning": "dạm, hỏi, ướm",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "cúng",
+            "examples": []
+          },
+          {
+            "meaning": "xảy ra, xảy đến, xuất hiện",
+            "examples": ["as opportunity offers: khi có dịp (xảy ra)"]
+          },
+          {
+            "meaning": "to offer battle: nghênh chiến",
+            "examples": []
+          },
+          {
+            "meaning": "to offer resistance: chống cự",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_offer.mp3",
+    "image": "4000B1_352.jpg",
+    "phonetic": "['ɔfə]",
+    "definition_en": "To offer is to present someone with something.",
+    "example_en": "He offered me the keys to his car.",
+    "audio_meaning": "4000B1_offer_meaning.mp3",
+    "audio_example": "4000B1_offer_example.mp3",
+    "unit": 4
+  },
+  {
+    "id": 36,
+    "word": "prohibit",
+    "pos": "ngoại động từ",
+    "meaning_vi": "cấm, ngăn cấm, cấm chỉ",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "cấm, ngăn cấm, cấm chỉ",
+            "examples": [
+              "smoking is prohibited: cấm hút thuốc",
+              "to prohibit someone from doing something: ngăn cấm người nào làm việc gì"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_prohibit.mp3",
+    "image": "4000B6_3255.jpg",
+    "phonetic": "[prəˈhɪbɪt]",
+    "definition_en": "To prohibit something means to not allow it.",
+    "example_en": "She prohibited the students from speaking until their work was done.",
+    "audio_meaning": "4000B6_prohibit_meaning.mp3",
+    "audio_example": "4000B6_prohibit_example.mp3",
+    "unit": 4
+  },
+  {
+    "id": 37,
+    "word": "length",
+    "pos": "danh từ",
+    "meaning_vi": "bề dài, chiều dài, độ dài",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "bề dài, chiều dài, độ dài",
+            "examples": ["at arm's length: cách một sải tay"]
+          },
+          {
+            "meaning": "to keep someone at arm's length: tránh không làm thân với ai",
+            "examples": []
+          },
+          {
+            "meaning": "at length: sau hết, cuối cùng",
+            "examples": []
+          },
+          {
+            "meaning": "đầy đủ chi tiết",
+            "examples": []
+          },
+          {
+            "meaning": "trong một thời gian dài",
+            "examples": []
+          },
+          {
+            "meaning": "at full length: hoàn toàn đầy đủ, không rút gọn, không cắt xén, không viết tắt (chữ viết)",
+            "examples": []
+          },
+          {
+            "meaning": "nằm dài",
+            "examples": []
+          },
+          {
+            "meaning": "at some length: với một số chi tiết",
+            "examples": []
+          },
+          {
+            "meaning": "to fall at full length: full to go to the lengthto go to any lengthlàm bất cứ cái gì có thể, không e dè câu nệ, không có gì có thể cản trở đượcto go the whole length of it(xem) goto go to the length of thinking that...đi đến chỗ nghĩ rằng...to win by a lengthhơn một thuyền, hơn một ngựa, hơn một xe... (trong những cuộc đua thuyền, ngựa, xe đạp...)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_length.mp3",
+    "image": "4000B1_290.jpg",
+    "phonetic": "[leŋ(k)θ]",
+    "definition_en": "The length of something is how long it is from one end to the other.",
+    "example_en": "The length of the floor is three meters.",
+    "audio_meaning": "4000B1_length_meaning.mp3",
+    "audio_example": "4000B1_length_example.mp3",
+    "unit": 4
+  },
+  {
+    "id": 38,
+    "word": "intestines",
+    "pos": "danh từ, (thường) số nhiều",
+    "meaning_vi": "(giải phẫu) ruột",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ, (thường) số nhiều",
+        "meanings": [
+          {
+            "meaning": "(giải phẫu) ruột",
+            "examples": [
+              "small intestine: ruột non",
+              "large intestine: ruột già"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "nội bộ",
+            "examples": ["intestine war: nội chiến"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_intestines.mp3",
+    "image": "4000B6_3289.jpg",
+    "phonetic": "[ɪnˈtɛstɪns]",
+    "definition_en": "intestines are tubes through which food passes after it leaves the stomach.",
+    "example_en": "Whatever you eat goes into your intestines.",
+    "audio_meaning": "4000B6_intestines_meaning.mp3",
+    "audio_example": "4000B6_intestines_example.mp3",
+    "unit": 4
+  },
+  {
+    "id": 39,
+    "word": "rage",
+    "pos": "danh từ",
+    "meaning_vi": "cơn thịnh nộ, cơn giận dữ",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "cơn thịnh nộ, cơn giận dữ",
+            "examples": [
+              "to fly inyo a rage: nổi xung, nổi cơn thịnh nộ",
+              "to be in a rage with someone: nổi xung với ai"
+            ]
+          },
+          {
+            "meaning": "cơn dữ dội (đau...), sự cuồng bạo, sự ác liệt (của cuộc chiến đấu...)",
+            "examples": [
+              "the rage of the wind: cơn gió dữ dội",
+              "the rage of the sea: biển động dữ dội",
+              "the rage of the battle: cuộc chiến đấu ác liệt"
+            ]
+          },
+          {
+            "meaning": "tính ham mê, sự say mê, sự mê cuồng (cái gì...)",
+            "examples": ["to have a rage for hunting: ham mê săn bắn"]
+          },
+          {
+            "meaning": "mốt thịnh hành, mốt phổ biến, cái hợp thị hiếu, người được thiên hạ ưa chuộng một thời",
+            "examples": [
+              "it is all the rage: cái đó trở thành cái mốt thịnh hành"
+            ]
+          },
+          {
+            "meaning": "thi hứng, cảm xúc mãnh liệt",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "nổi cơn thịnh nộ, nổi xung, giận điên lên",
+            "examples": ["to rage against (at) someone: nổi xung lên với ai"]
+          },
+          {
+            "meaning": "nổi cơn dữ dội (gió, sóng...), hoành hành (bệnh...), diễn ra ác liệt (cuộc chiến đấu...)",
+            "examples": [
+              "the wind is raging: gió thổi dữ dội",
+              "the sea is raging: biển động dữ dội",
+              "the battle had been raging for two days: cuộc chiến đấu diễn ra ác liệt trong hai ngày",
+              "the cholera is raging: bệnh tả đang hoành hành",
+              "to rage itself out: nguôi dần, lắng xuống, dịu đi",
+              "the storm has raged itself out: cơn bâo đã lắng xuống"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_rage.mp3",
+    "image": "4000B3_1572.jpg",
+    "phonetic": "[reɪʤ]",
+    "definition_en": "rage is a very angry feeling.",
+    "example_en": " The chef was filled with rage when his helpers ruined the meal.",
+    "audio_meaning": "4000B3_rage_meaning.mp3",
+    "audio_example": "4000B3_rage_example.mp3",
+    "unit": 4
+  },
+  {
+    "id": 40,
+    "word": "propulsion",
+    "pos": "danh từ",
+    "meaning_vi": "sự đẩy đi, sự đẩy tới",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự đẩy đi, sự đẩy tới",
+            "examples": []
+          },
+          {
+            "meaning": "(nghĩa bóng) sự thúc đẩy, sức thúc đẩy",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_propulsion.mp3",
+    "image": "4000B6_3336.jpg",
+    "phonetic": "[prəˈpʌlʃ(ə)n]",
+    "definition_en": "propulsion is the force that moves something forward.",
+    "example_en": "The propulsion lifted the rocket into the sky.",
+    "audio_meaning": "4000B6_propulsion_meaning.mp3",
+    "audio_example": "4000B6_propulsion_example.mp3",
+    "unit": 4
+  },
+  {
+    "id": 41,
+    "word": "subsidy",
+    "pos": "danh từ",
+    "meaning_vi": "tiền cấp",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "tiền cấp",
+            "examples": []
+          },
+          {
+            "meaning": "tiền trợ cấp",
+            "examples": ["housing subsidy: tiền trợ cấp nhà ở"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_subsidy.mp3",
+    "image": "4000B5_2478.jpg",
+    "phonetic": "['sʌbsɪdɪ]",
+    "definition_en": "Asubsidy is money given by the government to companies to assist them.",
+    "example_en": "The official gave the company asubsidy, so it could open two new factories.",
+    "audio_meaning": "4000B5_subsidy_meaning.mp3",
+    "audio_example": "4000B5_subsidy_example.mp3",
+    "unit": 5
+  },
+  {
+    "id": 42,
+    "word": "conclude",
+    "pos": "động từ",
+    "meaning_vi": "kết thúc, chấm dứt ((công việc...), bế mạc (phiên họp)",
+    "full_definition_vi": [
+      {
+        "pos": "động từ",
+        "meanings": [
+          {
+            "meaning": "kết thúc, chấm dứt ((công việc...), bế mạc (phiên họp)",
+            "examples": ["to conclude a speech: kết thúc bài nói"]
+          },
+          {
+            "meaning": "kết luận",
+            "examples": []
+          },
+          {
+            "meaning": "quyết định, giải quyết, dàn xếp, thu xếp",
+            "examples": []
+          },
+          {
+            "meaning": "ký kết",
+            "examples": ["to conclude a treaty: ký kết một bản hiệp ước"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_conclude.mp3",
+    "image": "4000B2_746.jpg",
+    "phonetic": "[kən'kluːd]",
+    "definition_en": "To conclude is to arrive at a logical end by looking at evidence.",
+    "example_en": "I saw crumbs on my dog's face, so I concluded that he ate my cookie.evidence: bằng chứng",
+    "audio_meaning": "4000B2_conclude_meaning.mp3",
+    "audio_example": "4000B2_conclude_example.mp3",
+    "unit": 5
+  },
+  {
+    "id": 43,
+    "word": "scheme",
+    "pos": "danh từ",
+    "meaning_vi": "sự sắp xếp theo hệ thống, sự phối hợp",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự sắp xếp theo hệ thống, sự phối hợp",
+            "examples": ["the scheme of colour: nguyên tắc phối hợp các màu"]
+          },
+          {
+            "meaning": "kế hoạch, âm mưu, mưu đồ, ý đồ",
+            "examples": ["to lay a scheme: sắp đặt một âm mưu"]
+          },
+          {
+            "meaning": "lược đồ, giản đồ, sơ đồ",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "động từ",
+        "meanings": [
+          {
+            "meaning": "vạch kế hoạch (làm gì), có kế hoạch thực hiện (điều gì)",
+            "examples": []
+          },
+          {
+            "meaning": "âm mưu, mưu đồ (làm việc gì)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_scheme.mp3",
+    "image": "4000B3_1497.jpg",
+    "phonetic": "[skiːm]",
+    "definition_en": "A scheme is a plan or design.",
+    "example_en": "Mickey and Minnie came up with a scheme to solve the problem.",
+    "audio_meaning": "4000B3_scheme_meaning.mp3",
+    "audio_example": "4000B3_scheme_example.mp3",
+    "unit": 5
+  },
+  {
+    "id": 44,
+    "word": "dash",
+    "pos": "danh từ",
+    "meaning_vi": "sự va chạm, sự đụng mạnh",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự va chạm, sự đụng mạnh",
+            "examples": []
+          },
+          {
+            "meaning": "tiếng nước vỗ bờ, tiếng nước vỗ",
+            "examples": []
+          },
+          {
+            "meaning": "sự lao tới, sự xông tới, sự nhảy bổ vào",
+            "examples": [
+              "to make a dash at (against) the enemy: lao tới kẻ thù",
+              "to make a dash for something: xống tới lấy cái gì"
+            ]
+          },
+          {
+            "meaning": "sự hăng hái, sự hăm hở, nghị lực, tính táo bạo, tính kiên quyết",
+            "examples": [
+              "a man of skill and dash: một người có kỹ năng và nghị lực"
+            ]
+          },
+          {
+            "meaning": "vết, nét (tô màu trên bức hoạ...)",
+            "examples": []
+          },
+          {
+            "meaning": "chút ít, ít, chút xíu",
+            "examples": [
+              "a dash of vinegar: một tí giấm",
+              "there is a romantic dash in it: có một chút gì lãng mạng trong đó"
+            ]
+          },
+          {
+            "meaning": "vẻ phô trương, dáng chưng diện",
+            "examples": [
+              "to cut a dash: có vẻ bảnh bao, làm ra vẻ làm ra dáng, loè, khoe khoang, phô trương"
+            ]
+          },
+          {
+            "meaning": "nét viết nhanh",
+            "examples": []
+          },
+          {
+            "meaning": "gạch ngang (đầu dòng...)",
+            "examples": []
+          },
+          {
+            "meaning": "(thể dục,thể thao) cuộc đua ngắn",
+            "examples": ["hundredmetre dash: cuộc chạy đua 100 mét"]
+          },
+          {
+            "meaning": "(từ Mỹ,nghĩa Mỹ) (như) dashboard",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "đập vỡ, làm tan nát",
+            "examples": [
+              "to dash to pieces: đập vỡ ra từng mảnh",
+              "flowers dashed by rain: những bông hoa bị mưa gió làm tan nát"
+            ]
+          },
+          {
+            "meaning": "(nghĩa bóng) làm tan vỡ, làm tiêu tan, làm lúng túng, làm bối rối, làm thất vọng, làm chán nản",
+            "examples": [
+              "to dash all one's hopes: làm tiêu tan hết cả hy vọng",
+              "to dash one's plan: làm vỡ kế hoạch",
+              "to look quite dashed: trông chán nản thất vọng ra mặt, trông bối rối lúng túng lắm"
+            ]
+          },
+          {
+            "meaning": "ném mạnh, văng mạnh, va mạnh",
+            "examples": []
+          },
+          {
+            "meaning": "to dash the glass agianst the wall: ném mạnh cái cốc vào tường",
+            "examples": []
+          },
+          {
+            "meaning": "vảy, hất (nước...)",
+            "examples": ["to dash water over something: vảy nước lên cái gì"]
+          },
+          {
+            "meaning": "pha, hoà, trộn",
+            "examples": ["wine dashed with water: rượu vang pha thêm nước"]
+          },
+          {
+            "meaning": "gạch đít",
+            "examples": []
+          },
+          {
+            "meaning": "(từ lóng)",
+            "examples": ["oh, dash!: mẹ kiếp!"]
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "lao tới, xông tới, nhảy bổ tới",
+            "examples": [
+              "to dash from the room: lao ra khỏi căn phòng",
+              "to dash along the street: lao đi trên đường phố",
+              "to dash up to the door: xô vào cửa"
+            ]
+          },
+          {
+            "meaning": "va mạnh, đụng mạnh",
+            "examples": [
+              "the waves dashed against the cliff: sóng vỗ mạnh vào vách đá"
+            ]
+          },
+          {
+            "meaning": "to dash along: lao đi",
+            "examples": []
+          },
+          {
+            "meaning": "to dash at: xông vào, nhảy bổ vào",
+            "examples": []
+          },
+          {
+            "meaning": "to dash away: xô mạnh ra xa, đẩy mạnh ra xa, quăng mạnh ra xa",
+            "examples": []
+          },
+          {
+            "meaning": "vọt ra xa",
+            "examples": []
+          },
+          {
+            "meaning": "to dash down: đạp mạnh xuống, vứt mạnh xuống",
+            "examples": []
+          },
+          {
+            "meaning": "nhảy bổ xuống, lao xuống (dốc...)",
+            "examples": []
+          },
+          {
+            "meaning": "viết nhanh, thảo nhanh",
+            "examples": []
+          },
+          {
+            "meaning": "to dash in: vẽ nhanh, vẽ phác",
+            "examples": []
+          },
+          {
+            "meaning": "lao vào, xông vào, nhảy bổ vào",
+            "examples": ["to dash off one's tears: lau vội nước mắt"]
+          },
+          {
+            "meaning": "thảo nhanh (bức thư...), vẽ nhanh (bức hoạ...)",
+            "examples": []
+          },
+          {
+            "meaning": "lao đi",
+            "examples": []
+          },
+          {
+            "meaning": "to dash out: gạch đi, xoá đi",
+            "examples": []
+          },
+          {
+            "meaning": "đánh vỡ (óc...)",
+            "examples": []
+          },
+          {
+            "meaning": "lao ra",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_dash.mp3",
+    "image": "4000B5_2807.jpg",
+    "phonetic": "[dæʃ]",
+    "definition_en": "To dash means to run or move quickly.",
+    "example_en": "Helen dashed up the stairs, so she wouldn’t be late for her appointment.",
+    "audio_meaning": "4000B5_dash_meaning.mp3",
+    "audio_example": "4000B5_dash_example.mp3",
+    "unit": 5
+  },
+  {
+    "id": 45,
+    "word": "examine",
+    "pos": "ngoại động từ",
+    "meaning_vi": "khám xét, xem xét, thẩm tra, khảo sát, nghiên cứu",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "khám xét, xem xét, thẩm tra, khảo sát, nghiên cứu",
+            "examples": []
+          },
+          {
+            "meaning": "hỏi thi, sát hạch (một thí sinh)",
+            "examples": []
+          },
+          {
+            "meaning": "(pháp lý) thẩm vấn",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "((thường) + into) thẩm tra, xem xét, khảo sát",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_examine.mp3",
+    "image": "4000B1_528.jpg",
+    "phonetic": "[ɪg'zæmɪn]",
+    "definition_en": "To examine something is to look at it carefully.",
+    "example_en": "The doctor examined my eyes today.",
+    "audio_meaning": "4000B1_examine_meaning.mp3",
+    "audio_example": "4000B1_examine_example.mp3",
+    "unit": 5
+  },
+  {
+    "id": 46,
+    "word": "combat",
+    "pos": "danh từ",
+    "meaning_vi": "trận, trận đấu, trận đánh, trận chiến đấu",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "trận, trận đấu, trận đánh, trận chiến đấu",
+            "examples": [
+              "single combat: trận đánh tay đôi",
+              "combat of wits: cuộc đấu trí"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "động từ",
+        "meanings": [
+          {
+            "meaning": "đánh nhau, chiến đấu",
+            "examples": [
+              "to combat with (against) somebody: đánh nhau với ai, đọ sức với ai",
+              "to combat for something: chiến đấu vì cái gì"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_combat.mp3",
+    "image": "4000B5_2746.jpg",
+    "phonetic": "[ˈkɒmbæt]",
+    "definition_en": "combat is fighting between two people or groups.",
+    "example_en": "The two warriors were locked in combat.",
+    "audio_meaning": "4000B5_combat_meaning.mp3",
+    "audio_example": "4000B5_combat_example.mp3",
+    "unit": 5
+  },
+  {
+    "id": 47,
+    "word": "hybrid",
+    "pos": "danh từ",
+    "meaning_vi": "cây lai, vật lai, người lai",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "cây lai, vật lai, người lai",
+            "examples": []
+          },
+          {
+            "meaning": "từ ghép lai",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "lai",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_hybrid.mp3",
+    "image": "4000B5_2988.jpg",
+    "phonetic": "[ˈhaɪbrɪd]",
+    "definition_en": "A hybrid is a mixture of different things or styles.",
+    "example_en": "In Greek mythology, a centaur is a hybrid of a man and a horse.",
+    "audio_meaning": "4000B5_hybrid_meaning.mp3",
+    "audio_example": "4000B5_hybrid_example.mp3",
+    "unit": 5
+  },
+  {
+    "id": 48,
+    "word": "supreme",
+    "pos": "tính từ",
+    "meaning_vi": "tối cao",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "tối cao",
+            "examples": ["Supreme Soviet: Xô-viết tối cao (Liên-xô)"]
+          },
+          {
+            "meaning": "lớn nhất, quan trọng nhất",
+            "examples": [
+              "supreme courage: sự dũng cảm lớn nhất",
+              "the supreme test of fadelity: sự thử thách quan trọng nhất về lòng trung thành"
+            ]
+          },
+          {
+            "meaning": "cuối cùng",
+            "examples": ["the supreme hour: giờ hấp hối, lúc lâm chung"]
+          },
+          {
+            "meaning": "the supreme Pontiff: Giáo hoàng",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_supreme.mp3",
+    "image": "4000B3_1597.jpg",
+    "phonetic": "[s(j)uː'priːm]",
+    "definition_en": "When something is supreme, it is the highest or best.",
+    "example_en": " The supreme officer was in charge of keeping the citizens calm.",
+    "audio_meaning": "4000B3_supreme_meaning.mp3",
+    "audio_example": "4000B3_supreme_example.mp3",
+    "unit": 5
+  },
+  {
+    "id": 49,
+    "word": "idiom",
+    "pos": "danh từ",
+    "meaning_vi": "thành ngữ",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "thành ngữ",
+            "examples": []
+          },
+          {
+            "meaning": "đặc ngữ",
+            "examples": []
+          },
+          {
+            "meaning": "cách biểu diễn, cách diễn đạt (của một nhà văn...)",
+            "examples": ["Shakespeare's idiom: cách diễn đạt của Sếch-xpia"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_idiom.mp3",
+    "image": "4000B1_592.jpg",
+    "phonetic": "['ɪdɪəm]",
+    "definition_en": "idiom is a phrase with a meaning different from its words.",
+    "example_en": "The idiom \"when pigs fly\" means that something will never happen.",
+    "audio_meaning": "4000B1_idiom_meaning.mp3",
+    "audio_example": "4000B1_idiom_example.mp3",
+    "unit": 5
+  },
+  {
+    "id": 50,
+    "word": "skinny",
+    "pos": "tính từ",
+    "meaning_vi": "(thuộc) da, như da",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "(thuộc) da, như da",
+            "examples": []
+          },
+          {
+            "meaning": "gầy giơ xương, gầy nhom",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_skinny.mp3",
+    "image": "4000B5_2819.jpg",
+    "phonetic": "[ˈskɪnɪ]",
+    "definition_en": "If someone is skinny, they are extremely thin.",
+    "example_en": "Polly is very skinny. I think she needs to eat more.",
+    "audio_meaning": "4000B5_skinny_meaning.mp3",
+    "audio_example": "4000B5_skinny_example.mp3",
+    "unit": 5
+  },
+  {
+    "id": 51,
+    "word": "convenient",
+    "pos": "tính từ",
+    "meaning_vi": "tiện lợi, thuận lợi, thích hợp",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "tiện lợi, thuận lợi, thích hợp",
+            "examples": [
+              "to find a convenient opportunity to do something: tìm cơ hội thuận lợi để làm việc gì",
+              "convenient to the hand: thuận tay"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B4_convenient.mp3",
+    "image": "4000B4_2122.jpg",
+    "phonetic": "[kən'viːnɪənt]",
+    "definition_en": "When something is convenient, it is easy to do and does not take a lot of work.",
+    "example_en": " The bus is a convenient way to get to school.",
+    "audio_meaning": "4000B4_convenient_meaning.mp3",
+    "audio_example": "4000B4_convenient_example.mp3",
+    "unit": 6
+  },
+  {
+    "id": 52,
+    "word": "reproductive",
+    "pos": "tính từ",
+    "meaning_vi": "(thuộc) tái sản xuất",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "(thuộc) tái sản xuất",
+            "examples": []
+          },
+          {
+            "meaning": "có khả năng sinh sôi nẩy nở, sinh sản",
+            "examples": ["reproductive organs: (sinh vật học) cơ quan sinh sản"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_reproductive.mp3",
+    "image": "4000B5_2536.jpg",
+    "phonetic": "[ˌriːprə'dʌktɪv]",
+    "definition_en": "If something is reproductive, it has to do with a living thing producing young.",
+    "example_en": "The reproductive system of a plant is simple.",
+    "audio_meaning": "4000B5_reproductive_meaning.mp3",
+    "audio_example": "4000B5_reproductive_example.mp3",
+    "unit": 6
+  },
+  {
+    "id": 53,
+    "word": "improvise",
+    "pos": "ngoại động từ",
+    "meaning_vi": "ứng khẩu, cương (trên sân khấu...)",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "ứng khẩu, cương (trên sân khấu...)",
+            "examples": []
+          },
+          {
+            "meaning": "làm ứng biến, làm ngay được",
+            "examples": [
+              "to improvise a bed out of leaves: ứng biến làm ngay được một chỗ nằm bằng lá cây"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_improvise.mp3",
+    "image": "4000B6_3011.jpg",
+    "phonetic": "[ˈɪmprəvaɪz]",
+    "definition_en": "To improvise something is to do it with whatever is available or without planning.",
+    "example_en": "There was no meat for the pizza, so we improvised with what was in the fridge.",
+    "audio_meaning": "4000B6_improvise_meaning.mp3",
+    "audio_example": "4000B6_improvise_example.mp3",
+    "unit": 6
+  },
+  {
+    "id": 54,
+    "word": "jolly",
+    "pos": "tính từ",
+    "meaning_vi": "vui vẻ, vui tươi, vui nhộn",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "vui vẻ, vui tươi, vui nhộn",
+            "examples": []
+          },
+          {
+            "meaning": "chếnh choáng say, ngà ngà say",
+            "examples": ["the jolly god: thần rượu"]
+          },
+          {
+            "meaning": "(từ lóng) thú vị, dễ chịu",
+            "examples": ["jolly weather: thời tiết dễ chịu"]
+          },
+          {
+            "meaning": "(mỉa mai) thú vị gớm, dễ chịu gớm, hay ho gớm",
+            "examples": [
+              "what a jolly mess I am in!: mình thật là lâm vào một hoàn cảnh dễ chịu gớm!"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "phó từ",
+        "meanings": [
+          {
+            "meaning": "(từ lóng) rất, hết sức, lắm, quá",
+            "examples": [
+              "jolly tired: mệt hết sức, mệt lử",
+              "you will jolly well have to do it: anh phải làm cái đó là đúng quá đi rồi, nhất định là anh phải làm cái đó rồi"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "(thông tục) ((thường) + along) tán tỉnh, phỉnh phờ, phỉnh nịnh",
+            "examples": []
+          },
+          {
+            "meaning": "đùa bỡn, trêu chòng, chòng ghẹo",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_jolly.mp3",
+    "image": "4000B6_3212.jpg",
+    "phonetic": "[ˈdʒɒlɪ]",
+    "definition_en": "When someone is jolly, they are cheerful and happy.",
+    "example_en": "My grandmother’s jolly attitude always made me smile.",
+    "audio_meaning": "4000B6_jolly_meaning.mp3",
+    "audio_example": "4000B6_jolly_example.mp3",
+    "unit": 6
+  },
+  {
+    "id": 55,
+    "word": "spare",
+    "pos": "tính từ",
+    "meaning_vi": "thừa, dư, có để dành",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "thừa, dư, có để dành",
+            "examples": [
+              "spare time: thì giờ rỗi",
+              "spare cash: tiền để dành",
+              "spare room: buồn ngủ dành riêng cho khách"
+            ]
+          },
+          {
+            "meaning": "thanh đạm, sơ sài",
+            "examples": ["spare diet: chế độ ăn uống thanh đạm"]
+          },
+          {
+            "meaning": "gầy go",
+            "examples": ["man of spare frame: người gầy gò"]
+          },
+          {
+            "meaning": "để thay thế (đồ phụ tùng)",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "đồ phụ tùng (máy móc)",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "để dành, tiết kiệm",
+            "examples": [
+              "to spare expense: tiết kiệm việc chi tiêu",
+              "to spare no efforts: không tiếc sức"
+            ]
+          },
+          {
+            "meaning": "không cần đến, có thừa",
+            "examples": [
+              "we cannot spare him just now: hiện giờ chúng tôi rất cần đến anh ta",
+              "I can spare you 10 d: tôi có thể cho anh vay tạm 10 đồng"
+            ]
+          },
+          {
+            "meaning": "tha, tha thứ, dung thứ, miễn cho",
+            "examples": [
+              "to spare someone's life: thay mạng cho ai, tha giết ai",
+              "to spare someone's feelings: không chạm đến tình cảm của ai",
+              "I could have spared the explanation: đáng lẽ tôi đã có thể miễn việc giải thích",
+              "spare me these jeremiads: xin miễn cho tôi những lời than van đó"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "ăn uống thanh đạm",
+            "examples": []
+          },
+          {
+            "meaning": "tằn tiện",
+            "examples": []
+          },
+          {
+            "meaning": "spare the rod and spoil the child: (xem) rod",
+            "examples": []
+          },
+          {
+            "meaning": "to have enought and to spare: có của ăn của để, dư dật",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_spare.mp3",
+    "image": "4000B3_1577.jpg",
+    "phonetic": "[speə]",
+    "definition_en": "To spare something is to give it because you have more than you need.",
+    "example_en": " I wanted to help him but I couldn't spare a tire.",
+    "audio_meaning": "4000B3_spare_meaning.mp3",
+    "audio_example": "4000B3_spare_example.mp3",
+    "unit": 6
+  },
+  {
+    "id": 56,
+    "word": "nuisance",
+    "pos": "danh từ",
+    "meaning_vi": "mối gây thiệt hại, mối gây khó chịu, mối làm phiền toái, mối làm rầy, mối làm phiền",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "mối gây thiệt hại, mối gây khó chịu, mối làm phiền toái, mối làm rầy, mối làm phiền",
+            "examples": [
+              "he is a nuisance: thằng cha hay làm phiền, thằng cha hay quấy rầy",
+              "to make oneself a nuisance to somebody: quấy rầy ai, làm phiền ai",
+              "commit no nuisance: cấm đổ rác, cấm phóng uế (yết thị)",
+              "what a nuisance!: thật phiền!, thật rầy rà!, thật khó chịu!"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_nuisance.mp3",
+    "image": "4000B6_3015.jpg",
+    "phonetic": "[ˈnjuːs(ə)n(t)s]",
+    "definition_en": "A nuisance is a person or thing that is annoying or causes a lot of problems.",
+    "example_en": "The teenager considered her noisy little brothers to be quite a nuisance.",
+    "audio_meaning": "4000B6_nuisance_meaning.mp3",
+    "audio_example": "4000B6_nuisance_example.mp3",
+    "unit": 6
+  },
+  {
+    "id": 57,
+    "word": "resume",
+    "pos": "ngoại động từ",
+    "meaning_vi": "lấy lại, chiếm lại, hồi phục lại",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "lấy lại, chiếm lại, hồi phục lại",
+            "examples": [
+              "to resume one's spirits: lấy lại tinh thần, lấy lại can đảm",
+              "to resume a territory: chiếm lại một lãnh thổ"
+            ]
+          },
+          {
+            "meaning": "lại bắt đầu, lại tiếp tục (sau khi nghỉ, dừng)",
+            "examples": ["to resume work: lại tiếp tục công việc"]
+          },
+          {
+            "meaning": "tóm tắt lại, nêu điểm chính",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_resume.mp3",
+    "image": "4000B2_1034.jpg",
+    "phonetic": "[rɪ'zjuːm]",
+    "definition_en": "To resume something means to start it again after taking a break.",
+    "example_en": " I put the newspaper down to eat breakfast. Then I resumed reading.",
+    "audio_meaning": "4000B2_resume_meaning.mp3",
+    "audio_example": "4000B2_resume_example.mp3",
+    "unit": 6
+  },
+  {
+    "id": 58,
+    "word": "surface",
+    "pos": "danh từ",
+    "meaning_vi": "mặt ngoài, bề mặt",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "mặt ngoài, bề mặt",
+            "examples": [
+              "a cube has six surface s: hình lập phương có sáu mặt",
+              "his politeness is only on (of) the surface: sự lễ phép của nó chỉ là ngoài mặt"
+            ]
+          },
+          {
+            "meaning": "(định ngữ) bề ngoài",
+            "examples": ["surface impressions: những ấn tượng bề ngoài"]
+          },
+          {
+            "meaning": "(định ngữ) ở mặt biển",
+            "examples": [
+              "surface craft: tàu mặt biển (đối lại với tàu ngầm)",
+              "surface mail: thư gửi đường biển"
+            ]
+          },
+          {
+            "meaning": "(toán học) mặt",
+            "examples": [
+              "plane surface: mặt phẳng",
+              "surface of contact: mặt tiếp xúc"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "trang trí mặt ngoài",
+            "examples": []
+          },
+          {
+            "meaning": "cho nổi lên mặt nước (tàu ngầm)",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "nổi lên mặt nước (tàu ngầm)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_surface.mp3",
+    "image": "4000B1_600.jpg",
+    "phonetic": "['sɜːfɪs]",
+    "definition_en": "surface of something is the top part or outside of it.",
+    "example_en": "The surface of the moon is very rough.",
+    "audio_meaning": "4000B1_surface_meaning.mp3",
+    "audio_example": "4000B1_surface_example.mp3",
+    "unit": 6
+  },
+  {
+    "id": 59,
+    "word": "resist",
+    "pos": "danh từ",
+    "meaning_vi": "chất cản màu (phết vào vải để cho thuốc nhuộm không ăn ở những chỗ không cần nhuộm màu)",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "chất cản màu (phết vào vải để cho thuốc nhuộm không ăn ở những chỗ không cần nhuộm màu)",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "động từ",
+        "meanings": [
+          {
+            "meaning": "kháng cự, chống lại",
+            "examples": [
+              "to resist an attack: chống lại một cuộc tấn công",
+              "to resist a disease: chống lại bệnh tật"
+            ]
+          },
+          {
+            "meaning": "chịu đựng được, chịu được",
+            "examples": ["to resist heat: chịu được nóng"]
+          },
+          {
+            "meaning": "cưỡng lại, không mắc phải",
+            "examples": ["to resist a bad habit: cưỡng lại một thói quen xấu"]
+          },
+          {
+            "meaning": "((thường) phủ định) nhịn được",
+            "examples": [
+              "I can't resist good coffee: cà phê ngon thì tôi không nhịn được",
+              "he can never resist a joke: nó không thể nào nhịn được đùa, nó không thể nào nhịn cười được khi nghe một câu chuyện đùa"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_resist.mp3",
+    "image": "4000B2_793.jpg",
+    "phonetic": "[rɪ'zɪst]",
+    "definition_en": "To resist something is to fight against it.",
+    "example_en": " He resisted the treatment at the hospital.",
+    "audio_meaning": "4000B2_resist_meaning.mp3",
+    "audio_example": "4000B2_resist_example.mp3",
+    "unit": 6
+  },
+  {
+    "id": 60,
+    "word": "quarrel",
+    "pos": "danh từ",
+    "meaning_vi": "sự câi nhau, sự gây chuyện, sự sinh sự, mối tranh chấp",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự câi nhau, sự gây chuyện, sự sinh sự, mối tranh chấp",
+            "examples": [
+              "to pick (seek) a quarrel with somebody: gây chuyện cãi nhau với ai"
+            ]
+          },
+          {
+            "meaning": "mối bất hoà",
+            "examples": []
+          },
+          {
+            "meaning": "cớ để phàn nàn, cớ để rầy rà",
+            "examples": [
+              "to have no quarrel against (with) somebody: không có gì đáng phàn nàn về ai"
+            ]
+          },
+          {
+            "meaning": "to espouse somebody's quarrel: to fight somebody's quarrel for himđứng ra bênh vực người nào",
+            "examples": []
+          },
+          {
+            "meaning": "cãi nhau",
+            "examples": [
+              "cãi nhauto quarrel with somebody about (for) something: câi nhau với ai về vấn đề gì",
+              "to quarrel with somebody about (for) something: câi nhau với ai về vấn đề gì"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "cãi nhau",
+            "examples": [
+              "to quarrel with somebody about (for) something: câi nhau với ai về vấn đề gì"
+            ]
+          },
+          {
+            "meaning": "bất hoà, giận nhau",
+            "examples": []
+          },
+          {
+            "meaning": "(+ with) đỗ lỗi, chê, phàn nàn",
+            "examples": []
+          },
+          {
+            "meaning": "a bad workman quarrel with his tools: (tục ngữ) vụng múa chê đất lệch",
+            "examples": []
+          },
+          {
+            "meaning": "to quarrel with one's brerad and butter: bỏ nghề đã nuôi sống mình, đi ngược lại với quyền lợi của chính mình",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_quarrel.mp3",
+    "image": "4000B3_1380.jpg",
+    "phonetic": "['kwɔr(ə)l]",
+    "definition_en": "To quarrel is to argue or fight.",
+    "example_en": "Billy quarreled with his wife about buying a new house.",
+    "audio_meaning": "4000B3_quarrel_meaning.mp3",
+    "audio_example": "4000B3_quarrel_example.mp3",
+    "unit": 6
+  },
+  {
+    "id": 61,
+    "word": "harm",
+    "pos": "danh từ",
+    "meaning_vi": "hại, tai hại, tổn hao, thiệt hại",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "hại, tai hại, tổn hao, thiệt hại",
+            "examples": [
+              "to do somebody harm: làm hại ai",
+              "to keep out of harms way: tránh những cái có thể gây tai hại, ở vào một nơi an toàn"
+            ]
+          },
+          {
+            "meaning": "ý muốn hại người, điều gây tai hại",
+            "examples": [
+              "there's no harm in him: nó không cố ý hại ai",
+              "he meant no harm: nó không có ý muốn hại ai"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "làm hại, gây tai hại, làm tổn hại",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_harm.mp3",
+    "image": "4000B1_133.jpg",
+    "phonetic": "[hɑːm]",
+    "definition_en": "harm is hurt or problems caused to someone or something.",
+    "example_en": "A hot iron can cause great harm if you are not careful.",
+    "audio_meaning": "4000B1_harm_meaning.mp3",
+    "audio_example": "4000B1_harm_example.mp3",
+    "unit": 7
+  },
+  {
+    "id": 62,
+    "word": "drown",
+    "pos": "nội động từ",
+    "meaning_vi": "chết đuối",
+    "full_definition_vi": [
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "chết đuối",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "dìm chết, làm chết đuối",
+            "examples": [
+              "to be drowned: bị chết đuối (vì tai nạn...)",
+              "to drown oneself: nhảy xuống (sông) tự tử, đâm đầu xuống (sông...) tự tử"
+            ]
+          },
+          {
+            "meaning": "pha loãng quá, pha nhiều nước quá (vào rượu...)",
+            "examples": []
+          },
+          {
+            "meaning": "làm ngập lụt, làm ngập nước, làm ướt đầm đìa, làm giàn giụa",
+            "examples": [
+              "drowned in tears: đầm đìa nước mắt",
+              "like a drowned rat: ướt như chuột lột"
+            ]
+          },
+          {
+            "meaning": "làm chìn đắm, làm lấp, làm át (tiếng nói...), làm tiêu (nỗi sầu...)",
+            "examples": [
+              "to be drowned in sleep: chìm đắm trong giấc ngủ, ngủ say mê mệt",
+              "to drown someone's voice: làm át tiếng nói của ai",
+              "to drown one's sorrow in drink: uống rượu tiêu sầu"
+            ]
+          },
+          {
+            "meaning": "to be drowned out: bị lụt lội phải lánh khỏi nhà",
+            "examples": []
+          },
+          {
+            "meaning": "to drowing man will catch at a straw: (xem) catch",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_drown.mp3",
+    "image": "4000B3_1724.jpg",
+    "phonetic": "[draun]",
+    "definition_en": "To drown is to die from not being able to breathe underwater.",
+    "example_en": "He would have drowned if the sailors would not have rescued him.",
+    "audio_meaning": "4000B3_drown_meaning.mp3",
+    "audio_example": "4000B3_drown_example.mp3",
+    "unit": 7
+  },
+  {
+    "id": 63,
+    "word": "toward",
+    "pos": "tính từ",
+    "meaning_vi": "(từ cổ,nghĩa cổ) dễ bảo, dễ dạy, ngoan",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "(từ cổ,nghĩa cổ) dễ bảo, dễ dạy, ngoan",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "giới từ+ (towards)",
+        "meanings": [
+          {
+            "meaning": "về phía, hướng về",
+            "examples": ["he was running toward us: nó chạy về phía chúng tôi"]
+          },
+          {
+            "meaning": "vào khoảng",
+            "examples": ["toward the end of the week: vào khoảng cuối tuần"]
+          },
+          {
+            "meaning": "đối với",
+            "examples": ["his attitude toward me: thái độ của hắn đối với tôi"]
+          },
+          {
+            "meaning": "để, cho, vì",
+            "examples": [
+              "to save money toward one's old age: dành dụm tiền cho tuổi già"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_toward.mp3",
+    "image": "4000B1_379.jpg",
+    "phonetic": "['təuəd]",
+    "definition_en": "If you go toward something, you go closer to it.",
+    "example_en": "Santa walked toward my house with a special tree.",
+    "audio_meaning": "4000B1_toward_meaning.mp3",
+    "audio_example": "4000B1_toward_example.mp3",
+    "unit": 7
+  },
+  {
+    "id": 64,
+    "word": "orangutan",
+    "pos": "danh từ",
+    "meaning_vi": "đười ươi (dã nhân)",
+    "full_definition_vi": [],
+    "audio_pronunciation": "4000B5_orangutan.mp3",
+    "image": "4000B5_2953.jpg",
+    "phonetic": "[ɔːˈræŋ.ə.tæn]",
+    "definition_en": "An orangutan is a large ape with red and brown hair and long arms.",
+    "example_en": "orangutans use their long arms to swing from trees.",
+    "audio_meaning": "4000B5_orangutan_meaning.mp3",
+    "audio_example": "4000B5_orangutan_example.mp3",
+    "unit": 7
+  },
+  {
+    "id": 65,
+    "word": "inspire",
+    "pos": "ngoại động từ",
+    "meaning_vi": "truyền (cảm hứng, ý nghĩ...), truyền cảm hứng cho (ai), gây cảm hứng cho (ai)",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "truyền (cảm hứng, ý nghĩ...), truyền cảm hứng cho (ai), gây cảm hứng cho (ai)",
+            "examples": []
+          },
+          {
+            "meaning": "gây (tình cảm...) (cho ai), gây ra, xúi giục",
+            "examples": []
+          },
+          {
+            "meaning": "hít vào, thở vào",
+            "examples": []
+          },
+          {
+            "meaning": "(tôn giáo) linh cảm",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_inspire.mp3",
+    "image": "4000B2_1091.jpg",
+    "phonetic": "[ɪn'spaɪə]",
+    "definition_en": "To inspire means to make person want to do something.",
+    "example_en": " I was inspired to write a poem after watching the sunrise.",
+    "audio_meaning": "4000B2_inspire_meaning.mp3",
+    "audio_example": "4000B2_inspire_example.mp3",
+    "unit": 7
+  },
+  {
+    "id": 66,
+    "word": "prevail",
+    "pos": "nội động từ",
+    "meaning_vi": "((thường) + against, over) thắng thế, chiếm ưu thế",
+    "full_definition_vi": [
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "((thường) + against, over) thắng thế, chiếm ưu thế",
+            "examples": [
+              "socialism will prevail: chủ nghĩa xã hội sẽ thắng thế",
+              "to prevail over the enemy: chiếm ưu thế đối với kẻ địch"
+            ]
+          },
+          {
+            "meaning": "thịnh hành, lưu hành, phổ biến khắp, lan khắp, thường xảy ra nhiều",
+            "examples": [
+              "according to the custom that prevailed in those days: theo phong tục thịnh hành thời bấy giờ"
+            ]
+          },
+          {
+            "meaning": "(+ on, upon) khiến, thuyết phục",
+            "examples": [
+              "to prevail upon somebody to do something: thuyết phục ai làm gì"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_prevail.mp3",
+    "image": "4000B6_3175.jpg",
+    "phonetic": "[prɪˈveɪl]",
+    "definition_en": "To prevail means to be accepted or very common.",
+    "example_en": "Unfortunately, injustice still prevails in the country’s court system.",
+    "audio_meaning": "4000B6_prevail_meaning.mp3",
+    "audio_example": "4000B6_prevail_example.mp3",
+    "unit": 7
+  },
+  {
+    "id": 67,
+    "word": "cattle",
+    "pos": "danh từ",
+    "meaning_vi": "(thông tục) ngựa",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "(thông tục) ngựa",
+            "examples": []
+          },
+          {
+            "meaning": "những kẻ đáng khinh, những kẻ thô lỗ, vũ phu",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_cattle.mp3",
+    "image": "4000B3_1664.jpg",
+    "phonetic": "['kætl]",
+    "definition_en": "cattle are cows and bulls, especially on a farm.",
+    "example_en": " The rancher's cattle were eating the grass in the field.",
+    "audio_meaning": "4000B3_cattle_meaning.mp3",
+    "audio_example": "4000B3_cattle_example.mp3",
+    "unit": 7
+  },
+  {
+    "id": 68,
+    "word": "anew",
+    "pos": "phó từ",
+    "meaning_vi": "lại, một lần nữa, lại nữa, bằng cách khác",
+    "full_definition_vi": [
+      {
+        "pos": "phó từ",
+        "meanings": [
+          {
+            "meaning": "lại, một lần nữa, lại nữa, bằng cách khác",
+            "examples": ["to begin anew: bắt đầu lại"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_anew.mp3",
+    "image": "4000B6_3322.jpg",
+    "phonetic": "[əˈn(j)uː]",
+    "definition_en": "If you do something anew, you do it again and in a different way.",
+    "example_en": "Though he had failed his driving test, he decided to try it anew.",
+    "audio_meaning": "4000B6_anew_meaning.mp3",
+    "audio_example": "4000B6_anew_example.mp3",
+    "unit": 7
+  },
+  {
+    "id": 69,
+    "word": "prototype",
+    "pos": "danh từ",
+    "meaning_vi": "người đầu tiên, vật đầu tiên, mẫu đầu tiên, nguyên mẫu",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "người đầu tiên, vật đầu tiên, mẫu đầu tiên, nguyên mẫu",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_prototype.mp3",
+    "image": "4000B6_3474.jpg",
+    "phonetic": "[ˈprəʊtətaɪp]",
+    "definition_en": "A prototype is a new machine that is not ready to be made in large quantities.",
+    "example_en": "He introduced his prototype to the motorcycle company.",
+    "audio_meaning": "4000B6_prototype_meaning.mp3",
+    "audio_example": "4000B6_prototype_example.mp3",
+    "unit": 7
+  },
+  {
+    "id": 70,
+    "word": "ethics",
+    "pos": "danh từ, số nhiều dùng như số ít",
+    "meaning_vi": "đạo đức, luân thường đạo lý",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ, số nhiều dùng như số ít",
+        "meanings": [
+          {
+            "meaning": "đạo đức, luân thường đạo lý",
+            "examples": []
+          },
+          {
+            "meaning": "đạo đức học",
+            "examples": []
+          },
+          {
+            "meaning": "(từ Mỹ,nghĩa Mỹ) nguyên tắc xử thế (một cá nhân), nội quy (một tổ chức)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_ethics.mp3",
+    "image": "4000B5_2831.jpg",
+    "phonetic": "[ˈɛθɪks]",
+    "definition_en": "ethics are moral beliefs or rules about right or wrong.",
+    "example_en": "The act of stealing certainly doesn’t go against some people’s ethics.",
+    "audio_meaning": "4000B5_ethics_meaning.mp3",
+    "audio_example": "4000B5_ethics_example.mp3",
+    "unit": 7
+  },
+  {
+    "id": 71,
+    "word": "beware",
+    "pos": "động từ",
+    "meaning_vi": "cẩn thận, chú ý, đề phòng",
+    "full_definition_vi": [
+      {
+        "pos": "động từ",
+        "meanings": [
+          {
+            "meaning": "cẩn thận, chú ý, đề phòng",
+            "examples": ["beware of the dog!: cẩn thận, có chó đấy!"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B4_beware.mp3",
+    "image": "4000B4_1844.jpg",
+    "phonetic": "[bɪ'weə] ",
+    "definition_en": "To beware means to be careful of something or someone that is dangerous.",
+    "example_en": " You should beware of driving fast on wet roads.",
+    "audio_meaning": "4000B4_beware_meaning.mp3",
+    "audio_example": "4000B4_beware_example.mp3",
+    "unit": 8
+  },
+  {
+    "id": 72,
+    "word": "bald",
+    "pos": "tính từ",
+    "meaning_vi": "hói (đầu)",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "hói (đầu)",
+            "examples": []
+          },
+          {
+            "meaning": "trọc, trụi",
+            "examples": [
+              "bald hill: đồi trọc",
+              "bald tree: cây trụi lá",
+              "bald bird: chim trụi lông"
+            ]
+          },
+          {
+            "meaning": "không che đậy, lộ liễu, phô bày ra rành rành (tật xấu khuyết điểm)",
+            "examples": []
+          },
+          {
+            "meaning": "nghèo nàn, khô khan, tẻ (văn chương)",
+            "examples": []
+          },
+          {
+            "meaning": "có lang trắng ở mặt (ngựa)",
+            "examples": []
+          },
+          {
+            "meaning": "as bald as an egg (as a coot, as a billiard ball): đầu trọc lông lốc bình vôi, đầu trọc như cái sọ dừa",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_bald.mp3",
+    "image": "4000B3_1383.jpg",
+    "phonetic": "[bɔːld]",
+    "definition_en": "If someone is bald, they have no hair.",
+    "example_en": "My oldest brother is bald.",
+    "audio_meaning": "4000B3_bald_meaning.mp3",
+    "audio_example": "4000B3_bald_example.mp3",
+    "unit": 8
+  },
+  {
+    "id": 73,
+    "word": "crawl",
+    "pos": "danh từ",
+    "meaning_vi": "ao nuôi cá",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "ao nuôi cá",
+            "examples": []
+          },
+          {
+            "meaning": "chỗ nuôi rùa, chỗ nuôi tôm",
+            "examples": []
+          },
+          {
+            "meaning": "sự bò, sự trường",
+            "examples": []
+          },
+          {
+            "meaning": "(thể dục,thể thao) lối bơi crôn, lối bơi trường ((cũng) crawl stroke)",
+            "examples": []
+          },
+          {
+            "meaning": "sự kéo lê đi",
+            "examples": ["to go at a crawl: đi kéo lê, đi chậm rề rề, bò lê ra"]
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "bò, trườn",
+            "examples": []
+          },
+          {
+            "meaning": "lê bước, lê chân, bò lê",
+            "examples": []
+          },
+          {
+            "meaning": "bò nhung nhúc, bò lúc nhúc",
+            "examples": [
+              "the ground crawls with ants: đất nhung nhúc những kiến"
+            ]
+          },
+          {
+            "meaning": "luồn cúi, quỵ luỵ",
+            "examples": ["to crawl before somebody: luồn cúi ai"]
+          },
+          {
+            "meaning": "sởn gai ốc",
+            "examples": [
+              "it makes my flesh crawl: cái đó làm tôi sởn gai ốc lên"
+            ]
+          },
+          {
+            "meaning": "(từ Mỹ,nghĩa Mỹ), (từ lóng) không giữ lời, nuốt lời, tháo lui",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_crawl.mp3",
+    "image": "4000B3_1367.jpg",
+    "phonetic": "[krɔːl]",
+    "definition_en": "To crawl is to move slowly on your hands and knees.",
+    "example_en": "The baby crawled across the floor.",
+    "audio_meaning": "4000B3_crawl_meaning.mp3",
+    "audio_example": "4000B3_crawl_example.mp3",
+    "unit": 8
+  },
+  {
+    "id": 74,
+    "word": "duplicate",
+    "pos": "danh từ",
+    "meaning_vi": "bản sao",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "bản sao",
+            "examples": []
+          },
+          {
+            "meaning": "vật giống hệt, vật làm giống hệt (một vật khác)",
+            "examples": []
+          },
+          {
+            "meaning": "từ đồng nghĩa",
+            "examples": []
+          },
+          {
+            "meaning": "biên lai cầm đồ",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "gồm hai bộ phận đúng nhau, thành hai bản",
+            "examples": []
+          },
+          {
+            "meaning": "giống hệt (một vật khác)",
+            "examples": []
+          },
+          {
+            "meaning": "gấp hai, gấp đôi, to gấp đôi, nhiều gấp đôi",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "sao lại, sao lục, làm thành hai bản",
+            "examples": []
+          },
+          {
+            "meaning": "gấp đôi, nhân đôi",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_duplicate.mp3",
+    "image": "4000B6_3325.jpg",
+    "phonetic": "[ˈdjuːplɪkət]",
+    "definition_en": "To duplicate something means to copy it.",
+    "example_en": "She duplicated her friend’s movements like she was in front of a mirror.",
+    "audio_meaning": "4000B6_duplicate_meaning.mp3",
+    "audio_example": "4000B6_duplicate_example.mp3",
+    "unit": 8
+  },
+  {
+    "id": 75,
+    "word": "gradual",
+    "pos": "tính từ",
+    "meaning_vi": "dần dần, từ từ, từng bước một",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "dần dần, từ từ, từng bước một",
+            "examples": [
+              "a gradual change: sự thay đổi từ từ",
+              "gradual transition: sự quá độ dần dần",
+              "a gradual slope: dốc thoai thoải"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_gradual.mp3",
+    "image": "4000B2_989.jpg",
+    "phonetic": "['grædjuəl]",
+    "definition_en": "When something is gradual, it happens slowly.",
+    "example_en": " Children learn to read at a gradual pace. They do not learn right away.",
+    "audio_meaning": "4000B2_gradual_meaning.mp3",
+    "audio_example": "4000B2_gradual_example.mp3",
+    "unit": 8
+  },
+  {
+    "id": 76,
+    "word": "insomnia",
+    "pos": "danh từ",
+    "meaning_vi": "(y học) chứng mất ngủ",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "(y học) chứng mất ngủ",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_insomnia.mp3",
+    "image": "4000B6_3148.jpg",
+    "phonetic": "[ɪnˈsɒmnɪə]",
+    "definition_en": "insomnia is a condition in which a person has difficulty sleeping.",
+    "example_en": "Nate’s insomnia prevented him from getting enough rest.",
+    "audio_meaning": "4000B6_insomnia_meaning.mp3",
+    "audio_example": "4000B6_insomnia_example.mp3",
+    "unit": 8
+  },
+  {
+    "id": 77,
+    "word": "tract",
+    "pos": "danh từ",
+    "meaning_vi": "(địa lý,địa chất) vùng, miền, dải",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "(địa lý,địa chất) vùng, miền, dải",
+            "examples": ["a narrow tract of land: một dải dất hẹp"]
+          },
+          {
+            "meaning": "(giải phẫu) bộ máy, đường",
+            "examples": ["the digestive tract: bộ máy tiêu hoá, đường tiêu hoá"]
+          },
+          {
+            "meaning": "(từ cổ,nghĩa cổ) khoảng (thời gian)",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "luận văn ngắn (in thành sách nhỏ, thường về vấn đề tôn giáo)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_tract.mp3",
+    "image": "4000B6_3278.jpg",
+    "phonetic": "[trækt]",
+    "definition_en": "A tract is a large area of land.",
+    "example_en": "On the other side of the mountains was a long tract of forest.",
+    "audio_meaning": "4000B6_tract_meaning.mp3",
+    "audio_example": "4000B6_tract_example.mp3",
+    "unit": 8
+  },
+  {
+    "id": 78,
+    "word": "subtract",
+    "pos": "ngoại động từ",
+    "meaning_vi": "(toán học) trừ",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "(toán học) trừ",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_subtract.mp3",
+    "image": "4000B2_1156.jpg",
+    "phonetic": "[səb'trækt]",
+    "definition_en": "To subtract means to take something away.",
+    "example_en": " We learned how to subtract numbers from each other in class.",
+    "audio_meaning": "4000B2_subtract_meaning.mp3",
+    "audio_example": "4000B2_subtract_example.mp3",
+    "unit": 8
+  },
+  {
+    "id": 79,
+    "word": "military",
+    "pos": "tính từ",
+    "meaning_vi": "(thuộc) quân đội, (thuộc) quân sự",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "(thuộc) quân đội, (thuộc) quân sự",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "(thường) the military quân đội, bộ đội",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_military.mp3",
+    "image": "4000B2_653.jpg",
+    "phonetic": "['mɪlɪt(ə)rɪ]",
+    "definition_en": "The military is the armed forces of a country.",
+    "example_en": " I joined the military after I finished high school.",
+    "audio_meaning": "4000B2_military_meaning.mp3",
+    "audio_example": "4000B2_military_example.mp3",
+    "unit": 8
+  },
+  {
+    "id": 80,
+    "word": "expertise",
+    "pos": "danh từ",
+    "meaning_vi": "sự thành thạo, sự tinh thông",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự thành thạo, sự tinh thông",
+            "examples": []
+          },
+          {
+            "meaning": "tài chuyên môn, ý kiến về mặt chuyên môn",
+            "examples": []
+          },
+          {
+            "meaning": "sự giám định",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_expertise.mp3",
+    "image": "4000B5_2505.jpg",
+    "phonetic": "[ˌekspɜː'tiːz]",
+    "definition_en": "expertise is the knowledge and skills to do something well.",
+    "example_en": "John has a lot of advertisingexpertise. He can sell anything!",
+    "audio_meaning": "4000B5_expertise_meaning.mp3",
+    "audio_example": "4000B5_expertise_example.mp3",
+    "unit": 8
+  },
+  {
+    "id": 81,
+    "word": "drift",
+    "pos": "danh từ",
+    "meaning_vi": "sự trôi giạt (tàu bè...), tình trạng bị lôi cuốn đi ((nghĩa đen) & (nghĩa bóng))",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự trôi giạt (tàu bè...), tình trạng bị lôi cuốn đi ((nghĩa đen) & (nghĩa bóng))",
+            "examples": [
+              "under the drift of unforeseen events: (nghĩa bóng) bị các biến cố không lường trước được lôi cuốn đi"
+            ]
+          },
+          {
+            "meaning": "vật trôi giạt, vật bị cuốn đi (đám bụi mù, củi rều...), vật bị thổi thành đông (tuyết, cát...)",
+            "examples": []
+          },
+          {
+            "meaning": "(địa lý,địa chất) đất bồi, vật tích tụ (do gió, nước để lắng lại), trầm tích băng hà",
+            "examples": []
+          },
+          {
+            "meaning": "lưới trôi, lưới kéo (để đánh cá mòi...) ((cũng) drift net)",
+            "examples": []
+          },
+          {
+            "meaning": "dòng chảy chậm",
+            "examples": []
+          },
+          {
+            "meaning": "sự lệch, độ lệch (của viên đạn bay)",
+            "examples": []
+          },
+          {
+            "meaning": "(ngành mỏ) đường hầm ngang (tiếp theo mạch mỏ)",
+            "examples": []
+          },
+          {
+            "meaning": "chỗ sông cạn lội qua được (Nam phi)",
+            "examples": []
+          },
+          {
+            "meaning": "cái đục, cái khoan, máy đột (đục lỗ ở kim loại)",
+            "examples": []
+          },
+          {
+            "meaning": "thái độ lững lờ chờ đợi, thái độ thụ động, thái độ nằm ì, thái độ nước chảy bèo trôi",
+            "examples": [
+              "the policy of drift: ruốm ghùi \"ì, chủ trương không hoạt động gì cả"
+            ]
+          },
+          {
+            "meaning": "chiều hướng, khuynh hướng, xu thế tự nhiên, sự tiến triển",
+            "examples": []
+          },
+          {
+            "meaning": "mục đích, ý định, ý nghĩa, nội dung",
+            "examples": [
+              "the drift of a speech: ý nghĩa của bài nói, nội dung của bài nói"
+            ]
+          },
+          {
+            "meaning": "(pháp lý) sự tập trung vật nuôi để kiểm lại",
+            "examples": []
+          },
+          {
+            "meaning": "(vật lý) sự kéo theo",
+            "examples": ["electron drift: sự kéo theo electron"]
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "trôi giạt, bị (gió, dòng nước...) cuốn đi",
+            "examples": ["to drift on shore: trôi giạt vào bờ"]
+          },
+          {
+            "meaning": "chất đống lê (tuyết, cát... do gió thổi)",
+            "examples": []
+          },
+          {
+            "meaning": "buông trôi, để mặc cho trôi đi, có thái độ thụ động, phó mặc cho số phận, trôi đi, trôi qua",
+            "examples": [
+              "to let things drift: để mặc cho sự việc trôi đi (muốn ra sao thì ra)"
+            ]
+          },
+          {
+            "meaning": "theo chiều hướng, hướng theo (đích nào, chiều hướng nào)",
+            "examples": [
+              "is that the way things are drifting?: sự việc có phải là diễn biến theo chiều hướng đó không?"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "làm trôi giạt, cuốn đi (dòng nước)",
+            "examples": []
+          },
+          {
+            "meaning": "thổi (tuyết, cát...) thành đông (gió)",
+            "examples": []
+          },
+          {
+            "meaning": "phủ đầy (cánh đồng, mặt đường...) những đống cát, phủ đầy những đống tuyết",
+            "examples": []
+          },
+          {
+            "meaning": "đục lỗ, đột lỗ, khoan rộng lỗ (miếng kim loại)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_drift.mp3",
+    "image": "4000B3_1445.jpg",
+    "phonetic": "[drɪft]",
+    "definition_en": "To drift means to be moved slowly by wind or water.",
+    "example_en": "The large chunk of ice drifted in the water.",
+    "audio_meaning": "4000B3_drift_meaning.mp3",
+    "audio_example": "4000B3_drift_example.mp3",
+    "unit": 9
+  },
+  {
+    "id": 82,
+    "word": "exit",
+    "pos": "danh từ",
+    "meaning_vi": "(sân khấu) sự đi vào (của diễn viên)",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "(sân khấu) sự đi vào (của diễn viên)",
+            "examples": []
+          },
+          {
+            "meaning": "sự ra, sự đi ra, sự đi khỏi",
+            "examples": []
+          },
+          {
+            "meaning": "lối ra, cửa ra",
+            "examples": []
+          },
+          {
+            "meaning": "sự chết, sự lìa trần",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "(sân khấu) vào, đi vào",
+            "examples": []
+          },
+          {
+            "meaning": "(nghĩa bóng) chết, lìa trần, biến mất",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B4_exit.mp3",
+    "image": "4000B4_2126.jpg",
+    "phonetic": "['eksɪt]",
+    "definition_en": "To exit means to leave.",
+    "example_en": "The students exited through the front door.",
+    "audio_meaning": "4000B4_exit_meaning.mp3",
+    "audio_example": "4000B4_exit_example.mp3",
+    "unit": 9
+  },
+  {
+    "id": 83,
+    "word": "rust",
+    "pos": "danh từ",
+    "meaning_vi": "gỉ (sắt, kim loại)",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "gỉ (sắt, kim loại)",
+            "examples": []
+          },
+          {
+            "meaning": "(nghĩa bóng) sự cùn trí nhớ, sự kém trí nhớ",
+            "examples": []
+          },
+          {
+            "meaning": "(thực vật học) bệnh gỉ sắt",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "gỉ",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "làm gỉ",
+            "examples": []
+          },
+          {
+            "meaning": "better wear out than rust out: thà rằng hoạt động mà suy nhược còn hơn là để chết dần chết mòn",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_rust.mp3",
+    "image": "4000B5_2759.jpg",
+    "phonetic": "[rʌst]",
+    "definition_en": "rust is a red and brown coating on iron objects caused by water and air.",
+    "example_en": "The old metal gate would not swing because the hinges were covered in rust.",
+    "audio_meaning": "4000B5_rust_meaning.mp3",
+    "audio_example": "4000B5_rust_example.mp3",
+    "unit": 9
+  },
+  {
+    "id": 84,
+    "word": "convection",
+    "pos": "danh từ",
+    "meaning_vi": "(vật lý) sự đối lưu",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "(vật lý) sự đối lưu",
+            "examples": ["thermal convection: sự đối lưu nhiệt"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_convection.mp3",
+    "image": "4000B6_3186.jpg",
+    "phonetic": "[kənˈvɛkʃ(ə)n]",
+    "definition_en": "convection is the flow of hot air through gas or liquid.",
+    "example_en": "The weather changed because of convection in the atmosphere.",
+    "audio_meaning": "4000B6_convection_meaning.mp3",
+    "audio_example": "4000B6_convection_example.mp3",
+    "unit": 9
+  },
+  {
+    "id": 85,
+    "word": "remark",
+    "pos": "danh từ",
+    "meaning_vi": "sự lưu ý, sự chú ý",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự lưu ý, sự chú ý",
+            "examples": ["worthy of remark: đáng lưu ý"]
+          },
+          {
+            "meaning": "sự nhận xét, lời phê bình, lời bình luận",
+            "examples": [
+              "to make (pass) no remark on: không có ý kiến nhận xét gì về (cái gì)",
+              "to pass a rude remark upon someone: nhận xét ai một cách thô bạo"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "thấy, chú ý, lưu ý, để ý đến",
+            "examples": []
+          },
+          {
+            "meaning": "làm chú ý, làm lưu ý",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "(+ on, upon) nhận xét, phê bình, bình luận",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_remark.mp3",
+    "image": "4000B2_617.jpg",
+    "phonetic": "[rɪ'mɑːk]",
+    "definition_en": "To remark is to say something.",
+    "example_en": "The teacher remarked on how quickly the students were learning.",
+    "audio_meaning": "4000B2_remark_meaning.mp3",
+    "audio_example": "4000B2_remark_example.mp3",
+    "unit": 9
+  },
+  {
+    "id": 86,
+    "word": "thermometer",
+    "pos": "danh từ",
+    "meaning_vi": "cái đo nhiệt, nhiệt biểu",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "cái đo nhiệt, nhiệt biểu",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_thermometer.mp3",
+    "image": "4000B6_3577.jpg",
+    "phonetic": "[θəˈmɒmɪtə]",
+    "definition_en": "A thermometer is a device that measures temperature.",
+    "example_en": "The thermometer outside the window indicated that it was a hot day today.",
+    "audio_meaning": "4000B6_thermometer_meaning.mp3",
+    "audio_example": "4000B6_thermometer_example.mp3",
+    "unit": 9
+  },
+  {
+    "id": 87,
+    "word": "keen",
+    "pos": "danh từ",
+    "meaning_vi": "bài hát tang (kèm theo tiếng than khóc ở Ai-len)",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "bài hát tang (kèm theo tiếng than khóc ở Ai-len)",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "hát bài hát tang",
+            "examples": []
+          },
+          {
+            "meaning": "than van ai oán, than khóc thảm thiết",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "hát bài hát tang mà than khóc (ai)",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "sắc, bén (dao), nhọn (kim)",
+            "examples": []
+          },
+          {
+            "meaning": "rét buốt, buốt thấu xương",
+            "examples": ["keen wind: gió rét buốt"]
+          },
+          {
+            "meaning": "chói (ánh sáng)",
+            "examples": []
+          },
+          {
+            "meaning": "trong và cao (tiếng...)",
+            "examples": []
+          },
+          {
+            "meaning": "buốt, nhói, dữ dội, thấm thía",
+            "examples": [
+              "keen hunger: sự đói dữ dội, sự đói như cào",
+              "keen sorrow: nỗi buồn thấm thía"
+            ]
+          },
+          {
+            "meaning": "sắc sảo, tinh, thính",
+            "examples": [
+              "keen intelligence: trí thông minh sắc sảo",
+              "keen eyes: mắt tinh",
+              "keen ears: tai thính"
+            ]
+          },
+          {
+            "meaning": "chua cay, đay nghiến, gay gắt (lời nói, lời phê bình...)",
+            "examples": []
+          },
+          {
+            "meaning": "mãnh liệt, thiết tha, kịch liệt, hăng hái, sôi nổi, nhiệt tình",
+            "examples": [
+              "keen desire: sự ham muốn mãnh liệt",
+              "a keen sportsman: nhà thể thao nhiệt tình",
+              "a keen debate: cuộc tranh luận sôi nổi"
+            ]
+          },
+          {
+            "meaning": "ham mê, say mê, ham thích",
+            "examples": [
+              "to be [dead] keen on something: say mê cái gì, ham thích cái gì",
+              "to be [dead] keen on somebody: say mê ai",
+              "to be keen about: hài lòng về, vừa ý về (cái gì)"
+            ]
+          },
+          {
+            "meaning": "(từ Mỹ,nghĩa Mỹ), (từ lóng) tuyệt diệu, cừ khôi, xuất sắc",
+            "examples": []
+          },
+          {
+            "meaning": "as keen as mustard: hăng say, phớn phở",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_keen.mp3",
+    "image": "4000B5_2454.jpg",
+    "phonetic": "[kiːn]",
+    "definition_en": "If someone is keen, they are intelligent.",
+    "example_en": "Only the keenest of students could have solved that math problem.",
+    "audio_meaning": "4000B5_keen_meaning.mp3",
+    "audio_example": "4000B5_keen_example.mp3",
+    "unit": 9
+  },
+  {
+    "id": 88,
+    "word": "tool",
+    "pos": "danh từ",
+    "meaning_vi": "dụng cụ, đồ dùng",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "dụng cụ, đồ dùng",
+            "examples": ["gardener's tools: dụng cụ của người làm vườn"]
+          },
+          {
+            "meaning": "(nghĩa bóng) công cụ, lợi khí, tay sai",
+            "examples": [
+              "a tool of new colonialism: một công cụ của chủ nghĩa thực dân mới",
+              "to make a tool of someone: lợi dụng ai, sử dụng ai làm tay sai"
+            ]
+          },
+          {
+            "meaning": "a bad workman quarrels with his tools: (xem) quarrel",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "chế tạo thành dụng cụ",
+            "examples": []
+          },
+          {
+            "meaning": "rập hình trang trí (vào gáy sách...)",
+            "examples": []
+          },
+          {
+            "meaning": "chạm",
+            "examples": []
+          },
+          {
+            "meaning": "(thông tục) lái (xe) một cách phóng khoáng",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_tool.mp3",
+    "image": "4000B1_359.jpg",
+    "phonetic": "[tuːl]",
+    "definition_en": "A tool is something that helps you do a task.",
+    "example_en": "We used a tool to fix the window.",
+    "audio_meaning": "4000B1_tool_meaning.mp3",
+    "audio_example": "4000B1_tool_example.mp3",
+    "unit": 9
+  },
+  {
+    "id": 89,
+    "word": "embed",
+    "pos": "ngoại động từ",
+    "meaning_vi": "ấn vào, đóng vào, gắn vào",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "ấn vào, đóng vào, gắn vào",
+            "examples": []
+          },
+          {
+            "meaning": "ghi vào (trí nhớ)",
+            "examples": [
+              "that day is embedded for ever in my recollection: ngày đó mãi mãi được ghi vào trong ký ức của tôi, tôi mãi mãi nhớ ngày hôm đó"
+            ]
+          },
+          {
+            "meaning": "ôm lấy, bao lấy",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_embed.mp3",
+    "image": "4000B5_2850.jpg",
+    "phonetic": "[ɪmˈbɛd]",
+    "definition_en": "To embed something means to place it firmly within a surrounding thing.",
+    "example_en": "The logger embedded the ax into the wood after chopping several logs.",
+    "audio_meaning": "4000B5_embed_meaning.mp3",
+    "audio_example": "4000B5_embed_example.mp3",
+    "unit": 9
+  },
+  {
+    "id": 90,
+    "word": "automate",
+    "pos": "động từ",
+    "meaning_vi": "tự động hoá",
+    "full_definition_vi": [
+      {
+        "pos": "động từ",
+        "meanings": [
+          {
+            "meaning": "tự động hoá",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_automate.mp3",
+    "image": "4000B5_2464.jpg",
+    "phonetic": "['ɔːtəmeɪt]",
+    "definition_en": "To automate a company means to install machines or computers to do the work.",
+    "example_en": "When the bank automated, it started installing ATM machines.",
+    "audio_meaning": "4000B5_automate_meaning.mp3",
+    "audio_example": "4000B5_automate_example.mp3",
+    "unit": 9
+  },
+  {
+    "id": 91,
+    "word": "fast",
+    "pos": "tính từ",
+    "meaning_vi": "chắc chắn",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "chắc chắn",
+            "examples": [
+              "a stake fast in the ground: cọc đóng chắc xuống đất",
+              "to take fast hold of: nắm chắc, cầm chắc"
+            ]
+          },
+          {
+            "meaning": "thân, thân thiết, keo sơn",
+            "examples": [
+              "a fast friend: bạn thân",
+              "fast friendship: tình bạn keo sơn"
+            ]
+          },
+          {
+            "meaning": "bền, không phai",
+            "examples": ["a fast olour: màu bền"]
+          },
+          {
+            "meaning": "nhanh, mau",
+            "examples": [
+              "watch is fast: đồng hồ chạy nhanh",
+              "a fast train: xe lửa tốc hành"
+            ]
+          },
+          {
+            "meaning": "trác táng, ăn chơi, phóng đãng (người)",
+            "examples": ["the fast set: làng chơi"]
+          },
+          {
+            "meaning": "to be fast with gout: nằm liệt giường vì bệnh gút",
+            "examples": []
+          },
+          {
+            "meaning": "to make fast: buộc chặt",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "phó từ",
+        "meanings": [
+          {
+            "meaning": "chắc chắn, bền vững, chặt chẽ",
+            "examples": [
+              "to stand fast: đứng vững",
+              "eyes fast shut: mắt nhắm nghiền",
+              "to sleep fast: ngủ say sưa"
+            ]
+          },
+          {
+            "meaning": "nhanh",
+            "examples": ["to run fast: chạy nhanh"]
+          },
+          {
+            "meaning": "trác táng, phóng đãng",
+            "examples": ["to live fast: sống trác táng, ăn chơi"]
+          },
+          {
+            "meaning": "(từ cổ,nghĩa cổ), (thơ ca) sát, ngay cạnh",
+            "examples": []
+          },
+          {
+            "meaning": "fast bind, fast find: (tục ngữ) cẩn tắc vô ưu",
+            "examples": []
+          },
+          {
+            "meaning": "to play fast and loose: lập lờ hai mặt, đòn xóc hai đầu",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự ăn chay",
+            "examples": []
+          },
+          {
+            "meaning": "mùa ăn chay, ngày ăn chay",
+            "examples": []
+          },
+          {
+            "meaning": "sự nhịn đói",
+            "examples": ["to break one's fast: ăn điểm tâm, ăn sáng"]
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "ăn chay, ăn kiêng (tôn giáo...)",
+            "examples": []
+          },
+          {
+            "meaning": "nhịn ăn",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_fast.mp3",
+    "image": "4000B5_2430.jpg",
+    "phonetic": "[fɑːst]",
+    "definition_en": "To fast means to go without food or drink for a period of time.",
+    "example_en": "In her religion, they fast for five days and then have a big feast.feast /fi:st/: bữa tiệc",
+    "audio_meaning": "4000B5_fast_meaning.mp3",
+    "audio_example": "4000B5_fast_example.mp3",
+    "unit": 10
+  },
+  {
+    "id": 92,
+    "word": "common",
+    "pos": "tính từ",
+    "meaning_vi": "chung, công, công cộng",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "chung, công, công cộng",
+            "examples": [
+              "a common language: ngôn ngữ chung",
+              "common ground: điểm chung (hai bên cùng có để đi đến chỗ thoả thuận)",
+              "common noun: danh từ chung",
+              "common multiple: (toán học) bội số chung",
+              "common divisor: (toán học) ước số chung",
+              "common property: tài sản công cộng"
+            ]
+          },
+          {
+            "meaning": "thường, thông thường, bình thường, phổ biến, phổ thông",
+            "examples": [
+              "common flowers: loại hoa phổ biến",
+              "it is common knowledge that...: điều phổ biến là..., mọi người đều biết rằng...",
+              "the common man: người bình thường",
+              "common sense: lẽ thường, lương tri"
+            ]
+          },
+          {
+            "meaning": "tầm thường, thô tục",
+            "examples": [
+              "a common appearance: diện mạo tầm thường",
+              "he is very common: hắn thô tục lắm"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "đất công",
+            "examples": []
+          },
+          {
+            "meaning": "quyền được hưởng trên đất đai của người khác",
+            "examples": [
+              "common of pasturage: quyền được chăn thả trên đất đai của người khác"
+            ]
+          },
+          {
+            "meaning": "sự chung, của chung",
+            "examples": [
+              "in common: chung, chung chạ",
+              "to have everything in common: chung tất cả mọi thứ",
+              "to have nothing in common: không có gì chung"
+            ]
+          },
+          {
+            "meaning": "(từ cổ,nghĩa cổ) những người bình dân, dân chúng",
+            "examples": []
+          },
+          {
+            "meaning": "in commom with: cùng với, cũng như, giống như",
+            "examples": []
+          },
+          {
+            "meaning": "out of the commom: đặc biệt khác thường",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_common.mp3",
+    "image": "4000B1_586.jpg",
+    "phonetic": "['kɔmən]",
+    "definition_en": "If something is common, it happens often or there is much of it.",
+    "example_en": "It is common for snow to fall in the winter.",
+    "audio_meaning": "4000B1_common_meaning.mp3",
+    "audio_example": "4000B1_common_example.mp3",
+    "unit": 10
+  },
+  {
+    "id": 93,
+    "word": "vegetarian",
+    "pos": "danh từ",
+    "meaning_vi": "người ăn chay",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "người ăn chay",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "ăn chay, chay",
+            "examples": [
+              "vegetarian food: thức ăn chay",
+              "vegetarian diet: chế độ ăn toàn rau, chế độ ăn chay",
+              "vegetarian priciples: thuyết ăn chay"
+            ]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B4_vegetarian.mp3",
+    "image": "4000B4_2260.jpg",
+    "phonetic": "[ˌveʤɪ'teərɪən]",
+    "definition_en": "A vegetarian is someone who does not eat any meat products.",
+    "example_en": " I became a vegetarian because I don’t like the taste of meat.",
+    "audio_meaning": "4000B4_vegetarian_meaning.mp3",
+    "audio_example": "4000B4_vegetarian_example.mp3",
+    "unit": 10
+  },
+  {
+    "id": 94,
+    "word": "facial",
+    "pos": "tính từ",
+    "meaning_vi": "(thuộc) mặt",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "(thuộc) mặt",
+            "examples": [
+              "facial artery: (giải phẫu) động mạch mặt",
+              "facial angle: góc mặt"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "sự xoa bóp mặt",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_facial.mp3",
+    "image": "4000B2_1089.jpg",
+    "phonetic": "['feɪʃ(ə)l]",
+    "definition_en": "If something is facial, it is related to a person's face.",
+    "example_en": "I could tell from his facial features that he was angry.",
+    "audio_meaning": "4000B2_facial_meaning.mp3",
+    "audio_example": "4000B2_facial_example.mp3",
+    "unit": 10
+  },
+  {
+    "id": 95,
+    "word": "dismiss",
+    "pos": "ngoại động từ",
+    "meaning_vi": "giải tán (đám đông tụ tập, quân đội...)",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "giải tán (đám đông tụ tập, quân đội...)",
+            "examples": ["dismiss!: giải tán! (tiếng ra lệnh sau buổi tập...)"]
+          },
+          {
+            "meaning": "cho đi",
+            "examples": []
+          },
+          {
+            "meaning": "đuổi ra, thải hồi, sa thải (người làm...)",
+            "examples": []
+          },
+          {
+            "meaning": "gạt bỏ, xua đuổi (ý nghĩ...)",
+            "examples": []
+          },
+          {
+            "meaning": "bàn luận qua loa, nêu lên qua loa (một vấn đề, cốt để bỏ qua)",
+            "examples": []
+          },
+          {
+            "meaning": "(thể dục,thể thao) đánh đi (quả bóng crickê)",
+            "examples": []
+          },
+          {
+            "meaning": "(pháp lý) bỏ không xét (một vụ), bác (đơn)",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "the dismiss (quân sự) sự giải tán (sau buổi tập luyện)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B3_dismiss.mp3",
+    "image": "4000B3_1525.jpg",
+    "phonetic": "[dɪs'mɪs]",
+    "definition_en": "To dismiss something is to say it is not important.",
+    "example_en": "He quickly dismissed my idea about a new project.",
+    "audio_meaning": "4000B3_dismiss_meaning.mp3",
+    "audio_example": "4000B3_dismiss_example.mp3",
+    "unit": 10
+  },
+  {
+    "id": 96,
+    "word": "moist",
+    "pos": "tính từ",
+    "meaning_vi": "ẩm, ẩm ướt, ướt lấp nhấp",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "ẩm, ẩm ướt, ướt lấp nhấp",
+            "examples": ["moist season: mùa ẩm"]
+          },
+          {
+            "meaning": "(y học) chẩy m",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_moist.mp3",
+    "image": "4000B6_3509.jpg",
+    "phonetic": "[mɔɪst]",
+    "definition_en": "When something is moist, it is slightly wet.",
+    "example_en": "The ground is still moist from the rain last night.",
+    "audio_meaning": "4000B6_moist_meaning.mp3",
+    "audio_example": "4000B6_moist_example.mp3",
+    "unit": 10
+  },
+  {
+    "id": 97,
+    "word": "colleague",
+    "pos": "danh từ",
+    "meaning_vi": "bạn đồng nghiệp, bạn đồng sự",
+    "full_definition_vi": [
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "bạn đồng nghiệp, bạn đồng sự",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B2_colleague.mp3",
+    "image": "4000B2_724.jpg",
+    "phonetic": "['kɔliːg]",
+    "definition_en": "A colleague is somebody you work with.",
+    "example_en": " My colleague helped me finish the job.",
+    "audio_meaning": "4000B2_colleague_meaning.mp3",
+    "audio_example": "4000B2_colleague_example.mp3",
+    "unit": 10
+  },
+  {
+    "id": 98,
+    "word": "moderate",
+    "pos": "tính từ",
+    "meaning_vi": "vừa phải, phải chăng, có mức độ, điều độ",
+    "full_definition_vi": [
+      {
+        "pos": "tính từ",
+        "meanings": [
+          {
+            "meaning": "vừa phải, phải chăng, có mức độ, điều độ",
+            "examples": ["moderate prices: giá cả phải chăng"]
+          },
+          {
+            "meaning": "ôn hoà, không quá khích",
+            "examples": [
+              "a man of moderate opinion: một người có tư tưởng ôn hoà"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "người ôn hoà",
+            "examples": []
+          }
+        ]
+      },
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "làm cho ôn hoà, làm dịu, làm giảm nhẹ, làm bớt đi, tiết chế",
+            "examples": ["to moderate one's anger: bớt giận"]
+          }
+        ]
+      },
+      {
+        "pos": "nội động từ",
+        "meanings": [
+          {
+            "meaning": "dịu đi, nhẹ đi, bớt đi",
+            "examples": ["the wind is moderrating: gió nhẹ đi, gió bớt lộng"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B5_moderate.mp3",
+    "image": "4000B5_2991.jpg",
+    "phonetic": "[ˈmɒd(ə)reɪt]",
+    "definition_en": "When something is moderate, it is not too big or too small in size or amount.",
+    "example_en": "It takes a moderate amount of patience to be around small children all day.",
+    "audio_meaning": "4000B5_moderate_meaning.mp3",
+    "audio_example": "4000B5_moderate_example.mp3",
+    "unit": 10
+  },
+  {
+    "id": 99,
+    "word": "within",
+    "pos": "giới từ",
+    "meaning_vi": "ở trong, phía trong, bên trong, trong",
+    "full_definition_vi": [
+      {
+        "pos": "giới từ",
+        "meanings": [
+          {
+            "meaning": "ở trong, phía trong, bên trong, trong",
+            "examples": [
+              "within the castle: bên trong lâu đài",
+              "within doors: trong nhà, ở nhà",
+              "within four walls: trong (giữa) bốn bức tường"
+            ]
+          },
+          {
+            "meaning": "trong vòng, trong khoảng",
+            "examples": [
+              "within three months: trong vòng ba tháng",
+              "within the next week: trong khoảng tuần tới",
+              "within an hour: trong vòng một giờ",
+              "within three miles: không quá ba dặm"
+            ]
+          },
+          {
+            "meaning": "trong phạm vi",
+            "examples": [
+              "within one's power: trong phạm vi quyền hạn của mình",
+              "within the four corners of the law: trong phạm vi pháp luật",
+              "to do something within oneself: làm việc gì không bỏ hết sức mình ra",
+              "within hearing: ở gần có thể nghe được, ở gần có thể bị nghe thấy"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "phó từ",
+        "meanings": [
+          {
+            "meaning": "(từ cổ,nghĩa cổ) ở trong, bên trong, ở phía trong",
+            "examples": [
+              "to decorate the house within and without: trang hoàng ngôi nhà c trong lẫn ngoài",
+              "to go within: đi vào nhà, đi vào phòng",
+              "is Mr. William within?: ông Uy-li-am có (ở) nhà không?"
+            ]
+          },
+          {
+            "meaning": "(nghĩa bóng) trong lưng tâm, trong thâm tâm, trong tâm hồn",
+            "examples": [
+              "such thoughts make one pure within: những ý nghĩ như vậy làm cho tâm hồn người ta trong sạch"
+            ]
+          }
+        ]
+      },
+      {
+        "pos": "danh từ",
+        "meanings": [
+          {
+            "meaning": "phía trong, bên trong",
+            "examples": ["from within: từ bên trong"]
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B1_within.mp3",
+    "image": "4000B1_560.jpg",
+    "phonetic": "[wɪ'ðɪn]",
+    "definition_en": "You use within to say that something is inside another thing.",
+    "example_en": "within the box, there was a pizza.",
+    "audio_meaning": "4000B1_within_meaning.mp3",
+    "audio_example": "4000B1_within_example.mp3",
+    "unit": 10
+  },
+  {
+    "id": 100,
+    "word": "elude",
+    "pos": "ngoại động từ",
+    "meaning_vi": "tránh, né, lảng tránh (cú đấm, sự khó khăn, sự quan sát...)",
+    "full_definition_vi": [
+      {
+        "pos": "ngoại động từ",
+        "meanings": [
+          {
+            "meaning": "tránh, né, lảng tránh (cú đấm, sự khó khăn, sự quan sát...)",
+            "examples": []
+          },
+          {
+            "meaning": "trốn tránh (luật pháp, trách nhiệm...)",
+            "examples": []
+          },
+          {
+            "meaning": "vượt quá (sự hiểu biết...)",
+            "examples": []
+          }
+        ]
+      }
+    ],
+    "audio_pronunciation": "4000B6_elude.mp3",
+    "image": "4000B6_3106.jpg",
+    "phonetic": "[ɪˈl(j)uːd], [əˈl(j)uːd]",
+    "definition_en": "To elude means to avoid being caught by something.",
+    "example_en": "The rabbit eluded the wolf by hiding in a bush.",
+    "audio_meaning": "4000B6_elude_meaning.mp3",
+    "audio_example": "4000B6_elude_example.mp3",
+    "unit": 10
+  }
+]
