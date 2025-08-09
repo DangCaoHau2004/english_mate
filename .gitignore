@@ -50,3 +50,4 @@ firebase.json
 ./dart_tool
 .vscode
 .env
+lib/firebase_options.dart
