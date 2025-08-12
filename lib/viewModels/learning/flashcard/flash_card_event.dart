@@ -1,6 +1,14 @@
 abstract class FlashCardEvent {}
 
-class SessionStarted extends FlashCardEvent {}
+class DefaultFlipToggled extends FlashCardEvent {
+  final bool value;
+  DefaultFlipToggled({required this.value});
+}
+
+class ShuffleToggled extends FlashCardEvent {
+  final bool enabled;
+  ShuffleToggled({required this.enabled});
+}
 
 class CardFlipped extends FlashCardEvent {}
 

@@ -1,10 +1,10 @@
 import 'package:english_mate/core/enums/app_enums.dart';
-import 'package:english_mate/viewModels/learning/session_word.dart';
+import 'package:english_mate/models/learning/session_word.dart';
 
-// false là tiếng anh, true là tiếng việt
 class FlashCardState {
   final LearningStatus learningStatus;
   final List<SessionWord> sessionWords;
+  final List<SessionWord> sessionWordsDefault;
   final int currentIndex;
   final bool isFlipped;
   final bool isFlippedDefault;
@@ -16,8 +16,17 @@ class FlashCardState {
     this.currentIndex = 0,
     this.errorMessage,
     this.isFlippedDefault = false,
-  });
+  }) : sessionWordsDefault = [...sessionWords];
 
+  FlashCardState._({
+    required this.learningStatus,
+    required this.sessionWords,
+    required this.sessionWordsDefault,
+    required this.currentIndex,
+    required this.isFlipped,
+    required this.isFlippedDefault,
+    required this.errorMessage,
+  });
   FlashCardState copyWith({
     LearningStatus? learningStatus,
     List<SessionWord>? sessionWords,
@@ -26,9 +35,10 @@ class FlashCardState {
     String? errorMessage,
     bool? isFlippedDefault,
   }) {
-    return FlashCardState(
+    return FlashCardState._(
       learningStatus: learningStatus ?? this.learningStatus,
       sessionWords: sessionWords ?? this.sessionWords,
+      sessionWordsDefault: sessionWordsDefault,
       currentIndex: currentIndex ?? this.currentIndex,
       isFlipped: isFlipped ?? this.isFlipped,
       errorMessage: errorMessage ?? this.errorMessage,

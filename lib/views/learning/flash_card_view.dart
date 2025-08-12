@@ -2,10 +2,11 @@ import 'package:english_mate/core/enums/app_enums.dart';
 import 'package:english_mate/generated/fonts.gen.dart';
 import 'package:english_mate/utils/asset_helper.dart';
 import 'package:english_mate/utils/string_utils.dart';
-import 'package:english_mate/viewModels/learning/flash_card_bloc.dart';
-import 'package:english_mate/viewModels/learning/flash_card_event.dart';
-import 'package:english_mate/viewModels/learning/flash_card_state.dart';
-import 'package:english_mate/viewModels/learning/session_word.dart';
+import 'package:english_mate/viewModels/learning/flashcard/flash_card_bloc.dart';
+import 'package:english_mate/viewModels/learning/flashcard/flash_card_event.dart';
+import 'package:english_mate/viewModels/learning/flashcard/flash_card_state.dart';
+import 'package:english_mate/models/learning/session_word.dart';
+import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
 import 'package:english_mate/views/learning/flash_card_setting_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -264,10 +265,19 @@ class _FlaskCardViewState extends State<FlaskCardView>
   }
 
   void _openSetting() {
+    final settingsBloc = context.read<SettingsBloc>();
+    final flashCardBloc = context.read<FlashCardBloc>();
+
     showDialog(
       context: context,
-      builder: (BuildContext context) =>
-          const Dialog(child: FlashCardSettingDialog()),
+      useRootNavigator: false,
+      builder: (_) => MultiBlocProvider(
+        providers: [
+          BlocProvider.value(value: settingsBloc),
+          BlocProvider.value(value: flashCardBloc),
+        ],
+        child: const Dialog(child: FlashCardSettingDialog()),
+      ),
     );
   }
 
@@ -279,7 +289,7 @@ class _FlaskCardViewState extends State<FlaskCardView>
             previous.currentIndex != current.currentIndex;
       },
       listener: (context, state) {
-        // Điều khiển animation lật thẻ từ state của BLoC
+        // tiếng anh là false còn tiếng việt là true
         if (state.isFlipped) {
           _flipController.forward();
         } else {

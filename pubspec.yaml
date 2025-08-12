@@ -45,6 +45,7 @@ dependencies:
   hive: ^2.2.3
   shared_preferences: ^2.5.3
   audioplayers: ^6.5.0
+  get_it: ^8.2.0
 
 dev_dependencies:
   flutter_test:

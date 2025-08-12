@@ -1,7 +1,11 @@
+import 'package:english_mate/viewModels/learning/flashcard/flash_card_bloc.dart';
+import 'package:english_mate/viewModels/learning/flashcard/flash_card_event.dart';
+import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
+import 'package:english_mate/viewModels/learning/settings/settings_event.dart';
+import 'package:english_mate/viewModels/learning/settings/settings_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-// Bước 1: Sử dụng enum để định nghĩa các lựa chọn một cách rõ ràng
-// Điều này tốt hơn nhiều so với việc dùng List<bool> và nhớ index
 enum CardFaceLanguage { english, vietnamese }
 
 class FlashCardSettingDialog extends StatefulWidget {
@@ -12,15 +16,6 @@ class FlashCardSettingDialog extends StatefulWidget {
 }
 
 class _FlashCardSettingDialogState extends State<FlashCardSettingDialog> {
-  // --- Biến trạng thái được đặt tên lại cho rõ ràng ---
-
-  // State cho việc có trộn thẻ hay không
-  bool _isShuffleEnabled = true;
-
-  // State cho việc chọn ngôn ngữ mặt trước, sử dụng enum đã tạo
-  CardFaceLanguage _frontCardLanguage = CardFaceLanguage.english;
-
-  // Tách các widget con ra để dễ quản lý
   final List<Widget> _languageOptions = const [
     Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -32,7 +27,6 @@ class _FlashCardSettingDialogState extends State<FlashCardSettingDialog> {
     ),
   ];
 
-  // Helper method để xây dựng một hàng cài đặt cho gọn gàng
   Widget _buildSettingRow({required String title, required Widget control}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,70 +37,90 @@ class _FlashCardSettingDialogState extends State<FlashCardSettingDialog> {
     );
   }
 
+  CardFaceLanguage _fromBool(bool isFlippedDefault) =>
+      isFlippedDefault ? CardFaceLanguage.vietnamese : CardFaceLanguage.english;
+  bool _toBool(CardFaceLanguage lang) => lang == CardFaceLanguage.vietnamese;
+
+  void _shuffleCards(bool enabled) {
+    // cập nhật setting
+    context.read<SettingsBloc>().add(
+      SettingsShuffleFlashCardsChanged(shuffleFlashCards: enabled),
+    );
+    // áp dụng ngay cho phiên hiện tại
+    context.read<FlashCardBloc>().add(ShuffleToggled(enabled: enabled));
+  }
+
+  void _setFrontCardLanguage(CardFaceLanguage language) {
+    final isFlipDefault = _toBool(language);
+    // lưu setting
+    context.read<SettingsBloc>().add(
+      SettingsFlippedDefaultChanged(flippedDefault: isFlipDefault),
+    );
+    // áp dụng ngay cho flashcard
+    context.read<FlashCardBloc>().add(DefaultFlipToggled(value: isFlipDefault));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(24.0),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment:
-            CrossAxisAlignment.start, // Căn lề các mục con sang trái
-        children: [
-          // Tiêu đề Dialog
-          Center(
-            child: Text(
-              "Tùy chọn",
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
-          ),
-          const SizedBox(height: 32),
+    return BlocBuilder<SettingsBloc, SettingsState>(
+      // chỉ cần rebuild khi các field liên quan đổi; nếu SettingsState chưa có ==, cân nhắc bỏ buildWhen
+      buildWhen: (prev, curr) =>
+          prev.isShuffleFlashCards != curr.isShuffleFlashCards ||
+          prev.isFlippedDefault != curr.isFlippedDefault,
+      builder: (context, state) {
+        final selectedLang = _fromBool(state.isFlippedDefault);
 
-          // --- Cài đặt Trộn thẻ ---
-          _buildSettingRow(
-            title: "Trộn thẻ",
-            control: Switch(
-              value: _isShuffleEnabled,
-              onChanged: (bool value) {
-                setState(() {
-                  _isShuffleEnabled = value;
-                });
-              },
-            ),
-          ),
-          const Divider(height: 32),
+        return Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: Text(
+                  "Tùy chọn",
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+              ),
+              const SizedBox(height: 32),
 
-          // --- Cài đặt Mặt trước thẻ ---
-          Text(
-            "Thiết lập thẻ ghi nhớ",
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
-          const SizedBox(height: 8),
+              _buildSettingRow(
+                title: "Trộn thẻ",
+                control: Switch(
+                  value: state.isShuffleFlashCards,
+                  onChanged: _shuffleCards,
+                ),
+              ),
+              const Divider(height: 32),
 
-          // ToggleButtons được căn giữa để trông đẹp hơn
-          Center(
-            child: ToggleButtons(
-              onPressed: (int index) {
-                setState(() {
-                  // Logic được đơn giản hóa nhờ có enum
-                  _frontCardLanguage = CardFaceLanguage.values[index];
-                });
-              },
-              borderRadius: const BorderRadius.all(Radius.circular(8)),
-              isSelected: [
-                _frontCardLanguage == CardFaceLanguage.english,
-                _frontCardLanguage == CardFaceLanguage.vietnamese,
-              ],
-              // --- Các thuộc tính style giữ nguyên ---
-              selectedBorderColor: Theme.of(context).colorScheme.tertiary,
-              selectedColor: Theme.of(context).colorScheme.onTertiary,
-              fillColor: Theme.of(context).colorScheme.tertiary,
-              color: Theme.of(context).colorScheme.onPrimary,
-              children: _languageOptions,
-            ),
+              Text(
+                "Thiết lập thẻ ghi nhớ",
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+              const SizedBox(height: 8),
+
+              Center(
+                child: ToggleButtons(
+                  onPressed: (int index) {
+                    _setFrontCardLanguage(CardFaceLanguage.values[index]);
+                  },
+                  borderRadius: const BorderRadius.all(Radius.circular(8)),
+                  isSelected: [
+                    selectedLang == CardFaceLanguage.english,
+                    selectedLang == CardFaceLanguage.vietnamese,
+                  ],
+                  selectedBorderColor: Theme.of(context).colorScheme.tertiary,
+                  selectedColor: Theme.of(context).colorScheme.onTertiary,
+                  fillColor: Theme.of(context).colorScheme.tertiary,
+                  color: Theme.of(context).colorScheme.onPrimary,
+                  children: _languageOptions,
+                ),
+              ),
+              const SizedBox(height: 16),
+            ],
           ),
-          const SizedBox(height: 16),
-        ],
-      ),
+        );
+      },
     );
   }
 }

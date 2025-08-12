@@ -1,3 +1,4 @@
+import 'package:english_mate/config/di.dart';
 import 'package:english_mate/config/theme/app_themes.dart';
 import 'package:english_mate/models/words/definition_part.dart';
 import 'package:english_mate/models/words/meaning.dart';
@@ -21,8 +22,8 @@ void main() async {
 
   await Hive.openBox<Word>('wordsBox');
 
-  await VocabLoader.loadIfNeeded();
-
+  await VocabLoader.loadIfNeeded(); // load bộ từ vựng duy nhất một lần
+  await DI().init();
   runApp(const App());
 }
 

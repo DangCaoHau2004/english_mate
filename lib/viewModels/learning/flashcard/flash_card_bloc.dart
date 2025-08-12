@@ -1,29 +1,25 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:english_mate/core/enums/app_enums.dart';
 import 'package:english_mate/utils/asset_helper.dart';
-import 'package:english_mate/viewModels/learning/flash_card_event.dart';
-import 'package:english_mate/viewModels/learning/flash_card_state.dart';
-import 'package:english_mate/viewModels/learning/session_word.dart';
+import 'package:english_mate/viewModels/learning/flashcard/flash_card_event.dart';
+import 'package:english_mate/viewModels/learning/flashcard/flash_card_state.dart';
+import 'package:english_mate/models/learning/session_word.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
-  List<SessionWord> sessionWords;
-  bool isFlippedDefault;
-
   final AudioPlayer _audioPlayer = AudioPlayer();
 
-  FlashCardBloc({required this.sessionWords, required this.isFlippedDefault})
-    : super(
-        FlashCardState(
-          learningStatus: LearningStatus.inProgress,
-          sessionWords: sessionWords,
-          isFlipped: isFlippedDefault,
-          isFlippedDefault: isFlippedDefault,
-        ),
-      ) {
-    on<SessionStarted>((event, emit) {
-      // khởi động lại bài học
-    });
+  FlashCardBloc({
+    required List<SessionWord> sessionWords,
+    required bool isFlippedDefault,
+  }) : super(
+         FlashCardState(
+           learningStatus: LearningStatus.inProgress,
+           sessionWords: sessionWords,
+           isFlipped: isFlippedDefault,
+           isFlippedDefault: isFlippedDefault,
+         ),
+       ) {
     on<CardFlipped>((event, emit) {
       emit(state.copyWith(isFlipped: !state.isFlipped));
     });
@@ -100,6 +96,35 @@ class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
           AssetHelper.getAudio(
             state.sessionWords[state.currentIndex].word.audioPronunciation,
           ),
+        ),
+      );
+    });
+    on<DefaultFlipToggled>((event, emit) {
+      emit(state.copyWith(isFlippedDefault: event.value));
+    });
+    on<ShuffleToggled>((e, emit) {
+      final base = List<SessionWord>.from(state.sessionWordsDefault);
+      if (e.enabled) base.shuffle();
+
+      final currId = state.sessionWords[state.currentIndex].word.wordId;
+
+      int newIndex = base.indexWhere(
+        (sw) =>
+            sw.word.wordId != currId &&
+            sw.wordStatus == WordStatus.stillLearning,
+      );
+
+      if (newIndex == -1) {
+        newIndex = base.indexWhere((sw) => sw.word.wordId != currId);
+      }
+
+      if (newIndex == -1) newIndex = 0;
+
+      emit(
+        state.copyWith(
+          sessionWords: base,
+          currentIndex: newIndex,
+          isFlipped: state.isFlippedDefault,
         ),
       );
     });
