@@ -1,15 +1,18 @@
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:english_mate/data/local/setting_local_datasource.dart';
 
 class SettingRepository {
-  final SharedPreferences prefs;
-  SettingRepository({required this.prefs});
-  bool get isFlippedDefault => prefs.getBool('is_flipped_default') ?? false;
+  final SettingLocalDatasource local;
+  SettingRepository({required this.local});
 
-  bool get shuffleFlashcards => prefs.getBool('shuffle_flashcards') ?? false;
+  bool get isFlippedDefault => local.isFlippedDefault;
 
-  Future<void> setIsFlippedDefault({required bool value}) async =>
-      prefs.setBool('is_flipped_default', value);
+  bool get shuffleFlashcards => local.shuffleFlashcards;
 
-  Future<void> setShuffleFlashcards({required bool value}) async =>
-      prefs.setBool('shuffle_flashcards', value);
+  Future<bool> setIsFlippedDefault({required bool value}) {
+    return local.setIsFlippedDefault(value: value);
+  }
+
+  Future<bool> setShuffleFlashcards({required bool value}) {
+    return local.setShuffleFlashcards(value: value);
+  }
 }

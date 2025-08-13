@@ -1,5 +1,6 @@
 import 'package:english_mate/config/di.dart';
 import 'package:english_mate/models/user_info_data.dart';
+import 'package:english_mate/models/words/word.dart';
 import 'package:english_mate/navigation/route_path.dart';
 import 'package:english_mate/viewModels/authentication/signIn/sign_in_bloc.dart';
 import 'package:english_mate/viewModels/authentication/signUp/sign_up_bloc.dart';
@@ -13,6 +14,7 @@ import 'package:english_mate/views/authentication/signUp/user_info_view.dart';
 import 'package:english_mate/views/authentication/sign_in_view.dart';
 import 'package:english_mate/views/home/home_view.dart';
 import 'package:english_mate/views/home_navigation/home_navigation.dart';
+import 'package:english_mate/views/learning/word_detail_view.dart';
 import 'package:english_mate/views/review/review_view.dart';
 import 'package:english_mate/views/statistics/statistics_view.dart';
 import 'package:flutter/material.dart';
@@ -149,6 +151,13 @@ class AppRouter {
               ),
             );
           }
+        },
+      ),
+      GoRoute(
+        path: RoutePath.wordDetail,
+        builder: (context, state) {
+          final Word word = state.extra as Word;
+          return WordDetailView(word: word);
         },
       ),
     ],

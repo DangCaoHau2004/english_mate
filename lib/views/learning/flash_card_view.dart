@@ -1,5 +1,7 @@
 import 'package:english_mate/core/enums/app_enums.dart';
 import 'package:english_mate/generated/fonts.gen.dart';
+import 'package:english_mate/models/words/word.dart';
+import 'package:english_mate/navigation/route_path.dart';
 import 'package:english_mate/utils/asset_helper.dart';
 import 'package:english_mate/utils/string_utils.dart';
 import 'package:english_mate/viewModels/learning/flashcard/flash_card_bloc.dart';
@@ -8,9 +10,12 @@ import 'package:english_mate/viewModels/learning/flashcard/flash_card_state.dart
 import 'package:english_mate/models/learning/session_word.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
 import 'package:english_mate/views/learning/flash_card_setting_dialog.dart';
+import 'package:english_mate/views/learning/report_word_dialog_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'dart:math' as math;
+
+import 'package:go_router/go_router.dart';
 
 class FlaskCardView extends StatefulWidget {
   const FlaskCardView({super.key});
@@ -28,10 +33,13 @@ class _FlaskCardViewState extends State<FlaskCardView>
   late Animation<Offset> _swipeAnimation;
   // State cho việc vuốt
   Offset _dragOffset = Offset.zero;
+  int? _lastIndex;
   @override
   void initState() {
     super.initState();
+    _lastIndex = context.read<FlashCardBloc>().state.currentIndex;
     final initialBlocState = context.read<FlashCardBloc>().state;
+
     // Khởi tạo controller cho việc lật
     _flipController = AnimationController(
       value: initialBlocState.isFlipped ? 1.0 : 0.0,
@@ -74,13 +82,35 @@ class _FlaskCardViewState extends State<FlaskCardView>
   void _saveWord() {}
 
   // hàm quay trở lại thẻ trước đó
-  void _goToPreviousCard() {}
+  void _goToPreviousCard() {
+    context.read<FlashCardBloc>().add(BackPressed());
+  }
 
-  // hàm quay trở lại thẻ trước đó
-  void _reportWord() {}
+  // hàm báo cáo từ
+  void _reportWord() {
+    final bloc = context.read<FlashCardBloc>();
+    final curIndex = bloc.state.currentIndex;
+    final word = bloc.state.sessionWords[curIndex].word;
 
-  // hàm quay trở lại thẻ trước đó
-  void _openDetailOfWord() {}
+    showDialog(
+      context: context,
+      useRootNavigator: false,
+      builder: (_) => ReportWordDialogView(word: word),
+    );
+  }
+
+  // đặt lại từ
+  void _resetWord() {
+    context.read<FlashCardBloc>().add(SessionRefreshed());
+  }
+
+  // hàm mở chi tiết từ vựng
+  void _openDetailOfWord() {
+    int curIndex = context.read<FlashCardBloc>().state.currentIndex;
+    Word word = context.read<FlashCardBloc>().state.sessionWords[curIndex].word;
+    context.push(RoutePath.wordDetail, extra: word);
+  }
+
   Widget _buildFront(SessionWord sessionWord) {
     String image = AssetHelper.getImage(sessionWord.word.image);
     String word = StringUtils.capitalizeFirstLetter(sessionWord.word.term);
@@ -290,20 +320,29 @@ class _FlaskCardViewState extends State<FlaskCardView>
       },
       listener: (context, state) {
         // tiếng anh là false còn tiếng việt là true
-        if (state.isFlipped) {
-          _flipController.forward();
+        final indexChanged = _lastIndex != state.currentIndex;
+
+        if (indexChanged) {
+          _flipController.stop();
+          _flipController.value = state.isFlipped ? 1.0 : 0.0;
         } else {
-          _flipController.reverse();
+          if (state.isFlipped) {
+            _flipController.forward();
+          } else {
+            _flipController.reverse();
+          }
         }
 
+        _lastIndex = state.currentIndex;
+
         setState(() {
-          _dragOffset = Offset.zero;
+          _dragOffset = Offset.zero; // reset kéo
         });
       },
       buildWhen: (previous, current) {
         return previous.currentIndex != current.currentIndex ||
             previous.learningStatus != current.learningStatus ||
-            previous.sessionWords.length != current.sessionWords.length;
+            previous.sessionWords != current.sessionWords;
       },
       builder: (context, state) {
         // Tính toán các giá trị cần thiết từ state
@@ -332,16 +371,31 @@ class _FlaskCardViewState extends State<FlaskCardView>
             ],
           ),
           body:
-              (state.learningStatus != LearningStatus.inProgress ||
+              (state.learningStatus == LearningStatus.complete ||
                   state.sessionWords.isEmpty)
               // Hiển thị khi phiên học kết thúc hoặc chưa bắt đầu
               ? Center(
-                  child: Text(
-                    state.learningStatus == LearningStatus.complete
-                        ? "Chúc mừng, bạn đã hoàn thành!"
-                        : "Đang chuẩn bị phiên học...",
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.titleLarge,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Chúc mừng, bạn đã hoàn thành!",
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.titleLarge,
+                      ),
+                      const SizedBox(height: 16),
+                      TextButton(
+                        onPressed: _resetWord,
+                        child: Text(
+                          "Đặt lại",
+                          style: Theme.of(context).textTheme.bodyMedium!
+                              .copyWith(
+                                color: Theme.of(context).colorScheme.tertiary,
+                              ),
+                        ),
+                      ),
+                    ],
                   ),
                 )
               // Hiển thị giao diện học chính
@@ -500,7 +554,9 @@ class _FlaskCardViewState extends State<FlaskCardView>
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           IconButton(
-                            onPressed: _goToPreviousCard,
+                            onPressed: state.historyWordIds.isEmpty
+                                ? null
+                                : _goToPreviousCard,
                             icon: const Icon(Icons.replay),
                           ),
                           Text(

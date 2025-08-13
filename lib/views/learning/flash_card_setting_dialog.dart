@@ -50,6 +50,11 @@ class _FlashCardSettingDialogState extends State<FlashCardSettingDialog> {
     context.read<FlashCardBloc>().add(ShuffleToggled(enabled: enabled));
   }
 
+  // đặt lại từ
+  void _resetWord() {
+    context.read<FlashCardBloc>().add(SessionRefreshed());
+  }
+
   void _setFrontCardLanguage(CardFaceLanguage language) {
     final isFlipDefault = _toBool(language);
     // lưu setting
@@ -117,6 +122,17 @@ class _FlashCardSettingDialogState extends State<FlashCardSettingDialog> {
                 ),
               ),
               const SizedBox(height: 16),
+              Center(
+                child: TextButton(
+                  onPressed: _resetWord,
+                  child: Text(
+                    "Đặt lại",
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: Theme.of(context).colorScheme.tertiary,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         );

@@ -1,4 +1,5 @@
 // di.dart
+import 'package:english_mate/data/local/setting_local_datasource.dart';
 import 'package:english_mate/data/repository/setting_repository.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
 import 'package:get_it/get_it.dart';
@@ -26,14 +27,16 @@ class DI {
   Future<void> init() async {
     final prefs = await SharedPreferences.getInstance();
     sl.registerLazySingleton<SharedPreferences>(() => prefs);
-    sl.registerLazySingleton<SettingRepository>(
-      () => SettingRepository(prefs: sl<SharedPreferences>()),
+    sl.registerLazySingleton<SettingLocalDatasource>(
+      () => SettingLocalDatasource(prefs: sl<SharedPreferences>()),
     );
     sl.registerLazySingleton<AuthRepository>(() => AuthRepository());
     sl.registerLazySingleton<UserRepository>(() => UserRepository());
 
     sl.registerLazySingleton<Box<Word>>(() => Hive.box<Word>('wordsBox'));
-
+    sl.registerLazySingleton<SettingRepository>(
+      () => SettingRepository(local: sl<SettingLocalDatasource>()),
+    );
     sl.registerFactory<SignInBloc>(
       () => SignInBloc(
         authRepository: sl<AuthRepository>(),

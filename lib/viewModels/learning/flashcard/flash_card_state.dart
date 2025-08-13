@@ -9,6 +9,7 @@ class FlashCardState {
   final bool isFlipped;
   final bool isFlippedDefault;
   final String? errorMessage;
+  final List<int> historyWordIds;
   FlashCardState({
     required this.learningStatus,
     required this.sessionWords,
@@ -16,7 +17,9 @@ class FlashCardState {
     this.currentIndex = 0,
     this.errorMessage,
     this.isFlippedDefault = false,
-  }) : sessionWordsDefault = [...sessionWords];
+    List<int>? historyWordIds,
+  }) : historyWordIds = [...(historyWordIds ?? [])],
+       sessionWordsDefault = [...sessionWords];
 
   FlashCardState._({
     required this.learningStatus,
@@ -26,6 +29,7 @@ class FlashCardState {
     required this.isFlipped,
     required this.isFlippedDefault,
     required this.errorMessage,
+    required this.historyWordIds,
   });
   FlashCardState copyWith({
     LearningStatus? learningStatus,
@@ -34,6 +38,7 @@ class FlashCardState {
     bool? isFlipped,
     String? errorMessage,
     bool? isFlippedDefault,
+    List<int>? historyWordIds,
   }) {
     return FlashCardState._(
       learningStatus: learningStatus ?? this.learningStatus,
@@ -43,6 +48,7 @@ class FlashCardState {
       isFlipped: isFlipped ?? this.isFlipped,
       errorMessage: errorMessage ?? this.errorMessage,
       isFlippedDefault: isFlippedDefault ?? this.isFlippedDefault,
+      historyWordIds: historyWordIds ?? this.historyWordIds,
     );
   }
 }

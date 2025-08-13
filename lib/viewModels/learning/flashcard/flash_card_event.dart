@@ -1,3 +1,5 @@
+import 'package:english_mate/models/learning/session_word.dart';
+
 abstract class FlashCardEvent {}
 
 class DefaultFlipToggled extends FlashCardEvent {
@@ -17,3 +19,7 @@ class WordMarkedAsKnown extends FlashCardEvent {}
 class WordMarkedAsStillLearning extends FlashCardEvent {}
 
 class AudioPlayed extends FlashCardEvent {}
+
+class BackPressed extends FlashCardEvent {}
+
+class SessionRefreshed extends FlashCardEvent {}

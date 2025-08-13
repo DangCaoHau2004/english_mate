@@ -32,7 +32,9 @@ class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
       updatedWords[currentIndex] = updatedWords[currentIndex].copyWith(
         wordStatus: WordStatus.known,
       );
-
+      // thêm word id vào history
+      final newHistory = List<int>.from(state.historyWordIds)
+        ..add(updatedWords[currentIndex].word.wordId);
       // tìm kiếm index tiếp theo
       int nextIndex = updatedWords.indexWhere(
         (word) => word.wordStatus == WordStatus.stillLearning,
@@ -45,13 +47,14 @@ class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
           (word) => word.wordStatus == WordStatus.stillLearning,
         );
       }
-      // 4. Phát ra state mới
+      // Phát ra state mới
       if (nextIndex == -1) {
         // Không còn từ nào để học -> phiên học hoàn tất
         emit(
           state.copyWith(
             learningStatus: LearningStatus.complete,
             sessionWords: updatedWords,
+            historyWordIds: newHistory,
           ),
         );
       } else {
@@ -61,12 +64,16 @@ class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
             sessionWords: updatedWords,
             currentIndex: nextIndex,
             isFlipped: state.isFlippedDefault,
+            historyWordIds: newHistory,
           ),
         );
       }
     });
     on<WordMarkedAsStillLearning>((event, emit) {
       final currentIndex = state.currentIndex;
+      //thêm id vào history
+      final newHistory = List<int>.from(state.historyWordIds)
+        ..add(state.sessionWords[currentIndex].word.wordId);
 
       // tìm index từ tiếp theo
       int nextIndex = state.sessionWords.indexWhere(
@@ -87,6 +94,7 @@ class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
         state.copyWith(
           currentIndex: nextIndex,
           isFlipped: state.isFlippedDefault,
+          historyWordIds: newHistory,
         ),
       );
     });
@@ -102,29 +110,101 @@ class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
     on<DefaultFlipToggled>((event, emit) {
       emit(state.copyWith(isFlippedDefault: event.value));
     });
-    on<ShuffleToggled>((e, emit) {
-      final base = List<SessionWord>.from(state.sessionWordsDefault);
-      if (e.enabled) base.shuffle();
+    on<ShuffleToggled>((event, emit) {
+      final order = <int, int>{
+        for (var i = 0; i < state.sessionWordsDefault.length; i++)
+          state.sessionWordsDefault[i].word.wordId: i,
+      };
 
-      final currId = state.sessionWords[state.currentIndex].word.wordId;
+      // clone danh sách hiện tại rồi sắp xếp theo thứ tự gốc
+      final reordered = List<SessionWord>.from(
+        state.sessionWords,
+      )..sort((a, b) => order[a.word.wordId]!.compareTo(order[b.word.wordId]!));
 
-      int newIndex = base.indexWhere(
-        (sw) =>
-            sw.word.wordId != currId &&
-            sw.wordStatus == WordStatus.stillLearning,
-      );
-
-      if (newIndex == -1) {
-        newIndex = base.indexWhere((sw) => sw.word.wordId != currId);
+      // TẮT SHUFFLE: không đổi currentIndex
+      if (!event.enabled) {
+        emit(
+          state.copyWith(
+            sessionWords: reordered,
+            currentIndex: state.currentIndex, // giữ nguyên index (số)
+            isFlipped: state.isFlippedDefault,
+          ),
+        );
+        return;
       }
 
+      // BẬT SHUFFLE: trộn và đổi currentIndex
+      reordered.shuffle();
+
+      // lấy id current từ danh sách hiện tại trước khi trộn
+      final currId = state.sessionWords.isEmpty
+          ? null
+          : state.sessionWords[state.currentIndex].word.wordId;
+
+      int newIndex = -1;
+
+      if (currId != null) {
+        // ưu tiên phần tử stillLearning và khác currId
+        newIndex = reordered.indexWhere(
+          (sw) =>
+              sw.word.wordId != currId &&
+              sw.wordStatus == WordStatus.stillLearning,
+        );
+        if (newIndex == -1) {
+          // nếu không có stillLearning thì lấy phần tử khác currId bất kỳ
+          newIndex = state.currentIndex;
+        }
+      }
+
+      // nếu danh sách chỉ có 1 phần tử hoặc không tìm ra cái khác -> rơi về 0 (hoặc giữ nguyên tùy ý)
       if (newIndex == -1) newIndex = 0;
 
       emit(
         state.copyWith(
-          sessionWords: base,
+          sessionWords: reordered,
           currentIndex: newIndex,
           isFlipped: state.isFlippedDefault,
+        ),
+      );
+    });
+
+    on<BackPressed>((event, emit) {
+      if (state.historyWordIds.isEmpty || state.currentIndex == -1) return;
+      int lastWordId = state.historyWordIds.last;
+      int index = state.sessionWords.indexWhere(
+        (sw) => sw.word.wordId == lastWordId,
+      );
+      // xóa bỏ từ cuối của history
+      final newHistory = List<int>.from(state.historyWordIds)..removeLast();
+
+      // sửa lại thành stillLearning
+      final newWords = List<SessionWord>.from(state.sessionWords);
+      newWords[index] = newWords[index].copyWith(
+        wordStatus: WordStatus.stillLearning,
+      );
+      emit(
+        state.copyWith(
+          currentIndex: index,
+          isFlipped: state.isFlippedDefault,
+          historyWordIds: newHistory,
+          sessionWords: newWords,
+        ),
+      );
+    });
+    on<SessionRefreshed>((event, emit) {
+      List<SessionWord> newSessionWords = [];
+      for (var i = 0; i < state.sessionWords.length; i++) {
+        newSessionWords.add(
+          state.sessionWords[i].copyWith(wordStatus: WordStatus.stillLearning),
+        );
+      }
+      emit(
+        state.copyWith(
+          sessionWords: newSessionWords,
+          historyWordIds: [],
+          currentIndex: 0,
+          isFlipped: state.isFlippedDefault,
+          learningStatus: LearningStatus.inProgress,
         ),
       );
     });
