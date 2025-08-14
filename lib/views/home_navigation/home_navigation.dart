@@ -23,6 +23,8 @@ class _HomeNavigationState extends State<HomeNavigation> {
     Icons.person,
   ];
   List<String> labels = ['Trang chủ', 'Ôn tập', 'Thống kê', 'Tài khoản'];
+  List<String> titles = ['Từ vựng', 'Ôn tập', 'Thống kê', 'Tài khoản'];
+
   int selectedIndex = 0;
 
   void _onSelected(int index) {
@@ -32,6 +34,9 @@ class _HomeNavigationState extends State<HomeNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: widget.navigationShell.currentIndex == 3
+          ? null
+          : AppBar(title: Text(titles[widget.navigationShell.currentIndex])),
       body: widget.navigationShell,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: widget.navigationShell.currentIndex,

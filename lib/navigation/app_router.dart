@@ -27,7 +27,7 @@ class AppRouter {
       GlobalKey<NavigatorState>(debugLabel: 'root');
 
   static final router = GoRouter(
-    initialLocation: RoutePath.flashCard,
+    initialLocation: RoutePath.home,
     navigatorKey: rootNavigatorKey,
     routes: [
       StatefulShellRoute.indexedStack(
@@ -71,12 +71,13 @@ class AppRouter {
       ),
 
       GoRoute(
-        path: RoutePath.flashCard,
+        path: "${RoutePath.flashCard}/:unitId",
         builder: (context, state) => MultiBlocProvider(
           providers: [
             BlocProvider(
               create: (context) {
-                return DI().sl<FlashCardBloc>(param1: 2);
+                final unitId = int.parse(state.pathParameters['unitId'] ?? "1");
+                return DI().sl<FlashCardBloc>(param1: unitId);
               },
             ),
             BlocProvider(

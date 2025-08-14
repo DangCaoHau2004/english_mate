@@ -1,5 +1,3 @@
-import 'package:english_mate/models/learning/session_word.dart';
-
 abstract class FlashCardEvent {}
 
 class DefaultFlipToggled extends FlashCardEvent {
