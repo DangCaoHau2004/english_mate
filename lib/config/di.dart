@@ -1,7 +1,10 @@
 // di.dart
 import 'package:english_mate/data/local/setting_local_datasource.dart';
+import 'package:english_mate/data/network/user_firestore_datasource.dart';
 import 'package:english_mate/data/repository/setting_repository.dart';
+import 'package:english_mate/viewModels/authentication/auth_gate_cubit.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -31,7 +34,6 @@ class DI {
       () => SettingLocalDatasource(prefs: sl<SharedPreferences>()),
     );
     sl.registerLazySingleton<AuthRepository>(() => AuthRepository());
-    sl.registerLazySingleton<UserRepository>(() => UserRepository());
 
     sl.registerLazySingleton<Box<Word>>(() => Hive.box<Word>('wordsBox'));
     sl.registerLazySingleton<SettingRepository>(
@@ -80,7 +82,26 @@ class DI {
       userInfoData,
       _,
     ) {
-      return UserInfoBloc(userInfoData: userInfoData);
+      return UserInfoBloc(
+        userInfoData: userInfoData,
+        userRepository: sl<UserRepository>(),
+      );
     });
+
+    //đăng kí cái kiểm tra user
+    sl.registerLazySingleton<UserFirestoreDatasource>(
+      () => UserFirestoreDatasource(),
+    );
+    sl.registerLazySingleton<UserRepository>(
+      () => UserRepository(
+        userFirestoreDatasource: sl<UserFirestoreDatasource>(),
+      ),
+    );
+    sl.registerLazySingleton<AuthGateCubit>(
+      () => AuthGateCubit(
+        firebaseAuth: FirebaseAuth.instance,
+        userRepository: sl<UserRepository>(),
+      ),
+    );
   }
 }

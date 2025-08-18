@@ -8,14 +8,12 @@ class SignInState {
   final String? password;
   final SignInStatus status;
   final String? errorMessage;
-  UserInfoData? userInfoData;
   SignInState({
     this.userData,
     this.email,
     this.password,
     this.status = SignInStatus.initial,
     this.errorMessage,
-    this.userInfoData,
   });
   SignInState copyWith({
     UserData? userData,
@@ -32,7 +30,6 @@ class SignInState {
       email: email ?? this.email,
       password: password ?? this.password,
       status: status ?? this.status,
-      userInfoData: userInfoData ?? this.userInfoData,
     );
   }
 }

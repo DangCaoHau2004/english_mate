@@ -1,5 +1,4 @@
 import 'package:english_mate/core/enums/app_enums.dart';
-import 'package:english_mate/models/user_info_data.dart';
 import 'package:english_mate/navigation/route_path.dart';
 import 'package:english_mate/viewModels/authentication/signUp/sign_up_bloc.dart';
 import 'package:english_mate/viewModels/authentication/signUp/sign_up_event.dart';
@@ -62,24 +61,7 @@ class _SignUpViewState extends State<SignUpView> {
           // nếu thành công
           else if (state.status == SignUpStatus.success) {
             context.pop();
-
-            if (state.userCredential == null) {
-              // Có thể hiển thị SnackBar lỗi ở đây thay vì throw Exception
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('Lỗi không xác định khi đăng ký!'),
-                ),
-              );
-              return;
-            }
-            String email = state.email;
-            String uid = state.userCredential!.user!.uid;
-            UserInfoData userInfoData = UserInfoData(
-              authProvider: AppAuthProvider.email,
-              email: email,
-              uid: uid,
-            );
-            context.push(RoutePath.userInfo, extra: userInfoData);
+            context.push(RoutePath.userInfo);
           }
         },
         child: Padding(

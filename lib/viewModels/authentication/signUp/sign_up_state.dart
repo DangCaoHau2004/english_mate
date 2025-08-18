@@ -6,13 +6,11 @@ class SignUpState {
   final String password;
   final SignUpStatus status;
   final String? errorMessage;
-  final UserCredential? userCredential;
   SignUpState({
     this.email = "",
     this.password = "",
     this.status = SignUpStatus.initial,
     this.errorMessage,
-    this.userCredential,
   });
 
   SignUpState copyWith({
@@ -27,7 +25,6 @@ class SignUpState {
       password: password ?? this.password,
       status: status ?? this.status,
       errorMessage: errorMessage,
-      userCredential: userCredential ?? this.userCredential,
     );
   }
 }

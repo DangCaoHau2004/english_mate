@@ -1,5 +1,6 @@
 import 'package:english_mate/core/enums/app_enums.dart';
 import 'package:english_mate/navigation/route_path.dart';
+import 'package:english_mate/viewModels/authentication/auth_gate_cubit.dart';
 import 'package:english_mate/viewModels/authentication/userInfo/user_info_bloc.dart';
 import 'package:english_mate/viewModels/authentication/userInfo/user_info_event.dart';
 import 'package:english_mate/viewModels/authentication/userInfo/user_info_state.dart';
@@ -73,6 +74,8 @@ class _UserInfoViewState extends State<UserInfoView> {
       );
 
       if (shouldExit == true) {
+        // reset lại authCubit
+        context.read<AuthGateCubit>().reset();
         if (_userInfoBloc.state.authProvider == AppAuthProvider.google) {
           //đăng xuất tài khoản google
           GoogleSignIn.instance.signOut();
@@ -119,6 +122,7 @@ class _UserInfoViewState extends State<UserInfoView> {
         _currentStep++;
       });
     } else {
+      context.read<AuthGateCubit>().changeIsNewUser(false);
       context.read<UserInfoBloc>().add(UserInfoSubmitted());
     }
   }

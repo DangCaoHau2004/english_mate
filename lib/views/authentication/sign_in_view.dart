@@ -1,5 +1,4 @@
 import 'package:english_mate/core/enums/app_enums.dart';
-import 'package:english_mate/models/user_info_data.dart';
 import 'package:english_mate/navigation/route_path.dart';
 import 'package:english_mate/viewModels/authentication/signIn/sign_in_bloc.dart';
 import 'package:english_mate/viewModels/authentication/signIn/sign_in_event.dart';
@@ -55,18 +54,7 @@ class _SignInViewState extends State<SignInView> {
             );
           } else if (state.status == SignInStatus.profileRequired) {
             context.pop();
-
-            if (state.userInfoData == null) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('Lỗi không xác định khi đăng ký!'),
-                ),
-              );
-              return;
-            }
-
-            UserInfoData userInfoData = state.userInfoData!;
-            context.push(RoutePath.userInfo, extra: userInfoData);
+            context.push(RoutePath.userInfo);
           }
         },
         child: LayoutBuilder(
@@ -268,7 +256,6 @@ class _SignInViewState extends State<SignInView> {
                       ),
                       Container(
                         padding: const EdgeInsets.symmetric(vertical: 16.0),
-
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: _singIn,

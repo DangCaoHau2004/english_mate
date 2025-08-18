@@ -1,5 +1,4 @@
 import 'package:english_mate/core/enums/app_enums.dart';
-import 'package:english_mate/models/user_info_data.dart';
 import 'package:english_mate/navigation/route_path.dart';
 import 'package:english_mate/viewModels/authentication/signIn/sign_in_bloc.dart';
 import 'package:english_mate/viewModels/authentication/signIn/sign_in_event.dart';
@@ -56,21 +55,9 @@ class GettingStartedView extends StatelessWidget {
               ),
             );
           } else if (state.status == SignInStatus.profileRequired) {
+            //bỏ dialog
             context.pop();
-
-            if (state.userInfoData == null) {
-              // Có thể hiển thị SnackBar lỗi ở đây thay vì throw Exception
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('Lỗi không xác định khi đăng ký!'),
-                ),
-              );
-              return;
-            }
-
-            // Bây giờ, tạo đối tượng UserInfoData một cách an toàn
-            UserInfoData userInfoData = state.userInfoData!;
-            context.push(RoutePath.userInfo, extra: userInfoData);
+            context.push(RoutePath.userInfo);
           }
         },
         child: Padding(

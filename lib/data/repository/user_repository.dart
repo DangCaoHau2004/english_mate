@@ -26,14 +26,10 @@ class UserRepository {
   }
 
   Future<UserData> getUserData({required String uid}) async {
-    try {
-      UserData? userData = await _userFirestoreDatasource.getUserData(uid: uid);
-      if (userData == null) {
-        throw Exception('Không tồn tại user');
-      }
-      return userData;
-    } catch (e) {
-      throw Exception('Có lỗi xảy ra!');
+    UserData? userData = await _userFirestoreDatasource.getUserData(uid: uid);
+    if (userData == null) {
+      throw Exception('Không tồn tại user');
     }
+    return userData;
   }
 }

@@ -10,31 +10,23 @@ class AuthRepository {
   Future<UserCredential> signInWithGoogle() async {
     final UserCredential? user = await _authNetworkDatasource
         .signInWithGoogleAccount();
-    try {
-      if (user == null) {
-        throw Exception("Đăng nhập Google bị hủy");
-      }
-      return user;
-      // nó tồn tại thì trả về data
-    } catch (e) {
-      throw Exception("Đăng nhập thất bại");
+    if (user == null) {
+      throw Exception("Đăng nhập Google bị hủy");
     }
+    return user;
+    // nó tồn tại thì trả về data
   }
 
   Future<UserCredential> signInWithEmailAndPassword({
     required String email,
     required String password,
   }) async {
-    try {
-      final UserCredential? user = await _authNetworkDatasource
-          .signInWithEmailAndPassword(email: email, password: password);
-      if (user == null) {
-        throw Exception("Đăng nhập thất bại");
-      }
-      return user;
-    } catch (e) {
+    final UserCredential? user = await _authNetworkDatasource
+        .signInWithEmailAndPassword(email: email, password: password);
+    if (user == null) {
       throw Exception("Đăng nhập thất bại");
     }
+    return user;
   }
 
   Future<UserCredential?> signUp({
@@ -45,10 +37,9 @@ class AuthRepository {
     final UserCredential? user = await _authNetworkDatasource
         .signUpWithEmailAndPassword(email: email, password: password);
 
-    if (user != null) {
-      return user;
-    } else {
+    if (user == null) {
       throw Exception('Đăng ký thất bại');
     }
+    return user;
   }
 }
