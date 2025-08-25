@@ -62,13 +62,15 @@ class UserInfoBloc extends Bloc<UserInfoEvent, UserInfoState> {
           uid: state.uid,
           email: state.email!,
           fullName: state.fullName,
-          authProvider: state.authProvider,
+          authProvider: [state.authProvider],
           gender: state.gender,
           dateOfBirth: state.dateOfBirth!,
           studyTime: state.studyTime,
         );
         await _userRepository.createUserProfile(userData: userData);
-        emit(state.copyWith(status: UserInfoStatus.success));
+        emit(
+          state.copyWith(status: UserInfoStatus.success, userData: userData),
+        );
       } catch (e) {
         emit(
           state.copyWith(
@@ -77,6 +79,14 @@ class UserInfoBloc extends Bloc<UserInfoEvent, UserInfoState> {
           ),
         );
       }
+    });
+    on<UserInfoErrorOccurred>((event, emit) {
+      emit(
+        state.copyWith(
+          errorMessage: event.errorMessage,
+          status: UserInfoStatus.failure,
+        ),
+      );
     });
   }
 }

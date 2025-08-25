@@ -1,4 +1,5 @@
 import 'package:english_mate/core/enums/app_enums.dart';
+import 'package:english_mate/models/user_data.dart';
 import 'package:flutter/material.dart';
 
 class UserInfoState {
@@ -11,6 +12,7 @@ class UserInfoState {
   final UserInfoStatus status;
   final String? errorMessage;
   final TimeOfDay? studyTime;
+  final UserData? userData;
   UserInfoState({
     required this.uid,
     this.email,
@@ -21,6 +23,7 @@ class UserInfoState {
     this.status = UserInfoStatus.initial,
     this.errorMessage,
     this.studyTime,
+    this.userData,
   }) : dateOfBirth = dateOfBirth ?? DateTime.now();
 
   UserInfoState copyWith({
@@ -32,6 +35,7 @@ class UserInfoState {
     UserInfoStatus? status,
     String? errorMessage,
     TimeOfDay? studyTime,
+    UserData? userData,
   }) {
     return UserInfoState(
       // uid ko đổi
@@ -44,6 +48,7 @@ class UserInfoState {
       status: status ?? this.status,
       errorMessage: errorMessage,
       studyTime: studyTime ?? this.studyTime,
+      userData: userData ?? this.userData,
     );
   }
 }

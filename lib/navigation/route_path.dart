@@ -12,4 +12,6 @@ class RoutePath {
   static const String setting = '/setting';
   static const String flashCard = '/flashCard';
   static const String wordDetail = '/wordDetail';
+  static const String editProfile = '/editProfile';
+  static const String linkedAccount = '/linkedAccount';
 }

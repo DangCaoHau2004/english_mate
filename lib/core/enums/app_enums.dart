@@ -4,6 +4,8 @@ enum SignInStatus { initial, loading, success, profileRequired, failure }
 
 enum UserInfoStatus { initial, loading, success, failure }
 
+enum LinkedAccount { initial, loading, success, failure }
+
 enum Gender { male, female, orther }
 
 enum AppAuthProvider { email, google }

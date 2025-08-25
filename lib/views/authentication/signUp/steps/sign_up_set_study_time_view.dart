@@ -1,4 +1,3 @@
-import 'package:english_mate/viewModels/authentication/auth_gate_cubit.dart';
 import 'package:english_mate/viewModels/authentication/userInfo/user_info_bloc.dart';
 import 'package:english_mate/viewModels/authentication/userInfo/user_info_event.dart';
 import 'package:english_mate/viewModels/authentication/userInfo/user_info_state.dart';
@@ -131,9 +130,7 @@ class _SignUpSetStudyTimeViewState extends State<SignUpSetStudyTimeView> {
                     context.read<UserInfoBloc>().add(
                       UserInfoStudyTimeSkipped(),
                     );
-                    // đẩy mẫu
-                    context.read<AuthGateCubit>().changeIsNewUser(false);
-
+                    //submit lên db
                     context.read<UserInfoBloc>().add(UserInfoSubmitted());
                   },
                   child: const Text('Bỏ qua'),

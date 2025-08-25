@@ -2,7 +2,9 @@
 import 'package:english_mate/data/local/setting_local_datasource.dart';
 import 'package:english_mate/data/network/user_firestore_datasource.dart';
 import 'package:english_mate/data/repository/setting_repository.dart';
+import 'package:english_mate/models/user_data.dart';
 import 'package:english_mate/viewModels/authentication/auth_gate_cubit.dart';
+import 'package:english_mate/viewModels/editProfile/editProfile/edit_profile_bloc.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
@@ -100,6 +102,12 @@ class DI {
     sl.registerLazySingleton<AuthGateCubit>(
       () => AuthGateCubit(
         firebaseAuth: FirebaseAuth.instance,
+        userRepository: sl<UserRepository>(),
+      ),
+    );
+    sl.registerFactoryParam<EditProfileBloc, UserData, void>(
+      (userData, _) => EditProfileBloc(
+        userData: userData,
         userRepository: sl<UserRepository>(),
       ),
     );

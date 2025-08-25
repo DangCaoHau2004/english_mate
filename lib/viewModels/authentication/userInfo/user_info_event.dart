@@ -31,3 +31,8 @@ class UserInfoStudyTimeChanged extends UserInfoEvent {
 class UserInfoStudyTimeSkipped extends UserInfoEvent {}
 
 class UserInfoSubmitted extends UserInfoEvent {}
+
+class UserInfoErrorOccurred extends UserInfoEvent {
+  final String errorMessage;
+  UserInfoErrorOccurred({required this.errorMessage});
+}

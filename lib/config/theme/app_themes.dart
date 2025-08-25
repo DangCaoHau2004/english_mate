@@ -106,7 +106,7 @@ class AppThemes {
       ),
     ),
     iconButtonTheme: IconButtonThemeData(
-      style: IconButton.styleFrom(backgroundColor: _lightColorScheme.primary),
+      style: IconButton.styleFrom(backgroundColor: Colors.transparent),
     ),
     iconTheme: IconThemeData(color: _lightColorScheme.onPrimary),
     checkboxTheme: CheckboxThemeData(
@@ -170,6 +170,82 @@ class AppThemes {
         }
         return _lightColorScheme.onPrimary;
       }),
+    ),
+    dropdownMenuTheme: DropdownMenuThemeData(
+      menuStyle: MenuStyle(
+        backgroundColor: WidgetStatePropertyAll(_lightColorScheme.primary),
+        elevation: const WidgetStatePropertyAll(4),
+
+        shape: const WidgetStatePropertyAll(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+          ),
+        ),
+      ),
+      textStyle: TextStyle(fontSize: 18, color: _lightColorScheme.onPrimary),
+    ),
+    datePickerTheme: DatePickerThemeData(
+      backgroundColor: _lightColorScheme.surface,
+      surfaceTintColor: _lightColorScheme.primary,
+      headerBackgroundColor: _lightColorScheme.primary,
+      headerForegroundColor: _lightColorScheme.onPrimary,
+      dayForegroundColor: WidgetStateProperty.resolveWith((states) {
+        if (states.contains(WidgetState.selected)) {
+          return _lightColorScheme.surface;
+        }
+        if (states.contains(WidgetState.disabled)) {
+          return _lightColorScheme.secondary; // màu chữ cho disabled
+        }
+        return _lightColorScheme.onSurface;
+      }),
+
+      dayBackgroundColor: WidgetStateProperty.resolveWith((states) {
+        if (states.contains(WidgetState.selected)) {
+          return _lightColorScheme.onSurface; // Nền xanh khi được chọn
+        }
+
+        return Colors.transparent;
+      }),
+      todayBorder: BorderSide(color: _lightColorScheme.surface, width: 0.2),
+      todayForegroundColor: WidgetStateProperty.resolveWith((states) {
+        if (states.contains(WidgetState.selected)) {
+          return _lightColorScheme.surface;
+        }
+
+        return _lightColorScheme.onSurface;
+      }),
+
+      weekdayStyle: TextStyle(color: _lightColorScheme.onSurface),
+      todayBackgroundColor: WidgetStateProperty.resolveWith((states) {
+        if (states.contains(WidgetState.selected)) {
+          return _lightColorScheme.onSurface;
+        }
+
+        return Colors.transparent;
+      }),
+      yearStyle: TextStyle(color: _lightColorScheme.onPrimary),
+      yearBackgroundColor: WidgetStateProperty.resolveWith((states) {
+        if (states.contains(WidgetState.selected)) {
+          return _lightColorScheme.onSurface;
+        }
+
+        return Colors.transparent;
+      }),
+      yearForegroundColor: WidgetStateProperty.resolveWith((states) {
+        if (states.contains(WidgetState.selected)) {
+          return _lightColorScheme.surface;
+        }
+
+        return _lightColorScheme.onSurface;
+      }),
+
+      confirmButtonStyle: TextButton.styleFrom(
+        foregroundColor: _lightColorScheme.onSurface,
+      ),
+
+      cancelButtonStyle: TextButton.styleFrom(
+        foregroundColor: _lightColorScheme.secondary,
+      ),
     ),
   );
 }

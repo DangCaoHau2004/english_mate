@@ -33,19 +33,18 @@ class _HomeNavigationState extends State<HomeNavigation> {
 
   @override
   Widget build(BuildContext context) {
+    int index = widget.navigationShell.currentIndex;
     return Scaffold(
-      appBar: widget.navigationShell.currentIndex == 3
-          ? null
-          : AppBar(title: Text(titles[widget.navigationShell.currentIndex])),
+      appBar: AppBar(title: Text(titles[index])),
       body: widget.navigationShell,
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: widget.navigationShell.currentIndex,
+        currentIndex: index,
         type: BottomNavigationBarType.fixed,
         onTap: _onSelected,
-        items: List.generate(routes.length, (index) {
+        items: List.generate(routes.length, (idx) {
           return BottomNavigationBarItem(
-            icon: Icon(icons[index]),
-            label: labels[index],
+            icon: Icon(icons[idx]),
+            label: labels[idx],
           );
         }),
       ),

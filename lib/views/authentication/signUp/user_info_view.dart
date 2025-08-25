@@ -1,5 +1,4 @@
 import 'package:english_mate/core/enums/app_enums.dart';
-import 'package:english_mate/navigation/route_path.dart';
 import 'package:english_mate/viewModels/authentication/auth_gate_cubit.dart';
 import 'package:english_mate/viewModels/authentication/userInfo/user_info_bloc.dart';
 import 'package:english_mate/viewModels/authentication/userInfo/user_info_event.dart';
@@ -9,6 +8,7 @@ import 'package:english_mate/views/authentication/signUp/steps/sign_up_set_date_
 import 'package:english_mate/views/authentication/signUp/steps/sign_up_set_email_view.dart';
 import 'package:english_mate/views/authentication/signUp/steps/sign_up_set_name_view.dart';
 import 'package:english_mate/views/authentication/signUp/steps/sign_up_set_study_time_view.dart';
+import 'package:english_mate/widgets/loading_dialog.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -74,16 +74,18 @@ class _UserInfoViewState extends State<UserInfoView> {
       );
 
       if (shouldExit == true) {
-        // reset lại authCubit
-        context.read<AuthGateCubit>().reset();
-        if (_userInfoBloc.state.authProvider == AppAuthProvider.google) {
-          //đăng xuất tài khoản google
-          GoogleSignIn.instance.signOut();
-        }
-        await FirebaseAuth.instance.signOut();
-        context.pop();
+        _logOutAccount();
       }
     }
+  }
+
+  void _logOutAccount() async {
+    // reset lại authCubit
+    context.read<AuthGateCubit>().reset();
+    //đăng xuất tài khoản google
+    GoogleSignIn.instance.signOut();
+    await FirebaseAuth.instance.signOut();
+    context.pop();
   }
 
   bool _isCurrentStepValid() {
@@ -122,7 +124,7 @@ class _UserInfoViewState extends State<UserInfoView> {
         _currentStep++;
       });
     } else {
-      context.read<AuthGateCubit>().changeIsNewUser(false);
+      //submit lên db
       context.read<UserInfoBloc>().add(UserInfoSubmitted());
     }
   }
@@ -134,15 +136,34 @@ class _UserInfoViewState extends State<UserInfoView> {
       listenWhen: (previous, current) => previous.status != current.status,
       listener: (context, state) {
         if (state.status == UserInfoStatus.failure) {
+          _logOutAccount();
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text(state.errorMessage ?? 'Lỗi không xác định')),
           );
         }
         // nếu thành công
         else if (state.status == UserInfoStatus.success) {
-          context.go(RoutePath.auth);
+          // sửa thành user mới thành cũ
+          context.read<AuthGateCubit>().changeIsNewUser();
+          // nếu user là null
+          if (state.userData == null) {
+            // báo lỗi
+            context.read<UserInfoBloc>().add(
+              UserInfoErrorOccurred(
+                errorMessage: "Lỗi không thể tạo tài khoản",
+              ),
+            );
+          }
+          context.read<AuthGateCubit>().changeUserData(state.userData!);
+          // đã xử lý điều hướng trong app_route
+          // context.go(RoutePath.home);
         } else if (state.status == UserInfoStatus.loading) {
-          context.go(RoutePath.auth);
+          showDialog(
+            context: context,
+            builder: (context) {
+              return const LoadingDialog(content: "Vui lòng chờ");
+            },
+          );
         }
       },
       child: Scaffold(

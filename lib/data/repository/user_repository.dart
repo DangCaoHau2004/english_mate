@@ -32,4 +32,11 @@ class UserRepository {
     }
     return userData;
   }
+
+  Future<void> updateUserData({required UserData userData}) {
+    return _userFirestoreDatasource.updateUserData(
+      uid: userData.uid,
+      data: userData.toJson(createAt: userData.createAt),
+    );
+  }
 }

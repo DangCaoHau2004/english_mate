@@ -35,4 +35,15 @@ class UserFirestoreDatasource {
       throw Exception(AuthErrorConverter.getErrorMessage(e.code));
     }
   }
+
+  Future<void> updateUserData({
+    required String uid,
+    required Map<String, dynamic> data,
+  }) async {
+    try {
+      await _firestore.collection('users').doc(uid).update(data);
+    } on FirebaseException catch (e) {
+      throw Exception(AuthErrorConverter.getErrorMessage(e.code));
+    }
+  }
 }

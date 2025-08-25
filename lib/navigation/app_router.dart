@@ -1,4 +1,5 @@
 import 'package:english_mate/config/di.dart';
+import 'package:english_mate/models/user_data.dart';
 import 'package:english_mate/models/user_info_data.dart';
 import 'package:english_mate/models/words/word.dart';
 import 'package:english_mate/navigation/go_router_refresh_stream.dart';
@@ -7,9 +8,12 @@ import 'package:english_mate/viewModels/authentication/auth_gate_cubit.dart';
 import 'package:english_mate/viewModels/authentication/signIn/sign_in_bloc.dart';
 import 'package:english_mate/viewModels/authentication/signUp/sign_up_bloc.dart';
 import 'package:english_mate/viewModels/authentication/userInfo/user_info_bloc.dart';
+import 'package:english_mate/viewModels/editProfile/editProfile/edit_profile_bloc.dart';
 import 'package:english_mate/viewModels/learning/flashcard/flash_card_bloc.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
 import 'package:english_mate/views/account/account_view.dart';
+import 'package:english_mate/views/account/edit_profile_view.dart';
+import 'package:english_mate/views/account/linked_account_view.dart';
 import 'package:english_mate/views/authentication/getting_started_view.dart';
 import 'package:english_mate/views/authentication/signUp/sign_up_view.dart';
 import 'package:english_mate/views/authentication/signUp/user_info_view.dart';
@@ -30,50 +34,46 @@ class AppRouter {
 
   static GoRouter build(AuthGateCubit authGateCubit) {
     return GoRouter(
-      initialLocation: RoutePath.home,
+      initialLocation: RoutePath.linkedAccount,
       navigatorKey: rootNavigatorKey,
-      refreshListenable: GoRouterRefreshStream(authGateCubit.stream),
-      redirect: (context, state) {
-        final authState = authGateCubit.state;
-        final loggedIn = authState.isLoggedIn;
-        final isNewUser = authState.isNewUser;
 
-        // In ra để debug toàn bộ trạng thái cùng lúc
-        print(
-          "REDIRECT CHECK: location=${state.matchedLocation}, loggedIn=$loggedIn, isNewUser=$isNewUser",
-        );
+      // refreshListenable: GoRouterRefreshStream(authGateCubit.stream),
+      // redirect: (context, state) {
+      //   final authState = authGateCubit.state;
+      //   final loggedIn = authState.isLoggedIn;
+      //   final isNewUser = authState.isNewUser;
 
-        final onAuthFlow =
-            state.matchedLocation == RoutePath.auth ||
-            state.matchedLocation == RoutePath.signIn ||
-            state.matchedLocation == RoutePath.signUp;
+      //   final onAuthFlow =
+      //       state.matchedLocation == RoutePath.auth ||
+      //       state.matchedLocation == RoutePath.signIn ||
+      //       state.matchedLocation == RoutePath.signUp;
 
-        final onUserInfo = state.matchedLocation == RoutePath.userInfo;
+      //   final onUserInfo = state.matchedLocation == RoutePath.userInfo;
 
-        // người dùng chưa đăng nhập
-        if (!loggedIn) {
-          return onAuthFlow ? null : RoutePath.auth;
-        }
+      //   // người dùng chưa đăng nhập
+      //   if (!loggedIn) {
+      //     return onAuthFlow ? null : RoutePath.auth;
+      //   }
 
-        // đã đăng nhập đang chờ check
-        if (isNewUser == null) {
-          return null;
-        }
+      //   // đã đăng nhập đang chờ check
+      //   if (isNewUser == null) {
+      //     return null;
+      //   }
 
-        // đã đăng nhập nhưng là người mới
-        if (isNewUser) {
-          return onUserInfo ? null : RoutePath.userInfo;
-        }
+      //   // đã đăng nhập nhưng là người mới
+      //   if (isNewUser) {
+      //     // đã điều hướng thủ công
+      //     return null;
+      //   }
 
-        // đã đăng nhập và nếu đang ở các trang đăng nhập hoặc điền thông tin thì cho về home
-        if (onAuthFlow || onUserInfo) {
-          return RoutePath.home;
-        }
+      //   // đã đăng nhập và nếu đang ở các trang đăng nhập hoặc điền thông tin thì cho về home
+      //   if (onAuthFlow || onUserInfo) {
+      //     return RoutePath.home;
+      //   }
 
-        // Mặc định: cho phép đi tiếp
-        return null;
-      },
-
+      //   // Mặc định: cho phép đi tiếp
+      //   return null;
+      // },
       routes: [
         StatefulShellRoute.indexedStack(
           builder: (context, state, navigationShell) {
@@ -206,6 +206,22 @@ class AppRouter {
           builder: (context, state) {
             final Word word = state.extra as Word;
             return WordDetailView(word: word);
+          },
+        ),
+        GoRoute(
+          path: RoutePath.editProfile,
+          builder: (context, state) {
+            UserData userData = context.read<AuthGateCubit>().state.userData!;
+            return BlocProvider(
+              create: (context) => DI().sl<EditProfileBloc>(param1: userData),
+              child: const EditProfileView(),
+            );
+          },
+        ),
+        GoRoute(
+          path: RoutePath.linkedAccount,
+          builder: (context, state) {
+            return const LinkedAccountView();
           },
         ),
       ],
