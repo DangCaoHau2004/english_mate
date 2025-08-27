@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:english_mate/core/enums/app_enums.dart';
 import 'package:english_mate/data/repository/user_repository.dart';
 import 'package:english_mate/models/user_data.dart';
@@ -16,11 +18,26 @@ class AuthGateState {
     this.userInfoData,
     this.userData,
   });
+  AuthGateState copyWith({
+    bool? isLoggedIn,
+    bool? isNewUser,
+    UserInfoData? userInfoData,
+    UserData? userData,
+  }) {
+    return AuthGateState(
+      isLoggedIn: isLoggedIn ?? this.isLoggedIn,
+      isNewUser: isNewUser ?? this.isNewUser,
+      userInfoData: userInfoData ?? this.userInfoData,
+      userData: userData ?? this.userData,
+    );
+  }
 }
 
 class AuthGateCubit extends Cubit<AuthGateState> {
   final FirebaseAuth firebaseAuth;
   final UserRepository userRepository;
+  StreamSubscription? _userDocSub;
+
   AuthGateCubit({required this.firebaseAuth, required this.userRepository})
     : super(const AuthGateState(isLoggedIn: false, isNewUser: null)) {
     firebaseAuth.userChanges().listen((user) async {
@@ -37,34 +54,52 @@ class AuthGateCubit extends Cubit<AuthGateState> {
         authProvider: authProvider,
         email: user.email,
       );
-      emit(
-        AuthGateState(
-          isLoggedIn: true,
-          isNewUser: null,
-          userInfoData: userInfoData,
-        ),
-      );
-      final isNewUser = await userRepository.isNewUser(user.uid);
-      // nếu là người dùng cũ
-      if (!isNewUser) {
-        UserData? userData = await userRepository.getUserData(uid: user.uid);
+      final prevUid = state.userInfoData?.uid;
+      final sameUid = prevUid == user.uid;
+
+      if (sameUid) {
+        // cùng uid giữ nguyên userData & stream, chỉ cập nhật userInfo,
+        // trong trường hợp link nó sẽ load lại cái này nếu bằng null thì sẽ lỗi
         emit(
-          AuthGateState(
+          state.copyWith(
             isLoggedIn: true,
-            isNewUser: isNewUser,
+            isNewUser: state.isNewUser, // giữ nguyên
             userInfoData: userInfoData,
-            userData: userData,
+            // userData: giữ nguyên
           ),
         );
+        return; // không động vào _userDocSub
       } else {
+        // nếu đổi tài khoản mà 2 cái khác uid
         emit(
           AuthGateState(
             isLoggedIn: true,
-            isNewUser: isNewUser,
+            isNewUser: null,
             userInfoData: userInfoData,
+            userData: null,
           ),
         );
       }
+
+      // nếu là người dùng cũ
+      _userDocSub = userRepository
+          .watchUserDoc(uid: user.uid)
+          .listen(
+            (docMap) {
+              if (docMap.data() == null) {
+                // Chưa có document -> userData = null
+                emit(state.copyWith(userData: null, isNewUser: true));
+                return;
+              }
+
+              final data = UserData.fromFirestore(doc: docMap);
+              emit(state.copyWith(userData: data, isNewUser: false));
+            },
+            onError: (e, st) {
+              // Nếu lỗi (rules/mạng), vẫn giữ đăng nhập, nhưng không có userData
+              emit(state.copyWith(userData: null, isNewUser: true));
+            },
+          );
     });
   }
   void changeIsNewUser() async {
@@ -100,5 +135,11 @@ class AuthGateCubit extends Cubit<AuthGateState> {
         userInfoData: null,
       ),
     );
+  }
+
+  @override
+  Future<void> close() async {
+    await _userDocSub?.cancel();
+    return super.close();
   }
 }

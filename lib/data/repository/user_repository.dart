@@ -1,9 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:english_mate/data/network/user_firestore_datasource.dart';
 import 'package:english_mate/models/user_data.dart';
+import 'package:english_mate/core/enums/app_enums.dart';
 
 class UserRepository {
   final UserFirestoreDatasource _userFirestoreDatasource;
-
+  final _col = FirebaseFirestore.instance.collection('users');
   UserRepository({UserFirestoreDatasource? userFirestoreDatasource})
     : _userFirestoreDatasource =
           userFirestoreDatasource ?? UserFirestoreDatasource();
@@ -38,5 +40,29 @@ class UserRepository {
       uid: userData.uid,
       data: userData.toJson(createAt: userData.createAt),
     );
+  }
+
+  Future<void> linkedAccountWithGoogle() async {
+    await _userFirestoreDatasource.linkedAccountWithGoogle();
+  }
+
+  Future<void> linkedAccountWithEmail({
+    required String email,
+    required String password,
+  }) async {
+    await _userFirestoreDatasource.linkedAccountWithEmail(
+      email: email,
+      password: password,
+    );
+  }
+
+  Future<void> unLinkedAccount({required AppAuthProvider authProvider}) async {
+    _userFirestoreDatasource.unLinkedAccount(authProvider: authProvider);
+  }
+
+  Stream<DocumentSnapshot<Map<String, dynamic>>> watchUserDoc({
+    required String uid,
+  }) {
+    return _col.doc(uid).snapshots();
   }
 }

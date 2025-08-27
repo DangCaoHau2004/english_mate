@@ -1,5 +1,4 @@
 import 'package:english_mate/core/enums/app_enums.dart';
-import 'package:english_mate/viewModels/authentication/auth_gate_cubit.dart';
 import 'package:english_mate/viewModels/editProfile/editProfile/edit_profile_bloc.dart';
 import 'package:english_mate/viewModels/editProfile/editProfile/edit_profile_event.dart';
 import 'package:english_mate/viewModels/editProfile/editProfile/edit_profile_state.dart';
@@ -69,7 +68,6 @@ class _EditProfileViewState extends State<EditProfileView> {
           showLoadingDialog(context: context);
         } else if (state.status == UserInfoStatus.success) {
           context.pop();
-          context.read<AuthGateCubit>().changeUserData(state.editting);
         } else if (state.status == UserInfoStatus.failure) {
           context.pop();
           ScaffoldMessenger.of(context).showSnackBar(

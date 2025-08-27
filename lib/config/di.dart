@@ -5,6 +5,7 @@ import 'package:english_mate/data/repository/setting_repository.dart';
 import 'package:english_mate/models/user_data.dart';
 import 'package:english_mate/viewModels/authentication/auth_gate_cubit.dart';
 import 'package:english_mate/viewModels/editProfile/editProfile/edit_profile_bloc.dart';
+import 'package:english_mate/viewModels/editProfile/linkedAccount/linked_account_bloc.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
@@ -57,6 +58,7 @@ class DI {
         settingRepository: sl<SettingRepository>(),
         isShuffleFlashCards: sl<SettingRepository>().shuffleFlashcards,
         isFlippedDefault: sl<SettingRepository>().isFlippedDefault,
+        appThemeMode: sl<SettingRepository>().appThemeMode,
       );
     });
 
@@ -109,6 +111,12 @@ class DI {
       (userData, _) => EditProfileBloc(
         userData: userData,
         userRepository: sl<UserRepository>(),
+      ),
+    );
+    sl.registerFactoryParam<LinkedAccountBloc, List<AppAuthProvider>, void>(
+      (appAuthProvider, _) => LinkedAccountBloc(
+        userRepository: sl<UserRepository>(),
+        appAuthProvider: appAuthProvider,
       ),
     );
   }

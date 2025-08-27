@@ -23,6 +23,28 @@ class UserData {
     this.createAt,
   });
 
+  UserData copyWith({
+    String? uid,
+    String? email,
+    String? fullName,
+    List<AppAuthProvider>? authProvider,
+    Gender? gender,
+    DateTime? dateOfBirth,
+    DateTime? createAt,
+    TimeOfDay? studyTime,
+  }) {
+    return UserData(
+      uid: uid ?? this.uid,
+      email: email ?? this.email,
+      fullName: fullName ?? this.fullName,
+      authProvider: authProvider ?? this.authProvider,
+      gender: gender ?? this.gender,
+      dateOfBirth: dateOfBirth ?? this.dateOfBirth,
+      createAt: createAt ?? this.createAt,
+      studyTime: studyTime ?? this.studyTime,
+    );
+  }
+
   factory UserData.fromFirestore({
     required DocumentSnapshot<Map<String, dynamic>> doc,
   }) {

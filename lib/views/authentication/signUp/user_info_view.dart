@@ -154,7 +154,6 @@ class _UserInfoViewState extends State<UserInfoView> {
               ),
             );
           }
-          context.read<AuthGateCubit>().changeUserData(state.userData!);
           // đã xử lý điều hướng trong app_route
           // context.go(RoutePath.home);
         } else if (state.status == UserInfoStatus.loading) {

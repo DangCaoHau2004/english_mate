@@ -1,3 +1,4 @@
+import 'package:english_mate/core/enums/app_enums.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_event.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,10 +11,12 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
     required this.settingRepository,
     required bool isFlippedDefault,
     required bool isShuffleFlashCards,
+    required AppThemeMode appThemeMode,
   }) : super(
          SettingsState(
            isFlippedDefault: isFlippedDefault,
            isShuffleFlashCards: isShuffleFlashCards,
+           appThemeMode: appThemeMode,
          ),
        ) {
     on<SettingsFlippedDefaultChanged>((event, emit) {
@@ -23,6 +26,10 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
     on<SettingsShuffleFlashCardsChanged>((event, emit) {
       emit(state.copyWith(isShuffleFlashCards: event.shuffleFlashCards));
       settingRepository.setShuffleFlashcards(value: event.shuffleFlashCards);
+    });
+    on<ThemeChanged>((event, emit) {
+      emit(state.copyWith(appThemeMode: event.appThemeMode));
+      settingRepository.setAppThemeMode(value: event.appThemeMode.name);
     });
   }
 }

@@ -1,10 +1,13 @@
 import 'package:english_mate/config/di.dart';
 import 'package:english_mate/config/theme/app_themes.dart';
+import 'package:english_mate/core/enums/app_enums.dart';
 import 'package:english_mate/models/words/definition_part.dart';
 import 'package:english_mate/models/words/meaning.dart';
 import 'package:english_mate/models/words/word.dart';
 import 'package:english_mate/navigation/app_router.dart';
 import 'package:english_mate/viewModels/authentication/auth_gate_cubit.dart';
+import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
+import 'package:english_mate/viewModels/learning/settings/settings_state.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -37,11 +40,25 @@ class App extends StatelessWidget {
     final gate = DI().sl<AuthGateCubit>();
 
     return MultiBlocProvider(
-      providers: [BlocProvider.value(value: gate)],
-      child: MaterialApp.router(
-        theme: AppThemes.lightTheme,
-        debugShowCheckedModeBanner: false,
-        routerConfig: AppRouter.build(gate),
+      providers: [
+        BlocProvider.value(value: gate),
+        BlocProvider(create: (_) => DI().sl<SettingsBloc>()),
+      ],
+      child: BlocBuilder<SettingsBloc, SettingsState>(
+        buildWhen: (previous, current) =>
+            previous.appThemeMode != current.appThemeMode,
+        builder: (context, state) {
+          ThemeData appTheme = switch (state.appThemeMode) {
+            AppThemeMode.light => AppThemes.lightTheme,
+            AppThemeMode.dark => AppThemes.darkTheme,
+            AppThemeMode.pink => AppThemes.pinkTheme,
+          };
+          return MaterialApp.router(
+            theme: appTheme,
+            debugShowCheckedModeBanner: false,
+            routerConfig: AppRouter.build(gate),
+          );
+        },
       ),
     );
   }

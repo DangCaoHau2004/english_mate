@@ -18,9 +18,14 @@ class _AccountViewState extends State<AccountView> {
     context.push(RoutePath.editProfile);
   }
 
-  void _goToSetting() {}
-  void _goToLinkAccount() {}
-  void _changeApperance() {}
+  void _goToSetting() {
+    context.push(RoutePath.setting);
+  }
+
+  void _goToLinkAccount() {
+    context.push(RoutePath.linkedAccount);
+  }
+
   void _goToHelpAndSupport() {}
   void _signOut() async {
     await FirebaseAuth.instance.signOut();
@@ -93,16 +98,7 @@ class _AccountViewState extends State<AccountView> {
 
                   trailing: const Icon(Icons.arrow_forward_ios),
                 ),
-                ListTile(
-                  onTap: _changeApperance,
-                  leading: const Icon(Icons.remove_red_eye_outlined),
-                  title: Text(
-                    "Giao diện",
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
 
-                  trailing: const Icon(Icons.arrow_forward_ios),
-                ),
                 ListTile(
                   onTap: _goToHelpAndSupport,
                   leading: const Icon(Icons.support_agent),

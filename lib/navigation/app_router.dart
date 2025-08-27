@@ -1,4 +1,5 @@
 import 'package:english_mate/config/di.dart';
+import 'package:english_mate/core/enums/app_enums.dart';
 import 'package:english_mate/models/user_data.dart';
 import 'package:english_mate/models/user_info_data.dart';
 import 'package:english_mate/models/words/word.dart';
@@ -9,11 +10,12 @@ import 'package:english_mate/viewModels/authentication/signIn/sign_in_bloc.dart'
 import 'package:english_mate/viewModels/authentication/signUp/sign_up_bloc.dart';
 import 'package:english_mate/viewModels/authentication/userInfo/user_info_bloc.dart';
 import 'package:english_mate/viewModels/editProfile/editProfile/edit_profile_bloc.dart';
+import 'package:english_mate/viewModels/editProfile/linkedAccount/linked_account_bloc.dart';
 import 'package:english_mate/viewModels/learning/flashcard/flash_card_bloc.dart';
-import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
 import 'package:english_mate/views/account/account_view.dart';
 import 'package:english_mate/views/account/edit_profile_view.dart';
 import 'package:english_mate/views/account/linked_account_view.dart';
+import 'package:english_mate/views/account/setting_view.dart';
 import 'package:english_mate/views/authentication/getting_started_view.dart';
 import 'package:english_mate/views/authentication/signUp/sign_up_view.dart';
 import 'package:english_mate/views/authentication/signUp/user_info_view.dart';
@@ -34,46 +36,45 @@ class AppRouter {
 
   static GoRouter build(AuthGateCubit authGateCubit) {
     return GoRouter(
-      initialLocation: RoutePath.linkedAccount,
+      initialLocation: RoutePath.home,
       navigatorKey: rootNavigatorKey,
+      refreshListenable: GoRouterRefreshStream(authGateCubit.stream),
+      redirect: (context, state) {
+        final authState = authGateCubit.state;
+        final loggedIn = authState.isLoggedIn;
+        final isNewUser = authState.isNewUser;
 
-      // refreshListenable: GoRouterRefreshStream(authGateCubit.stream),
-      // redirect: (context, state) {
-      //   final authState = authGateCubit.state;
-      //   final loggedIn = authState.isLoggedIn;
-      //   final isNewUser = authState.isNewUser;
+        final onAuthFlow =
+            state.matchedLocation == RoutePath.auth ||
+            state.matchedLocation == RoutePath.signIn ||
+            state.matchedLocation == RoutePath.signUp;
 
-      //   final onAuthFlow =
-      //       state.matchedLocation == RoutePath.auth ||
-      //       state.matchedLocation == RoutePath.signIn ||
-      //       state.matchedLocation == RoutePath.signUp;
+        final onUserInfo = state.matchedLocation == RoutePath.userInfo;
 
-      //   final onUserInfo = state.matchedLocation == RoutePath.userInfo;
+        // người dùng chưa đăng nhập
+        if (!loggedIn) {
+          return onAuthFlow ? null : RoutePath.auth;
+        }
 
-      //   // người dùng chưa đăng nhập
-      //   if (!loggedIn) {
-      //     return onAuthFlow ? null : RoutePath.auth;
-      //   }
+        // đã đăng nhập đang chờ check
+        if (isNewUser == null) {
+          return null;
+        }
 
-      //   // đã đăng nhập đang chờ check
-      //   if (isNewUser == null) {
-      //     return null;
-      //   }
+        // đã đăng nhập nhưng là người mới
+        if (isNewUser) {
+          // đã điều hướng thủ công
+          return null;
+        }
 
-      //   // đã đăng nhập nhưng là người mới
-      //   if (isNewUser) {
-      //     // đã điều hướng thủ công
-      //     return null;
-      //   }
+        // đã đăng nhập và nếu đang ở các trang đăng nhập hoặc điền thông tin thì cho về home
+        if (onAuthFlow || onUserInfo) {
+          return RoutePath.home;
+        }
 
-      //   // đã đăng nhập và nếu đang ở các trang đăng nhập hoặc điền thông tin thì cho về home
-      //   if (onAuthFlow || onUserInfo) {
-      //     return RoutePath.home;
-      //   }
-
-      //   // Mặc định: cho phép đi tiếp
-      //   return null;
-      // },
+        // Mặc định: cho phép đi tiếp
+        return null;
+      },
       routes: [
         StatefulShellRoute.indexedStack(
           builder: (context, state, navigationShell) {
@@ -127,16 +128,15 @@ class AppRouter {
                   return DI().sl<FlashCardBloc>(param1: unitId);
                 },
               ),
-              BlocProvider(
-                create: (context) {
-                  return DI().sl<SettingsBloc>();
-                },
-              ),
             ],
             child: const FlaskCardView(),
           ),
         ),
 
+        GoRoute(
+          path: RoutePath.setting,
+          builder: (context, state) => const SettingView(),
+        ),
         GoRoute(
           path: RoutePath.auth,
           builder: (context, state) => BlocProvider(
@@ -221,7 +221,16 @@ class AppRouter {
         GoRoute(
           path: RoutePath.linkedAccount,
           builder: (context, state) {
-            return const LinkedAccountView();
+            List<AppAuthProvider> appAuthProvider = context
+                .read<AuthGateCubit>()
+                .state
+                .userData!
+                .authProvider;
+            return BlocProvider(
+              create: (context) =>
+                  DI().sl<LinkedAccountBloc>(param1: appAuthProvider),
+              child: const LinkedAccountView(),
+            );
           },
         ),
       ],
