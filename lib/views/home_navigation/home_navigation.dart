@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 class HomeNavigation extends StatefulWidget {
   const HomeNavigation({super.key, required this.navigationShell});
   final StatefulNavigationShell navigationShell;
+  static final ValueNotifier<bool> showSearch = ValueNotifier(false);
   @override
   State<HomeNavigation> createState() => _HomeNavigationState();
 }
@@ -23,8 +24,22 @@ class _HomeNavigationState extends State<HomeNavigation> {
     Icons.person,
   ];
   List<String> labels = ['Trang chủ', 'Ôn tập', 'Thống kê', 'Tài khoản'];
-  List<String> titles = ['Từ vựng', 'Ôn tập', 'Thống kê', 'Tài khoản'];
-
+  List<PreferredSizeWidget> appbars = [
+    AppBar(
+      title: const Text('Từ vựng'),
+      actions: [
+        IconButton(
+          onPressed: () {
+            HomeNavigation.showSearch.value = !HomeNavigation.showSearch.value;
+          },
+          icon: const Icon(Icons.search),
+        ),
+      ],
+    ),
+    AppBar(title: const Text('Ôn tập')),
+    AppBar(title: const Text('Thống kê')),
+    AppBar(title: const Text('Tài khoản')),
+  ];
   int selectedIndex = 0;
 
   void _onSelected(int index) {
@@ -35,7 +50,7 @@ class _HomeNavigationState extends State<HomeNavigation> {
   Widget build(BuildContext context) {
     int index = widget.navigationShell.currentIndex;
     return Scaffold(
-      appBar: AppBar(title: Text(titles[index])),
+      appBar: appbars[index],
       body: widget.navigationShell,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: index,
