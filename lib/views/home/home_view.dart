@@ -59,7 +59,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     final vocabBox = Hive.box<Word>('wordsBox').values.toList();
-    Map<int, UnitSummary> unitSummaries = {};
+    Map<String, UnitSummary> unitSummaries = {};
     for (var i = 0; i < vocabBox.length; i++) {
       if (unitSummaries[vocabBox[i].unitId] == null) {
         unitSummaries[vocabBox[i].unitId] = UnitSummary(
@@ -68,7 +68,12 @@ class _HomeViewState extends State<HomeView> {
         );
       }
     }
-    final List<UnitSummary> unitSummary = unitSummaries.values.toList();
+    final List<UnitSummary> unitSummary = unitSummaries.values.toList()
+      ..sort(
+        (a, b) => (int.tryParse(a.unitId) ?? 1 << 30).compareTo(
+          int.tryParse(b.unitId) ?? 1 << 30,
+        ),
+      );
 
     return Padding(
       padding: const EdgeInsets.all(16),

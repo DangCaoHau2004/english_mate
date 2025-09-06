@@ -12,6 +12,7 @@ import 'package:english_mate/viewModels/authentication/userInfo/user_info_bloc.d
 import 'package:english_mate/viewModels/editProfile/editProfile/edit_profile_bloc.dart';
 import 'package:english_mate/viewModels/editProfile/linkedAccount/linked_account_bloc.dart';
 import 'package:english_mate/viewModels/learning/flashcard/flash_card_bloc.dart';
+import 'package:english_mate/viewModels/learning/flashcard/flash_card_event.dart';
 import 'package:english_mate/views/account/account_view.dart';
 import 'package:english_mate/views/account/edit_profile_view.dart';
 import 'package:english_mate/views/account/linked_account_view.dart';
@@ -122,10 +123,9 @@ class AppRouter {
             providers: [
               BlocProvider(
                 create: (context) {
-                  final unitId = int.parse(
-                    state.pathParameters['unitId'] ?? "1",
-                  );
-                  return DI().sl<FlashCardBloc>(param1: unitId);
+                  final unitId = state.pathParameters['unitId'] ?? "1";
+                  return DI().sl<FlashCardBloc>(param1: unitId)
+                    ..add(CheckUnitFirstTimeLearningUnit());
                 },
               ),
             ],

@@ -15,3 +15,5 @@ enum WordStatus { stillLearning, known }
 enum LearningStatus { initial, loading, success, failure, inProgress, complete }
 
 enum AppThemeMode { light, dark, pink }
+
+enum LearningProgressStatus { notLearned, learning, mastered }

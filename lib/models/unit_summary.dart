@@ -1,5 +1,5 @@
 class UnitSummary {
-  final int unitId;
+  final String unitId;
   final String thumbnailImage;
   final double? progress;
   UnitSummary({

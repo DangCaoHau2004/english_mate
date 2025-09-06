@@ -1,18 +1,24 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:english_mate/core/enums/app_enums.dart';
+import 'package:english_mate/data/repository/learning_progress_repository.dart';
+import 'package:english_mate/models/learning/learning_progress.dart';
 import 'package:english_mate/utils/asset_helper.dart';
 import 'package:english_mate/viewModels/learning/flashcard/flash_card_event.dart';
 import 'package:english_mate/viewModels/learning/flashcard/flash_card_state.dart';
 import 'package:english_mate/models/learning/session_word.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
   final AudioPlayer _audioPlayer = AudioPlayer();
+  final LearningProgressRepository _learningProgressRepository;
 
   FlashCardBloc({
     required List<SessionWord> sessionWords,
     required bool isFlippedDefault,
-  }) : super(
+    required LearningProgressRepository learningProgressRepository,
+  }) : _learningProgressRepository = learningProgressRepository,
+       super(
          FlashCardState(
            learningStatus: LearningStatus.inProgress,
            sessionWords: sessionWords,
@@ -20,6 +26,64 @@ class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
            isFlippedDefault: isFlippedDefault,
          ),
        ) {
+    on<CheckUnitFirstTimeLearningUnit>((event, emit) async {
+      emit(state.copyWith(learningStatus: LearningStatus.loading));
+      try {
+        String userId = FirebaseAuth.instance.currentUser!.uid;
+        String unitId = state.sessionWordsDefault.first.word.unitId;
+        bool isFirstTime = await _learningProgressRepository
+            .checkUnitFirstTimeLearningUnit(userId: userId, unitId: unitId);
+        if (isFirstTime) {
+          List<String> wordIds = state.sessionWords
+              .map((sw) => sw.word.wordId)
+              .toList();
+
+          await _learningProgressRepository.createCollectionWordProgress(
+            userId: userId,
+            wordIds: wordIds,
+          );
+          emit(
+            state.copyWith(
+              isFirstTime: isFirstTime,
+              learningStatus: LearningStatus.initial,
+            ),
+          );
+          return;
+        }
+        List<LearningProgress> progresses = await _learningProgressRepository
+            .getLearningProgressByUnit(userId: userId, unitId: unitId);
+        final byId = {for (final p in progresses) p.wordId: p};
+        final sessionWords = List<SessionWord>.from(state.sessionWords);
+        final sessionDefault = List<SessionWord>.from(
+          state.sessionWordsDefault,
+        );
+
+        final nextSession = sessionWords.map((sw) {
+          final progress = byId[sw.word.wordId];
+          return sw.copyWith(isStarred: progress?.isStarred ?? sw.isStarred);
+        });
+        final nextDefault = sessionDefault.map((sw) {
+          final progress = byId[sw.word.wordId];
+          return sw.copyWith(isStarred: progress?.isStarred ?? sw.isStarred);
+        });
+        ;
+        emit(
+          state.copyWith(
+            sessionWords: nextSession.toList(),
+            sessionWordsDefault: nextDefault.toList(),
+
+            learningStatus: LearningStatus.initial,
+          ),
+        );
+      } catch (e) {
+        emit(
+          state.copyWith(
+            errorMessage: e.toString(),
+            learningStatus: LearningStatus.failure,
+          ),
+        );
+      }
+    });
     on<CardFlipped>((event, emit) {
       emit(state.copyWith(isFlipped: !state.isFlipped));
     });
@@ -33,7 +97,7 @@ class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
         wordStatus: WordStatus.known,
       );
       // thêm word id vào history
-      final newHistory = List<int>.from(state.historyWordIds)
+      final newHistory = List<String>.from(state.historyWordIds)
         ..add(updatedWords[currentIndex].word.wordId);
       // tìm kiếm index tiếp theo
       int nextIndex = updatedWords.indexWhere(
@@ -72,7 +136,7 @@ class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
     on<WordMarkedAsStillLearning>((event, emit) {
       final currentIndex = state.currentIndex;
       //thêm id vào history
-      final newHistory = List<int>.from(state.historyWordIds)
+      final newHistory = List<String>.from(state.historyWordIds)
         ..add(state.sessionWords[currentIndex].word.wordId);
 
       // tìm index từ tiếp theo
@@ -111,7 +175,7 @@ class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
       emit(state.copyWith(isFlippedDefault: event.value));
     });
     on<ShuffleToggled>((event, emit) {
-      final order = <int, int>{
+      final order = <String, int>{
         for (var i = 0; i < state.sessionWordsDefault.length; i++)
           state.sessionWordsDefault[i].word.wordId: i,
       };
@@ -170,12 +234,12 @@ class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
 
     on<BackPressed>((event, emit) {
       if (state.historyWordIds.isEmpty || state.currentIndex == -1) return;
-      int lastWordId = state.historyWordIds.last;
+      String lastWordId = state.historyWordIds.last;
       int index = state.sessionWords.indexWhere(
         (sw) => sw.word.wordId == lastWordId,
       );
       // xóa bỏ từ cuối của history
-      final newHistory = List<int>.from(state.historyWordIds)..removeLast();
+      final newHistory = List<String>.from(state.historyWordIds)..removeLast();
 
       // sửa lại thành stillLearning
       final newWords = List<SessionWord>.from(state.sessionWords);
@@ -207,6 +271,71 @@ class FlashCardBloc extends Bloc<FlashCardEvent, FlashCardState> {
           learningStatus: LearningStatus.inProgress,
         ),
       );
+    });
+
+    on<UpdateUnitLearningProgress>((event, emit) async {
+      if (state.isFirstTime) {
+        emit(state.copyWith(learningStatus: LearningStatus.loading));
+        try {
+          List<String> wordIds = state.sessionWords
+              .map((sw) => sw.word.wordId)
+              .toList();
+          String userId = FirebaseAuth.instance.currentUser!.uid;
+          _learningProgressRepository.updateDefaultUnitLearningProgress(
+            wordIds: wordIds,
+            userId: userId,
+            unitId: state.sessionWordsDefault.first.word.unitId,
+          );
+          emit(state.copyWith(learningStatus: LearningStatus.complete));
+        } catch (e) {
+          emit(
+            state.copyWith(
+              learningStatus: LearningStatus.failure,
+              errorMessage: e.toString(),
+            ),
+          );
+        }
+      }
+    });
+
+    on<SetWordStarred>((event, emit) async {
+      try {
+        final idx = state.currentIndex;
+        if (idx < 0 || idx >= state.sessionWords.length) return;
+
+        // Lấy item hiện tại từ STATE (tránh lệch so với event)
+        final current = state.sessionWords[idx];
+        final bool newValue = !current.isStarred;
+
+        final next = List<SessionWord>.from(state.sessionWords);
+        next[idx] = current.copyWith(isStarred: newValue);
+
+        final nextDefault = List<SessionWord>.from(state.sessionWordsDefault);
+        final dIdx = nextDefault.indexWhere(
+          (sw) => sw.word.wordId == current.word.wordId,
+        );
+        if (dIdx != -1) {
+          nextDefault[dIdx] = nextDefault[dIdx].copyWith(isStarred: newValue);
+        }
+
+        emit(
+          state.copyWith(sessionWords: next, sessionWordsDefault: nextDefault),
+        );
+
+        final uid = FirebaseAuth.instance.currentUser!.uid;
+        await _learningProgressRepository.setWordStarred(
+          wordId: current.word.wordId,
+          isStarred: newValue,
+          userId: uid,
+        );
+      } catch (e) {
+        emit(
+          state.copyWith(
+            learningStatus: LearningStatus.failure,
+            errorMessage: e.toString(),
+          ),
+        );
+      }
     });
   }
 }

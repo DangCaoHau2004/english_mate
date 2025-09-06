@@ -147,14 +147,14 @@ class WordDetailView extends StatelessWidget {
 
               buildInfoTile(
                 context,
-                title: 'English Definition',
+                title: 'Định nghĩa tiếng Anh',
                 content: word.definitionEn,
                 audioUrl: word.audioDefinitionEn,
               ),
 
               buildInfoTile(
                 context,
-                title: 'Example',
+                title: 'Ví dụ',
                 content: word.example,
                 audioUrl: word.audioExample,
               ),
@@ -163,7 +163,7 @@ class WordDetailView extends StatelessWidget {
 
               if (word.fullDefinition.isNotEmpty) ...[
                 Text(
-                  'Full Definition',
+                  'Toàn bộ định nghĩa',
                   style: textTheme.bodyMedium!.copyWith(
                     fontWeight: FontWeight.bold,
                   ),

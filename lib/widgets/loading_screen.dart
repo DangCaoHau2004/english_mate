@@ -5,6 +5,16 @@ class LoadingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: CircularProgressIndicator()));
+    return Scaffold(
+      body: Center(
+        child: SizedBox(
+          width: 144, // kích thước tổng thể
+          height: 144,
+          child: CircularProgressIndicator(
+            color: Theme.of(context).colorScheme.surface,
+          ),
+        ),
+      ),
+    );
   }
 }

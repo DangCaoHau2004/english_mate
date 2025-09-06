@@ -6,10 +6,10 @@ part 'word.g.dart';
 @HiveType(typeId: 0)
 class Word {
   @HiveField(0)
-  final int wordId;
+  final String wordId;
 
   @HiveField(1)
-  final int unitId;
+  final String unitId;
 
   @HiveField(2)
   final String term; // Từ vựng chính

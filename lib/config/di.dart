@@ -1,6 +1,8 @@
 // di.dart
 import 'package:english_mate/data/local/setting_local_datasource.dart';
+import 'package:english_mate/data/network/learning_progress_datasource.dart';
 import 'package:english_mate/data/network/user_firestore_datasource.dart';
+import 'package:english_mate/data/repository/learning_progress_repository.dart';
 import 'package:english_mate/data/repository/setting_repository.dart';
 import 'package:english_mate/models/user_data.dart';
 import 'package:english_mate/viewModels/authentication/auth_gate_cubit.dart';
@@ -36,6 +38,14 @@ class DI {
     sl.registerLazySingleton<SettingLocalDatasource>(
       () => SettingLocalDatasource(prefs: sl<SharedPreferences>()),
     );
+    sl.registerLazySingleton<LearningProgressDatasource>(
+      () => LearningProgressDatasource(),
+    );
+    sl.registerLazySingleton<LearningProgressRepository>(
+      () => LearningProgressRepository(
+        learningProgressDatasource: sl<LearningProgressDatasource>(),
+      ),
+    );
     sl.registerLazySingleton<AuthRepository>(() => AuthRepository());
 
     sl.registerLazySingleton<Box<Word>>(() => Hive.box<Word>('wordsBox'));
@@ -62,7 +72,7 @@ class DI {
       );
     });
 
-    sl.registerFactoryParam<FlashCardBloc, int, void>((unitId, _) {
+    sl.registerFactoryParam<FlashCardBloc, String, void>((unitId, _) {
       final wordBox = sl<Box<Word>>();
 
       final wordInUnit = wordBox.values
@@ -79,6 +89,7 @@ class DI {
       return FlashCardBloc(
         sessionWords: sessionWords,
         isFlippedDefault: sl<SettingRepository>().isFlippedDefault,
+        learningProgressRepository: sl<LearningProgressRepository>(),
       );
     });
 

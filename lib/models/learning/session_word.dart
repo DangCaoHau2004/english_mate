@@ -4,8 +4,17 @@ import 'package:english_mate/models/words/word.dart';
 class SessionWord {
   final Word word;
   final WordStatus wordStatus;
-  SessionWord({required this.word, this.wordStatus = WordStatus.stillLearning});
+  final bool isStarred;
+  SessionWord({
+    required this.word,
+    this.wordStatus = WordStatus.stillLearning,
+    this.isStarred = false,
+  });
 
-  SessionWord copyWith({WordStatus? wordStatus}) =>
-      SessionWord(word: word, wordStatus: wordStatus ?? this.wordStatus);
+  SessionWord copyWith({WordStatus? wordStatus, bool? isStarred}) =>
+      SessionWord(
+        word: word,
+        wordStatus: wordStatus ?? this.wordStatus,
+        isStarred: isStarred ?? this.isStarred,
+      );
 }

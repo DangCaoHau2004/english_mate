@@ -25,8 +25,13 @@ class VocabLoader {
         for (var meaning in definition["meanings"]) {
           meanings.add(
             Meaning(
-              meaning: meaning["meaning"],
-              examples: List<String>.from(meaning["examples"]),
+              meaning: meaning["meaning"]?.toString().trim() ?? '',
+              examples: (meaning["examples"] is List)
+                  ? (meaning["examples"] as List)
+                        .map((e) => e.toString().trim())
+                        .where((e) => e.isNotEmpty)
+                        .toList()
+                  : [],
             ),
           );
         }
@@ -35,19 +40,20 @@ class VocabLoader {
         );
       }
       final Word words = Word(
-        wordId: item["id"],
-        unitId: item["unit"],
-        term: item["word"],
-        definitionVi: item["meaning_vi"],
-        definitionEn: item["definition_en"],
-        audioDefinitionEn: item["audio_meaning"],
-        partOfSpeech: item["pos"],
-        audioPronunciation: item["audio_pronunciation"],
-        image: item["image"],
-        phonetic: item["phonetic"],
+        wordId: item["id"]?.toString().trim() ?? '',
+        unitId: item["unit"]?.toString().trim() ?? '',
+        term: item["word"]?.toString().trim() ?? '',
+        definitionVi: item["meaning_vi"]?.toString().trim() ?? '',
+        definitionEn: item["definition_en"]?.toString().trim() ?? '',
+        audioDefinitionEn: item["audio_meaning"]?.toString().trim() ?? '',
+        partOfSpeech: item["pos"]?.toString().trim() ?? '',
+        audioPronunciation:
+            item["audio_pronunciation"]?.toString().trim() ?? '',
+        image: item["image"]?.toString().trim() ?? '',
+        phonetic: item["phonetic"]?.toString().trim() ?? '',
         fullDefinition: definitionPart,
-        example: item["example_en"],
-        audioExample: item["audio_example"],
+        example: item["example_en"]?.toString().trim() ?? '',
+        audioExample: item["audio_example"]?.toString().trim() ?? '',
         updateAt: DateTime.now(),
       );
       await vocabBox.put(words.wordId, words);

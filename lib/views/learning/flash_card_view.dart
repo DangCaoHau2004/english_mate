@@ -11,6 +11,7 @@ import 'package:english_mate/models/learning/session_word.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
 import 'package:english_mate/views/learning/flash_card_setting_dialog.dart';
 import 'package:english_mate/views/learning/report_word_dialog_view.dart';
+import 'package:english_mate/widgets/loading_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'dart:math' as math;
@@ -79,7 +80,9 @@ class _FlaskCardViewState extends State<FlaskCardView>
   }
 
   // hàm lưu vào dạng từ có dấu sao
-  void _saveWord() {}
+  void _saveWord(SessionWord sessionWord) {
+    context.read<FlashCardBloc>().add(SetWordStarred(sessionWord: sessionWord));
+  }
 
   // hàm quay trở lại thẻ trước đó
   void _goToPreviousCard() {
@@ -131,8 +134,12 @@ class _FlaskCardViewState extends State<FlaskCardView>
                 ),
 
                 IconButton(
-                  onPressed: _saveWord,
-                  icon: const Icon(Icons.star_border),
+                  onPressed: () {
+                    _saveWord(sessionWord);
+                  },
+                  icon: sessionWord.isStarred
+                      ? const Icon(Icons.star)
+                      : const Icon(Icons.star_border),
                 ),
               ],
             ),
@@ -351,230 +358,257 @@ class _FlaskCardViewState extends State<FlaskCardView>
             .where((word) => word.wordStatus == WordStatus.known)
             .length;
         final unKnowWord = wordCount - knowWord;
+        bool isComplete = state.learningStatus == LearningStatus.complete;
+        if (isComplete) {
+          // ghi lại data các từ vựng lên firebase
+          context.read<FlashCardBloc>().add(UpdateUnitLearningProgress());
+        } else if (state.learningStatus == LearningStatus.failure) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(state.errorMessage ?? "Lỗi không xác định")),
+          );
+        }
 
-        return Scaffold(
-          appBar: AppBar(
-            leading: IconButton(
-              onPressed: () => Navigator.of(context).pop(),
-              icon: const Icon(Icons.arrow_back),
-            ),
-            centerTitle: true,
-            title: Text(
-              wordCount > 0 ? "$knowWord/$wordCount" : "...",
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-            actions: [
-              IconButton(
-                onPressed: _openSetting,
-                icon: const Icon(Icons.settings),
-              ),
-            ],
-          ),
-          body:
-              (state.learningStatus == LearningStatus.complete ||
-                  state.sessionWords.isEmpty)
-              // Hiển thị khi phiên học kết thúc hoặc chưa bắt đầu
-              ? Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Chúc mừng, bạn đã hoàn thành!",
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.titleLarge,
-                      ),
-                      const SizedBox(height: 16),
-                      TextButton(
-                        onPressed: _resetWord,
-                        child: Text(
-                          "Đặt lại",
-                          style: Theme.of(context).textTheme.bodyMedium!
-                              .copyWith(
-                                color: Theme.of(context).colorScheme.tertiary,
-                              ),
-                        ),
-                      ),
-                    ],
+        return state.learningStatus == LearningStatus.loading
+            ? const LoadingScreen()
+            : Scaffold(
+                appBar: AppBar(
+                  leading: IconButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    icon: const Icon(Icons.arrow_back),
                   ),
-                )
-              // Hiển thị giao diện học chính
-              : Column(
-                  children: [
-                    LinearProgressIndicator(
-                      value: wordCount > 0 ? knowWord / wordCount : 0,
-                      borderRadius: const BorderRadius.all(Radius.circular(8)),
-                      backgroundColor: Theme.of(
-                        context,
-                      ).colorScheme.secondary.withAlpha(50),
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        Theme.of(context).colorScheme.surface,
-                      ),
-                      minHeight: 5,
-                    ),
-                    const SizedBox(height: 16),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          // Cụm "Đang học"
-                          Row(
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 8,
-                                  vertical: 4,
-                                ),
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Theme.of(
-                                      context,
-                                    ).colorScheme.primaryContainer,
-                                    width: 1.5,
-                                  ),
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Text(
-                                  unKnowWord.toString(),
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .titleMedium!
-                                      .copyWith(
-                                        color: Theme.of(
-                                          context,
-                                        ).colorScheme.primaryContainer,
-                                      ),
-                                ),
-                              ),
-                              const SizedBox(width: 8),
-                              Text(
-                                'Đang học',
-                                style: Theme.of(context).textTheme.titleMedium!
-                                    .copyWith(
-                                      color: Theme.of(
-                                        context,
-                                      ).colorScheme.primaryContainer,
-                                    ),
-                              ),
-                            ],
-                          ),
-                          // Cụm "Đã biết"
-                          Row(
-                            children: [
-                              Text(
-                                'Đã biết',
-                                style: Theme.of(context).textTheme.titleMedium!
-                                    .copyWith(
-                                      color: Theme.of(
-                                        context,
-                                      ).colorScheme.secondaryContainer,
-                                    ),
-                              ),
-                              const SizedBox(width: 8),
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 8,
-                                  vertical: 4,
-                                ),
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Theme.of(
-                                      context,
-                                    ).colorScheme.secondaryContainer,
-                                    width: 1.5,
-                                  ),
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Text(
-                                  knowWord.toString(),
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .titleMedium!
-                                      .copyWith(
-                                        color: Theme.of(
-                                          context,
-                                        ).colorScheme.secondaryContainer,
-                                      ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: GestureDetector(
-                          onTap: _handleTap,
-                          onHorizontalDragUpdate: _onDragUpdate,
-                          onHorizontalDragEnd: _onDragEnd,
-                          child: Transform.translate(
-                            offset: _dragOffset,
-                            child: Transform.rotate(
-                              angle:
-                                  _dragOffset.dx /
-                                  (MediaQuery.of(context).size.width / 2),
-                              child: AnimatedBuilder(
-                                animation: _flipController,
-                                builder: (context, child) {
-                                  final sessionWord =
-                                      state.sessionWords[state.currentIndex];
-                                  final angle = _flipController.value * math.pi;
-                                  final isFront = _flipController.value <= 0.5;
-
-                                  Widget content = isFront
-                                      ? _buildFront(sessionWord)
-                                      : Transform(
-                                          alignment: Alignment.center,
-                                          transform: Matrix4.rotationY(math.pi),
-                                          child: _buildBack(sessionWord),
-                                        );
-
-                                  return Transform(
-                                    alignment: Alignment.center,
-                                    transform: Matrix4.identity()
-                                      ..setEntry(3, 2, 0.001)
-                                      ..rotateY(angle),
-                                    child: content,
-                                  );
-                                },
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          IconButton(
-                            onPressed: state.historyWordIds.isEmpty
-                                ? null
-                                : _goToPreviousCard,
-                            icon: const Icon(Icons.replay),
-                          ),
-                          Text(
-                            "Nhấn để lật hoặc vuốt",
-                            style: Theme.of(context).textTheme.bodyMedium,
-                          ),
-                          IconButton(
-                            onPressed: _reportWord,
-                            icon: const Icon(
-                              Icons.report_gmailerrorred_outlined,
-                            ),
-                          ),
-                        ],
-                      ),
+                  centerTitle: true,
+                  title: Text(
+                    wordCount > 0 ? "$knowWord/$wordCount" : "...",
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                  actions: [
+                    IconButton(
+                      onPressed: _openSetting,
+                      icon: const Icon(Icons.settings),
                     ),
                   ],
                 ),
-        );
+                body: (isComplete || state.sessionWords.isEmpty)
+                    // Hiển thị khi phiên học kết thúc hoặc chưa bắt đầu
+                    ? Center(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Chúc mừng, bạn đã hoàn thành!",
+                              textAlign: TextAlign.center,
+                              style: Theme.of(context).textTheme.titleLarge,
+                            ),
+                            const SizedBox(height: 16),
+                            TextButton(
+                              onPressed: _resetWord,
+                              child: Text(
+                                "Đặt lại",
+                                style: Theme.of(context).textTheme.bodyMedium!
+                                    .copyWith(
+                                      color: Theme.of(
+                                        context,
+                                      ).colorScheme.tertiary,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    // Hiển thị giao diện học chính
+                    : Column(
+                        children: [
+                          LinearProgressIndicator(
+                            value: wordCount > 0 ? knowWord / wordCount : 0,
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(8),
+                            ),
+                            backgroundColor: Theme.of(
+                              context,
+                            ).colorScheme.secondary.withAlpha(50),
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              Theme.of(context).colorScheme.surface,
+                            ),
+                            minHeight: 5,
+                          ),
+                          const SizedBox(height: 16),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8.0,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                // Cụm "Đang học"
+                                Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 8,
+                                        vertical: 4,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Theme.of(
+                                            context,
+                                          ).colorScheme.primaryContainer,
+                                          width: 1.5,
+                                        ),
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                      child: Text(
+                                        unKnowWord.toString(),
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleMedium!
+                                            .copyWith(
+                                              color: Theme.of(
+                                                context,
+                                              ).colorScheme.primaryContainer,
+                                            ),
+                                      ),
+                                    ),
+                                    const SizedBox(width: 8),
+                                    Text(
+                                      'Đang học',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleMedium!
+                                          .copyWith(
+                                            color: Theme.of(
+                                              context,
+                                            ).colorScheme.primaryContainer,
+                                          ),
+                                    ),
+                                  ],
+                                ),
+                                // Cụm "Đã biết"
+                                Row(
+                                  children: [
+                                    Text(
+                                      'Đã biết',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleMedium!
+                                          .copyWith(
+                                            color: Theme.of(
+                                              context,
+                                            ).colorScheme.secondaryContainer,
+                                          ),
+                                    ),
+                                    const SizedBox(width: 8),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 8,
+                                        vertical: 4,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Theme.of(
+                                            context,
+                                          ).colorScheme.secondaryContainer,
+                                          width: 1.5,
+                                        ),
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                      child: Text(
+                                        knowWord.toString(),
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleMedium!
+                                            .copyWith(
+                                              color: Theme.of(
+                                                context,
+                                              ).colorScheme.secondaryContainer,
+                                            ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                              ),
+                              child: GestureDetector(
+                                onTap: _handleTap,
+                                onHorizontalDragUpdate: _onDragUpdate,
+                                onHorizontalDragEnd: _onDragEnd,
+                                child: Transform.translate(
+                                  offset: _dragOffset,
+                                  child: Transform.rotate(
+                                    angle:
+                                        _dragOffset.dx /
+                                        (MediaQuery.of(context).size.width / 2),
+                                    child: AnimatedBuilder(
+                                      animation: _flipController,
+                                      builder: (context, child) {
+                                        final sessionWord = state
+                                            .sessionWords[state.currentIndex];
+                                        final angle =
+                                            _flipController.value * math.pi;
+                                        final isFront =
+                                            _flipController.value <= 0.5;
+
+                                        Widget content = isFront
+                                            ? _buildFront(sessionWord)
+                                            : Transform(
+                                                alignment: Alignment.center,
+                                                transform: Matrix4.rotationY(
+                                                  math.pi,
+                                                ),
+                                                child: _buildBack(sessionWord),
+                                              );
+
+                                        return Transform(
+                                          alignment: Alignment.center,
+                                          transform: Matrix4.identity()
+                                            ..setEntry(3, 2, 0.001)
+                                            ..rotateY(angle),
+                                          child: content,
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 16),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16.0,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                IconButton(
+                                  onPressed: state.historyWordIds.isEmpty
+                                      ? null
+                                      : _goToPreviousCard,
+                                  icon: const Icon(Icons.replay),
+                                ),
+                                Text(
+                                  "Nhấn để lật hoặc vuốt",
+                                  style: Theme.of(context).textTheme.bodyMedium,
+                                ),
+                                IconButton(
+                                  onPressed: _reportWord,
+                                  icon: const Icon(
+                                    Icons.report_gmailerrorred_outlined,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+              );
       },
     );
   }

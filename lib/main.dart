@@ -5,6 +5,7 @@ import 'package:english_mate/models/words/definition_part.dart';
 import 'package:english_mate/models/words/meaning.dart';
 import 'package:english_mate/models/words/word.dart';
 import 'package:english_mate/navigation/app_router.dart';
+import 'package:english_mate/test.dart';
 import 'package:english_mate/viewModels/authentication/auth_gate_cubit.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_state.dart';
@@ -37,6 +38,12 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return const MaterialApp(
+    //   title: 'Puzzle App',
+    //   debugShowCheckedModeBanner: false,
+    //   home: PuzzleInputRow(),
+    // );
+
     final gate = DI().sl<AuthGateCubit>();
 
     return MultiBlocProvider(
