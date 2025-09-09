@@ -13,17 +13,17 @@ class HomeNavigation extends StatefulWidget {
 class _HomeNavigationState extends State<HomeNavigation> {
   List<String> routes = [
     RoutePath.home,
+    RoutePath.library,
     RoutePath.review,
-    RoutePath.statistics,
     RoutePath.account,
   ];
   List<IconData> icons = [
     Icons.home_filled,
+    Icons.library_books,
     Icons.menu_book,
-    Icons.leaderboard,
     Icons.person,
   ];
-  List<String> labels = ['Trang chủ', 'Ôn tập', 'Thống kê', 'Tài khoản'];
+  List<String> labels = ['Trang chủ', 'Thư viện', 'Ôn tập', 'Tài khoản'];
   List<PreferredSizeWidget> appbars = [
     AppBar(
       title: const Text('Từ vựng'),
@@ -37,7 +37,7 @@ class _HomeNavigationState extends State<HomeNavigation> {
       ],
     ),
     AppBar(title: const Text('Ôn tập')),
-    AppBar(title: const Text('Thống kê')),
+    AppBar(title: const Text('Tổng quan')),
     AppBar(title: const Text('Tài khoản')),
   ];
   int selectedIndex = 0;

@@ -25,7 +25,7 @@ import 'package:english_mate/views/home/home_view.dart';
 import 'package:english_mate/views/home_navigation/home_navigation.dart';
 import 'package:english_mate/views/learning/word_detail_view.dart';
 import 'package:english_mate/views/review/review_view.dart';
-import 'package:english_mate/views/statistics/statistics_view.dart';
+import 'package:english_mate/views/library/library_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -101,8 +101,8 @@ class AppRouter {
             StatefulShellBranch(
               routes: [
                 GoRoute(
-                  path: RoutePath.statistics,
-                  builder: (context, state) => const StatisticsView(),
+                  path: RoutePath.library,
+                  builder: (context, state) => const LibraryView(),
                 ),
               ],
             ),

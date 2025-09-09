@@ -9,6 +9,8 @@ import 'package:english_mate/test.dart';
 import 'package:english_mate/viewModels/authentication/auth_gate_cubit.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_bloc.dart';
 import 'package:english_mate/viewModels/learning/settings/settings_state.dart';
+import 'package:english_mate/views/review/review_setup_view.dart';
+import 'package:english_mate/views/review/review_view.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -38,11 +40,12 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return const MaterialApp(
-    //   title: 'Puzzle App',
-    //   debugShowCheckedModeBanner: false,
-    //   home: PuzzleInputRow(),
-    // );
+    return MaterialApp(
+      title: 'Puzzle App',
+      theme: AppThemes.lightTheme,
+      debugShowCheckedModeBanner: false,
+      home: const ReviewSetupView(),
+    );
 
     final gate = DI().sl<AuthGateCubit>();
 

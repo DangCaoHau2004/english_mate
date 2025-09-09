@@ -291,6 +291,17 @@ class AppThemes {
         foregroundColor: _lightColorScheme.secondary,
       ),
     ),
+    tabBarTheme: TabBarThemeData(
+      labelColor: _lightColorScheme.onSurface,
+      unselectedLabelColor: _lightColorScheme.secondary,
+      labelStyle: const TextStyle(fontSize: 14),
+      unselectedLabelStyle: const TextStyle(fontSize: 14),
+      indicator: BoxDecoration(
+        color: _lightColorScheme.surface,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      indicatorSize: TabBarIndicatorSize.tab,
+    ),
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -497,6 +508,17 @@ class AppThemes {
         foregroundColor: _darkColorScheme.secondary,
       ),
     ),
+    tabBarTheme: TabBarThemeData(
+      labelColor: _darkColorScheme.surface,
+      unselectedLabelColor: _darkColorScheme.secondary,
+      labelStyle: const TextStyle(fontSize: 14),
+      unselectedLabelStyle: const TextStyle(fontSize: 14),
+      indicator: BoxDecoration(
+        color: _darkColorScheme.surface,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      indicatorSize: TabBarIndicatorSize.tab,
+    ),
   );
 
   static ThemeData pinkTheme = ThemeData(
@@ -702,6 +724,17 @@ class AppThemes {
       cancelButtonStyle: TextButton.styleFrom(
         foregroundColor: _pinkColorScheme.secondary,
       ),
+    ),
+    tabBarTheme: TabBarThemeData(
+      labelColor: _pinkColorScheme.surface,
+      unselectedLabelColor: _pinkColorScheme.secondary,
+      labelStyle: const TextStyle(fontSize: 14),
+      unselectedLabelStyle: const TextStyle(fontSize: 14),
+      indicator: BoxDecoration(
+        color: _pinkColorScheme.surface,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      indicatorSize: TabBarIndicatorSize.tab,
     ),
   );
 }
