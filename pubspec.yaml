@@ -62,6 +62,7 @@ flutter:
   assets:
     - assets/images/words/
     - assets/images/logo/
+    - assets/images/illustrations/
     - assets/audio/words/
     - assets/data/data.json
 
